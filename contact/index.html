@@ -169,32 +169,27 @@
           const form = this;
           const status = document.getElementById('formStatus');
 
-          const data = {
-              name: form.name.value,
-              email: form.email.value,
-              phone: form.phone.value,
-              message: form.message.value
-          };
+          const formData = new formData()
+            formData.append('name', form.name.value);
+            formData.append('email', form.email.value);
+            formData.append('phone', form.phone.value);
+            formData.append('name', form.message.value);
 
           status.textContent = 'Sending...';
 
           try {
-              const response = await fetch(
+              await fetch(
                   'https://script.google.com/macros/s/AKfycbz2iMWpgdr5yE9-5COeJ-Ywjw77_4AqFqbuTOK6tdxyLTQviNsRj9_e2PZP90K1xGzoYA/exec',
                   {
                       method: 'POST',
-                      body: JSON.stringify(data)
+                      body: formData,
+                      mode: 'no-cors'
                   }
               );
 
-              const result = await response.json();
 
-              if (result.success) {
-                  status.textContent = 'Message sent successfully!';
-                  form.reset();
-              } else {
-                  status.textContent = 'Something went wrong.';
-              }
+              status.textContent = 'Message sent successfully!';
+              formData.reset();
           } catch (error) {
               status.textContent = 'Failed to send message.';
               console.error(error);
