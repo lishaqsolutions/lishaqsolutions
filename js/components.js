@@ -6,10 +6,10 @@ async function loadComponent(selector, file) {
 
 document.addEventListener('DOMContentLoaded', async () => {
     if (document.querySelector('#header')) {
-        await loadComponent('#header', 'templates/header.html');
+        await loadComponent('#header', '/lishaqsolutions/templates/header.html');
     }
 
     if (document.querySelector('#footer')) {
-        await loadComponent('#footer', 'templates/footer.html');
+        await loadComponent('#footer', '/lishaqsolutions/templates/footer.html');
     }
 });
