@@ -18,7 +18,11 @@ async function loadBlogs() {
         //     await response.json();
         const response =
             await fetch(
-                window.SITE_CONFIG.googleScript.blogsApi
+                window.SITE_CONFIG.googleScript.blogsApi,
+                {
+                    method: "GET",
+                    redirect: "follow"
+                }
             );
 
         console.log(response);
