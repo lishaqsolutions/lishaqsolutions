@@ -91,7 +91,7 @@ async function loadBlogs() {
 
                         </div>
 
-                        <h2>
+                        <h2 style="color: white;">
                             ${blog.title}
                         </h2>
 
