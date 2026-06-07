@@ -9,13 +9,27 @@ async function loadBlogs() {
 
     try {
 
+        // const response =
+        //     await fetch(
+        //         window.SITE_CONFIG.googleScript.blogsApi
+        //     );
+
+        // const blogs =
+        //     await response.json();
         const response =
             await fetch(
                 window.SITE_CONFIG.googleScript.blogsApi
             );
 
+        console.log(response);
+
+        const text =
+            await response.text();
+
+        console.log(text);
+
         const blogs =
-            await response.json();
+            JSON.parse(text);
 
         container.innerHTML = "";
 
