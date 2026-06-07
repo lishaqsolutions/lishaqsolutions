@@ -15,6 +15,6 @@ window.SITE_CONFIG = {
 
     googleScript: {
         contactForm: "https://script.google.com/macros/s/AKfycbz2iMWpgdr5yE9-5COeJ-Ywjw77_4AqFqbuTOK6tdxyLTQviNsRj9_e2PZP90K1xGzoYA/exec",
-        blogsApi: "YOUR_BLOGS_API_URL"
+        blogsApi: "https://script.google.com/macros/s/AKfycbwozAp8FGr1IN-DnTqENCHda2lm-OdjS_13ApJ5LO9B0lK8FCGg-H2Ugei68ptlghSJwQ/exec"
     }
 };
