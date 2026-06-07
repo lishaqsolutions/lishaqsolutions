@@ -16,24 +16,36 @@ async function loadBlogs() {
 
         // const blogs =
         //     await response.json();
-        const response =
-            await fetch(
-                window.SITE_CONFIG.googleScript.blogsApi,
-                {
-                    method: "GET",
-                    redirect: "follow"
-                }
-            );
 
-        console.log(response);
 
-        const text =
-            await response.text();
 
-        console.log(text);
 
-        const blogs =
-            JSON.parse(text);
+        // const response =
+        //     await fetch(
+        //         window.SITE_CONFIG.googleScript.blogsApi,
+        //         {
+        //             method: "GET",
+        //             redirect: "follow"
+        //         }
+        //     );
+
+        // console.log(response);
+
+        // const text =
+        //     await response.text();
+
+        // console.log(text);
+
+        // const blogs =
+        //     JSON.parse(text);
+
+        const response = await fetch(window.SITE_CONFIG.googleScript.blogsApi);
+
+        if (!response.ok) {
+            throw new Error("HTTP error " + response.status);
+        }
+
+        const blogs = await response.json();
 
         container.innerHTML = "";
 
