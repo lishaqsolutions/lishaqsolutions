@@ -819,3 +819,36 @@ p {
 .wa-float:hover {
   transform: scale(1.1);
 }
+
+
+
+
+
+
+
+/* Blog card visibility fix */
+.blog-card,
+.blog-card * {
+    color: #eef2ff !important;
+}
+
+.blog-card .meta span {
+    color: #a3b3e0 !important;
+}
+
+.blog-card h2 {
+    color: white !important;
+}
+
+.blog-card .muted {
+    color: #cfdcff !important;
+}
+
+.blog-card .link-arrow {
+    color: #5b9aff !important;
+}
+
+.blog-card .thumb {
+    background: #1a1a2e;
+    min-height: 180px;
+}
