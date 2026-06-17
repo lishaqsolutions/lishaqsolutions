@@ -82,7 +82,7 @@ async function loadBlogs() {
             container.innerHTML += `
                 <a
                     href="/lishaqsolutions/blog-post/?slug=${encodeURIComponent(blog.slug)}"
-                    class="card blog-card reveal"
+                    class="card blog-card"
                     style="padding:0;overflow:hidden;display:block;text-decoration:none;background: rgba(15, 25, 55, 0.75);border-radius: 28px;transition: all 0.25s ease;border: 1px solid rgba(43, 127, 255, 0.25);"
                 >
                     <div class="thumb" style="aspect-ratio:16/9;overflow:hidden">
