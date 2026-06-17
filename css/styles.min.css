@@ -822,35 +822,3 @@ p {
 
 
 
-
-
-
-
-/* FORCE BLOG CONTENT VISIBILITY */
-#blogContainer .card.blog-card,
-#blogContainer .card.blog-card * {
-    color: #eef2ff !important;
-}
-
-#blogContainer .card.blog-card .meta span {
-    color: #a3b3e0 !important;
-}
-
-#blogContainer .card.blog-card h2 {
-    color: white !important;
-}
-
-#blogContainer .card.blog-card .muted,
-#blogContainer .card.blog-card p {
-    color: #cfdcff !important;
-}
-
-#blogContainer .card.blog-card .link-arrow {
-    color: #5b9aff !important;
-}
-
-/* Ensure card background is visible */
-#blogContainer .card.blog-card {
-    background: rgba(15, 25, 55, 0.85) !important;
-    border: 1px solid rgba(43, 127, 255, 0.3) !important;
-}
