@@ -801,54 +801,119 @@ p {
 
 
 
-  /* reset & base */
+
+
+
+/* modern, clean style */
   .socials {
     display: flex;
-    gap: 0.75rem;
+    gap: 0.5rem;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding: 0.7rem;
-    background: #f8fafc;
-    border-radius: 1rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 0.5rem;
+    background: transparent;
     max-width: fit-content;
-    margin: 0 10;
+    margin: 0;
   }
 
   .social-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 2.8rem;
-    height: 2.8rem;
-    border-radius: 50%;
-    background: white;
-    color: #1e293b;
-    font-size: 1.4rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 12px;
+    background: transparent;
+    color: #6b7280;
+    font-size: 1.35rem;
     text-decoration: none;
-    transition: all 0.2s ease;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-    border: 1px solid rgba(0,0,0,0.02);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    position: relative;
   }
 
-  /* brand colors on hover */
-  .whatsapp:hover { color: #25D366; background: #e8f5e9; border-color: #25D36640; }
-  .email:hover { color: #ea4335; background: #fce8e6; border-color: #ea433540; }
-  .github:hover { color: #181717; background: #f0f0f0; border-color: #18171740; }
-  .linkedin:hover { color: #0A66C2; background: #e3f0fa; border-color: #0A66C240; }
-  .youtube:hover { color: #FF0000; background: #fde8e8; border-color: #FF000040; }
-  .facebook:hover { color: #1877F2; background: #e4edfc; border-color: #1877F240; }
-  .tiktok:hover { color: #010101; background: #f2f2f2; border-color: #01010140; }
-
-  /* optional subtle lift */
+  /* subtle background on hover - each brand gets its own color */
   .social-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    transform: translateY(-3px) scale(1.05);
+    background: rgba(0,0,0,0.04);
   }
 
-  /* accessibility */
+  /* brand-specific hover colors */
+  .social-link[data-whatsapp-link]:hover { color: #25D366; background: #25D36612; }
+  .social-link[data-email-link]:hover { color: #EA4335; background: #EA433512; }
+  .social-link[data-github-link]:hover { color: #181717; background: #18171712; }
+  .social-link[data-linkedin-link]:hover { color: #0A66C2; background: #0A66C212; }
+  .social-link[data-youtube-link]:hover { color: #FF0000; background: #FF000012; }
+  .social-link[data-facebook-link]:hover { color: #1877F2; background: #1877F212; }
+  .social-link[data-tiktok-link]:hover { color: #010101; background: #01010112; }
+
+  /* active/click feedback */
+  .social-link:active {
+    transform: scale(0.92);
+    transition-duration: 0.08s;
+  }
+
+  /* accessible focus */
   .social-link:focus-visible {
     outline: 2px solid #2563eb;
-    outline-offset: 3px;
+    outline-offset: 4px;
+    border-radius: 12px;
+  }
+
+  /* tooltip-like label on hover — optional extra polish */
+  .social-link::after {
+    content: attr(aria-label);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    background: #1f2937;
+    color: #f9fafb;
+    padding: 0.25rem 0.65rem;
+    border-radius: 6px;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .social-link:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+
+  /* small arrow on tooltip */
+  .social-link::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    border: 5px solid transparent;
+    border-top-color: #1f2937;
+    opacity: 0;
+    transition: all 0.2s ease;
+  }
+
+  .social-link:hover::before {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+
+  /* responsive tweaks */
+  @media (max-width: 480px) {
+    .social-link {
+      width: 2.6rem;
+      height: 2.6rem;
+      font-size: 1.15rem;
+    }
+    .socials {
+      gap: 0.3rem;
+      padding: 0.3rem;
+    }
   }
