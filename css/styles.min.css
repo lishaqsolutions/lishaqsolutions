@@ -846,7 +846,7 @@ p {
   .social-link[data-linkedin-link]:hover { color: #0A66C2; background: #0A66C212; }
   .social-link[data-youtube-link]:hover { color: #FF0000; background: #FF000012; }
   .social-link[data-facebook-link]:hover { color: #1877F2; background: #1877F212; }
-  .social-link[data-tiktok-link]:hover { color: #010101; background: #01010112; }
+  .social-link[data-tiktok-link]:hover { color: #7b7676; background: #01010112; }
 
   /* active/click feedback */
   .social-link:active {
