@@ -114,6 +114,15 @@ async function loadBlogPost() {
         // ======================================
         // ARTICLE
         // ======================================
+        // Format date nicely
+            let formattedDate = blog.date;
+            if (blog.date && !isNaN(Date.parse(blog.date))) {
+                formattedDate = new Date(blog.date).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+            }
 
         container.innerHTML = `
 
@@ -150,7 +159,7 @@ async function loadBlogPost() {
                     </span>
 
                     <span>
-                        📅 ${blog.date}
+                        📅 ${formattedDate}
                     </span>
 
                 </div>
