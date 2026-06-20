@@ -780,8 +780,8 @@ p {
 /* ===== WhatsApp floating ===== */
 .wa-float {
   position: fixed;
-  bottom: 5px;
-  right: 5px;
+  bottom: 22px;
+  right: 22px;
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -793,6 +793,11 @@ p {
   box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
   font-size: 1.4rem;
   transition: var(--transition);
+}
+
+.wa-float i{
+  width: 45px;
+  height: 45px;
 }
 
 .wa-float:hover {
