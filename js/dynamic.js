@@ -82,6 +82,18 @@
                     config.social.youtube
                 );
             }
+            if (config.social.facebook) {
+                setHref(
+                    "[data-facebook-link]",
+                    config.social.facebook
+                );
+            }
+            if (config.social.tiktok) {
+                setHref(
+                    "[data-tiktok-link]",
+                    config.social.tiktok
+                );
+            }
         }
 
         // Contact Form
@@ -165,7 +177,9 @@
                     "sameAs": [
                         config.social.linkedin || "",
                         config.social.github || "",
-                        config.social.youtube || ""
+                        config.social.youtube || "",
+                        config.social.facebook || "",
+                        config.social.tiktok || ""
                     ].filter(Boolean)
                 },
                 null,

@@ -8,9 +8,11 @@ window.SITE_CONFIG = {
     country: "Pakistan",
 
     social: {
-        github: "https://github.com/yourusername",
-        linkedin: "https://linkedin.com/in/yourprofile",
-        youtube: "https://youtube.com/@lishaqsolutions"
+        github: "https://github.com/lishaqsolutions",
+        linkedin: "https://linkedin.com/in/lishaqsolutions",
+        youtube: "https://youtube.com/@lishaqsolutions",
+        facebook: "https://youtube.com/@lishaqsolutions",
+        tiktok: "https://youtube.com/@lishaqsolutions"
     },
 
     googleScript: {
