@@ -559,27 +559,6 @@ p {
   color: var(--text);
 }
 
-.socials {
-  display: flex;
-  gap: 10px;
-  margin-top: 16px;
-}
-
-.socials a {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  display: grid;
-  place-items: center;
-  background: rgba(20, 30, 70, 0.6);
-  border: 1px solid var(--border);
-  transition: var(--transition);
-  cursor: pointer;
-}
-
-.socials a:hover {
-  color: var(--primary);
-}
 
 .copyright {
   padding: 18px 0;
