@@ -822,3 +822,54 @@ p {
 
 
 
+  /* reset & base */
+  .socials {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    max-width: fit-content;
+    margin: 2rem auto;
+  }
+
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    background: white;
+    color: #1e293b;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.02);
+  }
+
+  /* brand colors on hover */
+  .whatsapp:hover { color: #25D366; background: #e8f5e9; border-color: #25D36640; }
+  .email:hover { color: #ea4335; background: #fce8e6; border-color: #ea433540; }
+  .github:hover { color: #181717; background: #f0f0f0; border-color: #18171740; }
+  .linkedin:hover { color: #0A66C2; background: #e3f0fa; border-color: #0A66C240; }
+  .youtube:hover { color: #FF0000; background: #fde8e8; border-color: #FF000040; }
+  .facebook:hover { color: #1877F2; background: #e4edfc; border-color: #1877F240; }
+  .tiktok:hover { color: #010101; background: #f2f2f2; border-color: #01010140; }
+
+  /* optional subtle lift */
+  .social-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  }
+
+  /* accessibility */
+  .social-link:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 3px;
+  }
