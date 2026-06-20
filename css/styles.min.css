@@ -808,12 +808,11 @@ p {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding: 0.7rem;
     background: #f8fafc;
     border-radius: 2rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     max-width: fit-content;
-    margin: 2rem auto;
   }
 
   .social-link {
