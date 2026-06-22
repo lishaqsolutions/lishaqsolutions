@@ -11,14 +11,7 @@
   will-change: transform;
 }
 
-.slider-track .card {
-  flex: 0 0 calc(25% - 18px);
-  min-width: calc(25% - 18px);
-  padding: 24px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-}
+
 
 .slider-btn {
   position: absolute;
