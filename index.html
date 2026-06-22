@@ -1,506 +1,570 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Dynamic Title -->
-    <title
-      data-site-title
-      data-page-title="Web Development Company in Karachi | Laravel, POS, E-commerce"
-    >
-      Web Development Company in Karachi | Laravel, POS, E-commerce
-    </title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Dynamic Description -->
-    <meta
-      name="description"
-      data-site-description
-      data-page-description="Professional web development in Karachi. متخصص in Laravel, POS systems, e-commerce & admin dashboards. Get fast, scalable websites. Contact now!"
-      content="Professional web development in Karachi."
-    />
+  <!-- Dynamic Title -->
+  <title data-site-title data-page-title="Web Development Company in Karachi | Laravel, POS, E-commerce">
+    Web Development Company in Karachi | Laravel, POS, E-commerce
+  </title>
 
-    <meta name="author" content="Muhammad Ishaq" />
+  <!-- Dynamic Description -->
+  <meta name="description" data-site-description
+    data-page-description="Professional web development in Karachi. متخصص in Laravel, POS systems, e-commerce & admin dashboards. Get fast, scalable websites. Contact now!"
+    content="Professional web development in Karachi." />
 
-    <!-- Open Graph -->
-    <meta
-      property="og:title"
-      content="Lishaq Solutions — Web Development, POS, E-commerce & Debugging"
-    />
-    <meta
-      property="og:description"
-      content="We build, fix, and scale systems that run your business. Custom web development, POS, inventory, e-commerce, landing pages, debugging & optimization."
-    />
-    <meta property="og:type" content="website" />
+  <meta name="author" content="Muhammad Ishaq" />
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:description" content="" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Lishaq Solutions — Web Development, POS, E-commerce & Debugging" />
+  <meta property="og:description"
+    content="We build, fix, and scale systems that run your business. Custom web development, POS, inventory, e-commerce, landing pages, debugging & optimization." />
+  <meta property="og:type" content="website" />
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="/lishaqsolutions/images/logo.png" type="image/x-icon" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:description" content="" />
 
-    <!-- Dynamic Canonical -->
-    <link rel="canonical" href="https://lishaqsolutions.com/" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/lishaqsolutions/images/logo.png" type="image/x-icon" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Dynamic Canonical -->
+  <link rel="canonical" href="https://lishaqsolutions.com/" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="/lishaqsolutions/css/styles.min.css" />
-    <style>
-     
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono&display=swap"
+    rel="stylesheet" />
 
+  <!-- CSS -->
+  <link rel="stylesheet" href="/lishaqsolutions/css/styles.min.css" />
+  <style>
+    /* Read more button */
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--primary, #2563eb);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: gap 0.3s ease;
+      position: relative;
+      z-index: 2;
+    }
 
-/* Read more button */
-.read-more {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--primary, #2563eb);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: gap 0.3s ease;
-  position: relative;
-  z-index: 2;
-}
+    .read-more i {
+      font-size: 0.75rem;
+      transition: transform 0.3s ease;
+    }
 
-.read-more i {
-  font-size: 0.75rem;
-  transition: transform 0.3s ease;
-}
+    .read-more:hover {
+      gap: 12px;
+    }
 
-.read-more:hover {
-  gap: 12px;
-}
-
-.read-more:hover i {
-  transform: translateX(4px);
-}
+    .read-more:hover i {
+      transform: translateX(4px);
+    }
 
 
 
-/* Responsive grid adjustments */
-@media (max-width: 1200px) {
-  .grid-4 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
+    /* Responsive grid adjustments */
+    @media (max-width: 1200px) {
+      .grid-4 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
 
-@media (max-width: 768px) {
-  .grid-4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+    @media (max-width: 768px) {
+      .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
 
-@media (max-width: 480px) {
-  .grid-4 {
-    grid-template-columns: 1fr;
-  }
-}
-    </style>
-  </head>
+    @media (max-width: 480px) {
+      .grid-4 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
 
-  <body>
-    <!-- Header -->
-    <div id="header"></div>
+<body>
+  <!-- Header -->
+  <div id="header"></div>
 
-    <!-- Main Content -->
-    <section class="hero">
-      <p>
-        <strong>
-          ✔ Free consultation | ✔ Fast delivery | ✔ WhatsApp support
-        </strong>
+  <!-- Main Content -->
+  <section class="hero">
+    <p>
+      <strong>
+        ✔ Free consultation | ✔ Fast delivery | ✔ WhatsApp support
+      </strong>
+    </p>
+
+    <div class="container">
+      <span class="hero-pill glass">
+        <span class="dot"></span>Available for new projects · 2026
+      </span>
+
+      <h1>
+        Web Development Company in
+        <span data-site-city>Karachi</span><br />
+        <span class="text-gradient">Laravel, POS & E-commerce Experts</span>
+      </h1>
+
+      <p style="margin-top: 20px">
+        <span data-site-name>Lishaq Solutions</span> is a web development
+        company in <span data-site-city>Karachi</span>,
+        <span data-site-country>Pakistan</span> specializing in Laravel
+        development, POS systems, inventory management software, e-commerce
+        websites, and custom admin dashboards.
       </p>
 
-      <div class="container">
-        <span class="hero-pill glass">
-          <span class="dot"></span>Available for new projects · 2026
-        </span>
+      <div class="hero-cta">
+        <a href="/lishaqsolutions/contact/" class="btn btn-primary">
+          Get Free Quote →
+        </a>
 
-        <h1>
-          Web Development Company in
-          <span data-site-city>Karachi</span><br />
-          <span class="text-gradient">Laravel, POS & E-commerce Experts</span>
-        </h1>
+        <a href="/lishaqsolutions/projects/" class="btn btn-ghost">
+          View Projects
+        </a>
+      </div>
 
-        <p style="margin-top: 20px">
-          <span data-site-name>Lishaq Solutions</span> is a web development
-          company in <span data-site-city>Karachi</span>,
-          <span data-site-country>Pakistan</span> specializing in Laravel
-          development, POS systems, inventory management software, e-commerce
-          websites, and custom admin dashboards.
+      <div class="trust">
+        <span>🛡 2+ Years Experience</span>
+        <span>⚡ Real Systems Delivered</span>
+        <span>⏱ Fast Turnaround</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">What we do</span>
+        <h2>Solutions that move the needle</h2>
+        <p>
+          Pick a service. We'll handle the technical mess so you can focus on
+          growth.
         </p>
+      </div>
 
-        <div class="hero-cta">
-          <a href="/lishaqsolutions/contact/" class="btn btn-primary">
-            Get Free Quote →
+      <div class="grid grid-4">
+        <!-- Card 1: POS Systems -->
+        <div class="card svc-card reveal">
+          <a href="/lishaqsolutions/services/pos-system/" class="card-link">
+            <div class="svc-icon">
+              <i class="fas fa-store" aria-hidden="true"></i>
+            </div>
+            <h3>POS Systems</h3>
+            <p>Fast, reliable point-of-sale that grows with your shop.</p>
           </a>
+          <div class="card-footer">
+            <a href="/lishaqsolutions/services/pos-system/" class="read-more">
+              Read more <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
 
-          <a href="/lishaqsolutions/projects/" class="btn btn-ghost">
-            View Projects
+        <!-- Card 2: Inventory Systems -->
+        <div class="card svc-card reveal">
+          <a href="/lishaqsolutions/services/inventory-management-system/" class="card-link">
+            <div class="svc-icon">
+              <i class="fas fa-boxes" aria-hidden="true"></i>
+            </div>
+            <h3>Inventory Systems</h3>
+            <p>Track stock, suppliers, and sales in real time.</p>
           </a>
-        </div>
-
-        <div class="trust">
-          <span>🛡 2+ Years Experience</span>
-          <span>⚡ Real Systems Delivered</span>
-          <span>⏱ Fast Turnaround</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">What we do</span>
-          <h2>Solutions that move the needle</h2>
-          <p>
-            Pick a service. We'll handle the technical mess so you can focus on
-            growth.
-          </p>
-        </div>
-
-        <div class="grid grid-4">
-  <!-- Card 1: POS Systems -->
-  <div class="card svc-card reveal">
-    <a href="/lishaqsolutions/services/pos-system/" class="card-link">
-      <div class="svc-icon">
-        <i class="fas fa-store" aria-hidden="true"></i>
-      </div>
-      <h3>POS Systems</h3>
-      <p>Fast, reliable point-of-sale that grows with your shop.</p>
-    </a>
-    <div class="card-footer">
-      <a href="/lishaqsolutions/services/pos-system/" class="read-more">
-        Read more <i class="fas fa-arrow-right" aria-hidden="true"></i>
-      </a>
-    </div>
-  </div>
-
-  <!-- Card 2: Inventory Systems -->
-  <div class="card svc-card reveal">
-    <a href="/lishaqsolutions/services/inventory-management-system/" class="card-link">
-      <div class="svc-icon">
-        <i class="fas fa-boxes" aria-hidden="true"></i>
-      </div>
-      <h3>Inventory Systems</h3>
-      <p>Track stock, suppliers, and sales in real time.</p>
-    </a>
-    <div class="card-footer">
-      <a href="/lishaqsolutions/services/inventory-management-system/" class="read-more">
-        Read more <i class="fas fa-arrow-right" aria-hidden="true"></i>
-      </a>
-    </div>
-  </div>
-
-  <!-- Card 3: Admin Dashboards -->
-  <div class="card svc-card reveal">
-    <a href="/lishaqsolutions/services/admin-dashboards/" class="card-link">
-      <div class="svc-icon">
-        <i class="fas fa-chart-pie" aria-hidden="true"></i>
-      </div>
-      <h3>Admin Dashboards</h3>
-      <p>Custom dashboards built around how you actually work.</p>
-    </a>
-    <div class="card-footer">
-      <a href="/lishaqsolutions/services/admin-dashboards/" class="read-more">
-        Read more <i class="fas fa-arrow-right" aria-hidden="true"></i>
-      </a>
-    </div>
-  </div>
-
-  <!-- Card 4: E-commerce Stores -->
-  <div class="card svc-card reveal">
-    <a href="/lishaqsolutions/services/ecommerce-development/" class="card-link">
-      <div class="svc-icon">
-        <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-      </div>
-      <h3>E-commerce Stores</h3>
-      <p>Full online stores designed to sell, not just exist.</p>
-    </a>
-    <div class="card-footer">
-      <a href="/lishaqsolutions/services/ecommerce-development/" class="read-more">
-        Read more <i class="fas fa-arrow-right" aria-hidden="true"></i>
-      </a>
-    </div>
-  </div>
-
-  <!-- Card 5: Landing Pages -->
-  <div class="card svc-card reveal">
-    <a href="/lishaqsolutions/services/landing-page-design/" class="card-link">
-      <div class="svc-icon">
-        <i class="fas fa-rocket" aria-hidden="true"></i>
-      </div>
-      <h3>Landing Pages</h3>
-      <p>High-converting pages built for paid ads &amp; launches.</p>
-    </a>
-    <div class="card-footer">
-      <a href="/lishaqsolutions/services/landing-page-design/" class="read-more">
-        Read more <i class="fas fa-arrow-right" aria-hidden="true"></i>
-      </a>
-    </div>
-  </div>
-
-  <!-- Card 6: Bug Fixing -->
-  <div class="card svc-card reveal">
-    <a href="/lishaqsolutions/services/bug-fixing/" class="card-link">
-      <div class="svc-icon">
-        <i class="fas fa-bug" aria-hidden="true"></i>
-      </div>
-      <h3>Bug Fixing</h3>
-      <p>Stop losing customers to broken pages and errors.</p>
-    </a>
-    <div class="card-footer">
-      <a href="/lishaqsolutions/services/bug-fixing/" class="read-more">
-        Read more <i class="fas fa-arrow-right" aria-hidden="true"></i>
-      </a>
-    </div>
-  </div>
-
-  <!-- Card 7: Rebuild & Optimize -->
-  <div class="card svc-card reveal">
-    <a href="/lishaqsolutions/services/website-optimization/" class="card-link">
-      <div class="svc-icon">
-        <i class="fas fa-sync-alt" aria-hidden="true"></i>
-      </div>
-      <h3>Rebuild &amp; Optimize</h3>
-      <p>Modernize old sites — faster, safer, sharper.</p>
-    </a>
-    <div class="card-footer">
-      <a href="/lishaqsolutions/services/website-optimization/" class="read-more">
-        Read more <i class="fas fa-arrow-right" aria-hidden="true"></i>
-      </a>
-    </div>
-  </div>
-
-  <!-- Card 8: Laravel Development -->
-  <div class="card svc-card reveal">
-    <a href="/lishaqsolutions/services/laravel-development/" class="card-link">
-      <div class="svc-icon">
-        <i class="fab fa-laravel" aria-hidden="true"></i>
-      </div>
-      <h3>Laravel Development</h3>
-      <p>Build your website on the powerful Laravel Framework.</p>
-    </a>
-    <div class="card-footer">
-      <a href="/lishaqsolutions/services/laravel-development/" class="read-more">
-        Read more <i class="fas fa-arrow-right" aria-hidden="true"></i>
-      </a>
-    </div>
-  </div>
-
-  <!-- Card 9: Coding Guidance -->
-  <div class="card svc-card reveal">
-    <a href="/lishaqsolutions/services/coding-mentorship/" class="card-link">
-      <div class="svc-icon">
-        <i class="fas fa-chalkboard-teacher" aria-hidden="true"></i>
-      </div>
-      <h3>Coding Guidance</h3>
-      <p>1-on-1 mentorship and code reviews for developers.</p>
-    </a>
-    <div class="card-footer">
-      <a href="/lishaqsolutions/services/coding-mentorship/" class="read-more">
-        Read more <i class="fas fa-arrow-right" aria-hidden="true"></i>
-      </a>
-    </div>
-  </div>
-
-  <!-- Card 10: Tutorials -->
-  <div class="card svc-card reveal">
-    <a href="/lishaqsolutions/blog/" class="card-link">
-      <div class="svc-icon">
-        <i class="fas fa-book-open" aria-hidden="true"></i>
-      </div>
-      <h3>Tutorials</h3>
-      <p>Step-by-step tutorials for new learners and junior developers.</p>
-    </a>
-    <div class="card-footer">
-      <a href="/lishaqsolutions/blog/" class="read-more">
-        Read more <i class="fas fa-arrow-right" aria-hidden="true"></i>
-      </a>
-    </div>
-  </div>
-</div>
-
-      </div>
-    </section>
-
-    <!-- Problems & Promise -->
-    <section class="section">
-      <div class="container grid grid-2" style="align-items: center; gap: 50px">
-        <div class="reveal">
-          <span class="eyebrow">Sound familiar?</span>
-          <h2>
-            Tech problems are
-            <span class="text-gradient">costing you money</span>
-          </h2>
-
-          <p class="muted" style="margin: 16px 0 24px">
-            Every bug, every slow page, every broken checkout is a customer
-            walking away. You shouldn't have to fight your own tools.
-          </p>
-
-          <div class="problem-item glass">
-            <span class="problem-badge">!</span>
-            <span>Website not working properly?</span>
-          </div>
-
-          <div class="problem-item glass">
-            <span class="problem-badge">!</span>
-            <span>Losing customers due to slow systems?</span>
-          </div>
-
-          <div class="problem-item glass">
-            <span class="problem-badge">!</span>
-            <span>Errors and bugs hurting your business?</span>
-          </div>
-
-          <div class="problem-item glass">
-            <span class="problem-badge">!</span>
-            <span>Need a professional online store or landing page?</span>
+          <div class="card-footer">
+            <a href="/lishaqsolutions/services/inventory-management-system/" class="read-more">
+              Read more <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
 
-        <div class="card reveal">
-          <span class="eyebrow">Our promise</span>
-
-          <h2 style="font-size: 1.7rem">
-            We don't just build websites —
-            <span class="text-gradient">we solve real business problems.</span>
-          </h2>
-
-          <div class="grid grid-2" style="margin-top: 22px">
-            <div class="glass" style="padding: 14px; border-radius: 12px">
-              🛡 Reliability
+        <!-- Card 3: Admin Dashboards -->
+        <div class="card svc-card reveal">
+          <a href="/lishaqsolutions/services/admin-dashboards/" class="card-link">
+            <div class="svc-icon">
+              <i class="fas fa-chart-pie" aria-hidden="true"></i>
             </div>
-            <div class="glass" style="padding: 14px; border-radius: 12px">
-              ⚡ Speed
+            <h3>Admin Dashboards</h3>
+            <p>Custom dashboards built around how you actually work.</p>
+          </a>
+          <div class="card-footer">
+            <a href="/lishaqsolutions/services/admin-dashboards/" class="read-more">
+              Read more <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 4: E-commerce Stores -->
+        <div class="card svc-card reveal">
+          <a href="/lishaqsolutions/services/ecommerce-development/" class="card-link">
+            <div class="svc-icon">
+              <i class="fas fa-shopping-cart" aria-hidden="true"></i>
             </div>
-            <div class="glass" style="padding: 14px; border-radius: 12px">
-              🚀 Scalability
+            <h3>E-commerce Stores</h3>
+            <p>Full online stores designed to sell, not just exist.</p>
+          </a>
+          <div class="card-footer">
+            <a href="/lishaqsolutions/services/ecommerce-development/" class="read-more">
+              Read more <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 5: Landing Pages -->
+        <div class="card svc-card reveal">
+          <a href="/lishaqsolutions/services/landing-page-design/" class="card-link">
+            <div class="svc-icon">
+              <i class="fas fa-rocket" aria-hidden="true"></i>
             </div>
-            <div class="glass" style="padding: 14px; border-radius: 12px">
-              💬 Support
+            <h3>Landing Pages</h3>
+            <p>High-converting pages built for paid ads &amp; launches.</p>
+          </a>
+          <div class="card-footer">
+            <a href="/lishaqsolutions/services/landing-page-design/" class="read-more">
+              Read more <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 6: Bug Fixing -->
+        <div class="card svc-card reveal">
+          <a href="/lishaqsolutions/services/bug-fixing/" class="card-link">
+            <div class="svc-icon">
+              <i class="fas fa-bug" aria-hidden="true"></i>
             </div>
+            <h3>Bug Fixing</h3>
+            <p>Stop losing customers to broken pages and errors.</p>
+          </a>
+          <div class="card-footer">
+            <a href="/lishaqsolutions/services/bug-fixing/" class="read-more">
+              Read more <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 7: Rebuild & Optimize -->
+        <div class="card svc-card reveal">
+          <a href="/lishaqsolutions/services/website-optimization/" class="card-link">
+            <div class="svc-icon">
+              <i class="fas fa-sync-alt" aria-hidden="true"></i>
+            </div>
+            <h3>Rebuild &amp; Optimize</h3>
+            <p>Modernize old sites — faster, safer, sharper.</p>
+          </a>
+          <div class="card-footer">
+            <a href="/lishaqsolutions/services/website-optimization/" class="read-more">
+              Read more <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 8: Laravel Development -->
+        <div class="card svc-card reveal">
+          <a href="/lishaqsolutions/services/laravel-development/" class="card-link">
+            <div class="svc-icon">
+              <i class="fab fa-laravel" aria-hidden="true"></i>
+            </div>
+            <h3>Laravel Development</h3>
+            <p>Build your website on the powerful Laravel Framework.</p>
+          </a>
+          <div class="card-footer">
+            <a href="/lishaqsolutions/services/laravel-development/" class="read-more">
+              Read more <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 9: Coding Guidance -->
+        <div class="card svc-card reveal">
+          <a href="/lishaqsolutions/services/coding-mentorship/" class="card-link">
+            <div class="svc-icon">
+              <i class="fas fa-chalkboard-teacher" aria-hidden="true"></i>
+            </div>
+            <h3>Coding Guidance</h3>
+            <p>1-on-1 mentorship and code reviews for developers.</p>
+          </a>
+          <div class="card-footer">
+            <a href="/lishaqsolutions/services/coding-mentorship/" class="read-more">
+              Read more <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 10: Tutorials -->
+        <div class="card svc-card reveal">
+          <a href="/lishaqsolutions/blog/" class="card-link">
+            <div class="svc-icon">
+              <i class="fas fa-book-open" aria-hidden="true"></i>
+            </div>
+            <h3>Tutorials</h3>
+            <p>Step-by-step tutorials for new learners and junior developers.</p>
+          </a>
+          <div class="card-footer">
+            <a href="/lishaqsolutions/blog/" class="read-more">
+              Read more <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Featured Work -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Featured work</span>
-          <h2>Real systems, real results</h2>
-        </div>
+    </div>
+  </section>
 
-        <div class="grid grid-3">
-          <!-- Your project cards remain unchanged -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Videos -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Watch & learn</span>
-          <h2>Demos, tutorials & explanations</h2>
-        </div>
-
-        <div class="grid grid-2">
-          <div class="video-wrap">
-            <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="Demo"
-              allowfullscreen
-            ></iframe>
-          </div>
-
-          <div class="video-wrap">
-            <iframe
-              src="https://www.youtube.com/embed/5qap5aO4i9A"
-              title="Tutorial"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Client love</span>
-          <h2>What people say</h2>
-        </div>
-
-        <div class="grid grid-3">
-          <!-- Your testimonial cards remain unchanged -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="container">
-      <div class="final-cta glass">
-        <span class="eyebrow">Let's talk</span>
-
+  <!-- Problems & Promise -->
+  <section class="section">
+    <div class="container grid grid-2" style="align-items: center; gap: 50px">
+      <div class="reveal">
+        <span class="eyebrow">Sound familiar?</span>
         <h2>
-          Let's solve your
-          <span class="text-gradient">problem</span> today
+          Tech problems are
+          <span class="text-gradient">costing you money</span>
         </h2>
 
-        <p class="muted" style="max-width: 520px; margin: 14px auto 0">
-          Tell us about your project. You'll get a clear, honest plan within 24
-          hours — no jargon, no pressure.
+        <p class="muted" style="margin: 16px 0 24px">
+          Every bug, every slow page, every broken checkout is a customer
+          walking away. You shouldn't have to fight your own tools.
         </p>
 
-        <div class="hero-cta" style="margin-top: 28px">
-          <a href="/lishaqsolutions/contact/" class="btn btn-primary">
-            Contact Now →
-          </a>
+        <div class="problem-item glass">
+          <span class="problem-badge">!</span>
+          <span>Website not working properly?</span>
+        </div>
 
-          <a data-whatsapp-link class="btn btn-ghost">
-            💬 WhatsApp Us
-          </a>
+        <div class="problem-item glass">
+          <span class="problem-badge">!</span>
+          <span>Losing customers due to slow systems?</span>
+        </div>
+
+        <div class="problem-item glass">
+          <span class="problem-badge">!</span>
+          <span>Errors and bugs hurting your business?</span>
+        </div>
+
+        <div class="problem-item glass">
+          <span class="problem-badge">!</span>
+          <span>Need a professional online store or landing page?</span>
         </div>
       </div>
-    </section>
 
-    <!-- Footer -->
-    <div id="footer"></div>
+      <div class="card reveal">
+        <span class="eyebrow">Our promise</span>
 
-    <!-- Floating WhatsApp Button -->
-    <a data-whatsapp-link
-      aria-label="WhatsApp Chat"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="wa-float">
-      <i class="fab fa-whatsapp"></i>
-      <span class="notification-dot"></span>
-    </a>
+        <h2 style="font-size: 1.7rem">
+          We don't just build websites —
+          <span class="text-gradient">we solve real business problems.</span>
+        </h2>
 
-    <!-- Scripts -->
-    <script src="/lishaqsolutions/js/components.js"></script>
-    <script src="/lishaqsolutions/js/config.js"></script>
-    <script src="/lishaqsolutions/js/dynamic.js"></script>
-    <script src="/lishaqsolutions/js/main.min.js"></script>
+        <div class="grid grid-2" style="margin-top: 22px">
+          <div class="glass" style="padding: 14px; border-radius: 12px">
+            🛡 Reliability
+          </div>
+          <div class="glass" style="padding: 14px; border-radius: 12px">
+            ⚡ Speed
+          </div>
+          <div class="glass" style="padding: 14px; border-radius: 12px">
+            🚀 Scalability
+          </div>
+          <div class="glass" style="padding: 14px; border-radius: 12px">
+            💬 Support
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Dynamic Local Business Schema -->
-    <script
-      id="local-business-schema"
-      type="application/ld+json"
-    ></script>
-  </body>
+  <!-- Featured Work -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Featured work</span>
+        <h2>Real systems, real results</h2>
+      </div>
+
+      <div class="grid grid-3">
+        <!-- Your project cards remain unchanged -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Watch & learn</span>
+        <h2>Demos, tutorials & explanations</h2>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Demo" allowfullscreen></iframe>
+        </div>
+
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/5qap5aO4i9A" title="Tutorial" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Client love</span>
+        <h2>What people say</h2>
+      </div>
+
+      <div class="grid grid-3">
+        <article class="card">
+          <p>
+            "We needed a custom inventory system because managing stock in Excel was becoming impossible. Muhammad
+            delivered exactly what we needed and explained everything clearly. Our daily operations are now much
+            easier."
+          </p>
+
+          <div style="margin-top:16px">
+            <strong>Ahmed Raza</strong><br>
+            <span class="muted">Business Owner, Karachi</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <p>
+            "Our Laravel project had several issues that previous developers couldn't solve. The bugs were fixed quickly
+            and the system became much more stable. Communication throughout the project was excellent."
+          </p>
+
+          <div style="margin-top:16px">
+            <strong>Usman Khan</strong><br>
+            <span class="muted">Software Consultant, Lahore</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <p>
+            "We wanted a professional business website that could represent our company properly online. The final
+            website looks modern, loads fast, and has already helped us generate new inquiries."
+          </p>
+
+          <div style="margin-top:16px">
+            <strong>Bilal Hussain</strong><br>
+            <span class="muted">Managing Director, Islamabad</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <p>
+            "The POS system developed for our store helped us track sales and inventory much better than before. The
+            reporting features alone have saved us a lot of manual work."
+          </p>
+
+          <div style="margin-top:16px">
+            <strong>Sajid Ali</strong><br>
+            <span class="muted">Retail Store Owner, Peshawar</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <p>
+            "I received Laravel mentorship and project guidance while building my final year project. Complex concepts
+            were explained in a simple way and I gained confidence working on real-world applications."
+          </p>
+
+          <div style="margin-top:16px">
+            <strong>Hamza Shah</strong><br>
+            <span class="muted">BS IT Student, Karachi</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- why business choose lishaq solutions -->
+  <section class="section">
+    <div class="container">
+      <div class="card text-center">
+        <h3>Why Businesses Choose Lishaq Solutions</h3>
+
+        <div class="grid grid-4" style="margin-top:24px">
+          <div>
+            <strong>2+ Years</strong>
+            <p class="muted">Development Experience</p>
+          </div>
+
+          <div>
+            <strong>Laravel & PHP</strong>
+            <p class="muted">Specialized Expertise</p>
+          </div>
+
+          <div>
+            <strong>Custom Solutions</strong>
+            <p class="muted">Built For Your Business</p>
+          </div>
+
+          <div>
+            <strong>Direct Communication</strong>
+            <p class="muted">No Middlemen</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="container">
+    <div class="final-cta glass">
+      <span class="eyebrow">Let's talk</span>
+
+      <h2>
+        Let's solve your
+        <span class="text-gradient">problem</span> today
+      </h2>
+
+      <p class="muted" style="max-width: 520px; margin: 14px auto 0">
+        Tell us about your project. You'll get a clear, honest plan within 24
+        hours — no jargon, no pressure.
+      </p>
+
+      <div class="hero-cta" style="margin-top: 28px">
+        <a href="/lishaqsolutions/contact/" class="btn btn-primary">
+          Contact Now →
+        </a>
+
+        <a data-whatsapp-link class="btn btn-ghost">
+          💬 WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- Floating WhatsApp Button -->
+  <a data-whatsapp-link aria-label="WhatsApp Chat" target="_blank" rel="noopener noreferrer" class="wa-float">
+    <i class="fab fa-whatsapp"></i>
+    <span class="notification-dot"></span>
+  </a>
+
+  <!-- Scripts -->
+  <script src="/lishaqsolutions/js/components.js"></script>
+  <script src="/lishaqsolutions/js/config.js"></script>
+  <script src="/lishaqsolutions/js/dynamic.js"></script>
+  <script src="/lishaqsolutions/js/main.min.js"></script>
+
+  <!-- Dynamic Local Business Schema -->
+  <script id="local-business-schema" type="application/ld+json"></script>
+</body>
+
 </html>
