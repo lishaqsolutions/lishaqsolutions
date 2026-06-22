@@ -1,41 +1,45 @@
+/* ===== Wrapper to contain the absolute buttons ===== */
+.testimonial-slider-wrapper {
+  position: relative;
+  padding-top: 70px; /* Creates space for the buttons at top */
+}
+
 .testimonial-slider {
   position: relative;
   overflow: hidden;
   padding: 10px 0;
-  margin-top: 20px;
 }
 
 /* ===== Arrow buttons at top corners ===== */
 .slider-btn {
   position: absolute;
-  top: -58px; /* Adjust based on your heading height */
-  background: var(--primary);
-  border: 1px solid var(--primary);
-  border-radius: 8px;
-  width: 40px;
-  height: 40px;
+  top: 0;
+  background: var(--primary, #2563eb);
+  border: 2px solid var(--primary, #2563eb);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  color: var(--text, #1a1a2e);
+  color: #ffffff;
   padding: 0;
   z-index: 10;
-  backdrop-filter: blur(10px);
-  box-shadow: var(--shadow-card, 0 2px 8px rgba(0,0,0,0.06));
-}
-
-.slider-btn:hover {
-  background: var(--primary, #2563eb);
-  color: #fff;
-  border-color: var(--primary, #2563eb);
-  transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
+.slider-btn:hover {
+  background: #ffffff;
+  color: var(--primary, #2563eb);
+  border-color: var(--primary, #2563eb);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
 .slider-btn:active {
-  transform: scale(0.95);
+  transform: scale(0.92);
 }
 
 .slider-btn.prev {
@@ -47,8 +51,9 @@
 }
 
 .slider-btn svg {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
 }
 
 /* ===== Slider Track ===== */
@@ -88,6 +93,20 @@
     flex: 0 0 calc(50% - 12px);
     min-width: calc(50% - 12px);
   }
+  
+  .testimonial-slider-wrapper {
+    padding-top: 60px;
+  }
+  
+  .slider-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .slider-btn svg {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -96,8 +115,11 @@
     min-width: calc(100% - 0px);
   }
   
+  .testimonial-slider-wrapper {
+    padding-top: 50px;
+  }
+  
   .slider-btn {
-    top: -50px;
     width: 36px;
     height: 36px;
   }
