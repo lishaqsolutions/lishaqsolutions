@@ -41,9 +41,8 @@
     rel="stylesheet" />
 
   <!-- CSS -->
-   <!-- Using Slick Slider CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
   <link rel="stylesheet" href="/lishaqsolutions/css/styles.min.css" />
+  <link rel="stylesheet" href="/lishaqsolutions/css/slider.min.css">
   <style>
     /* Read more button */
     .read-more {
@@ -417,81 +416,101 @@
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Client love</span>
-        <h2>What people say</h2>
-      </div>
-
-      <div class="grid grid-3">
-        <div class="testimonial-slider-slick">
-          <article class="card">
-            <p>
-              "We needed a custom inventory system because managing stock in Excel was becoming impossible. Muhammad
-              delivered exactly what we needed and explained everything clearly. Our daily operations are now much
-              easier."
-            </p>
-
-            <div style="margin-top:16px">
-              <strong>Ahmed Raza</strong><br>
-              <span class="muted">Business Owner, Karachi</span>
-            </div>
-          </article>
-
-          <article class="card">
-            <p>
-              "Our Laravel project had several issues that previous developers couldn't solve. The bugs were fixed quickly
-              and the system became much more stable. Communication throughout the project was excellent."
-            </p>
-
-            <div style="margin-top:16px">
-              <strong>Usman Khan</strong><br>
-              <span class="muted">Software Consultant, Lahore</span>
-            </div>
-          </article>
-
-          <article class="card">
-            <p>
-              "We wanted a professional business website that could represent our company properly online. The final
-              website looks modern, loads fast, and has already helped us generate new inquiries."
-            </p>
-
-            <div style="margin-top:16px">
-              <strong>Bilal Hussain</strong><br>
-              <span class="muted">Managing Director, Islamabad</span>
-            </div>
-          </article>
-
-          <article class="card">
-            <p>
-              "The POS system developed for our store helped us track sales and inventory much better than before. The
-              reporting features alone have saved us a lot of manual work."
-            </p>
-
-            <div style="margin-top:16px">
-              <strong>Sajid Ali</strong><br>
-              <span class="muted">Retail Store Owner, Peshawar</span>
-            </div>
-          </article>
-
-          <article class="card">
-            <p>
-              "I received Laravel mentorship and project guidance while building my final year project. Complex concepts
-              were explained in a simple way and I gained confidence working on real-world applications."
-            </p>
-
-            <div style="margin-top:16px">
-              <strong>Hamza Shah</strong><br>
-              <span class="muted">BS IT Student, Karachi</span>
-            </div>
-          </article>
-        </div>
-
-      </div>
+  <!-- Testimonials Slider -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Client love</span>
+      <h2>What people say</h2>
     </div>
-  </section>
+
+    <div class="testimonial-slider">
+      <div class="slider-track" id="sliderTrack">
+        <!-- Card 1 -->
+        <article class="card">
+          <p>"We needed a custom inventory system because managing stock in Excel was becoming impossible. Muhammad delivered exactly what we needed and explained everything clearly. Our daily operations are now much easier."</p>
+          <div style="margin-top:16px">
+            <strong>Ahmed Raza</strong><br>
+            <span class="muted">Business Owner, Karachi</span>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card">
+          <p>"Our Laravel project had several issues that previous developers couldn't solve. The bugs were fixed quickly and the system became much more stable. Communication throughout the project was excellent."</p>
+          <div style="margin-top:16px">
+            <strong>Usman Khan</strong><br>
+            <span class="muted">Software Consultant, Lahore</span>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card">
+          <p>"We wanted a professional business website that could represent our company properly online. The final website looks modern, loads fast, and has already helped us generate new inquiries."</p>
+          <div style="margin-top:16px">
+            <strong>Bilal Hussain</strong><br>
+            <span class="muted">Managing Director, Islamabad</span>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card">
+          <p>"The POS system developed for our store helped us track sales and inventory much better than before. The reporting features alone have saved us a lot of manual work."</p>
+          <div style="margin-top:16px">
+            <strong>Sajid Ali</strong><br>
+            <span class="muted">Retail Store Owner, Peshawar</span>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="card">
+          <p>"I received Laravel mentorship and project guidance while building my final year project. Complex concepts were explained in a simple way and I gained confidence working on real-world applications."</p>
+          <div style="margin-top:16px">
+            <strong>Hamza Shah</strong><br>
+            <span class="muted">BS IT Student, Karachi</span>
+          </div>
+        </article>
+
+        <!-- Duplicate first 4 cards for seamless infinite loop -->
+        <article class="card">
+          <p>"We needed a custom inventory system because managing stock in Excel was becoming impossible. Muhammad delivered exactly what we needed and explained everything clearly. Our daily operations are now much easier."</p>
+          <div style="margin-top:16px">
+            <strong>Ahmed Raza</strong><br>
+            <span class="muted">Business Owner, Karachi</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <p>"Our Laravel project had several issues that previous developers couldn't solve. The bugs were fixed quickly and the system became much more stable. Communication throughout the project was excellent."</p>
+          <div style="margin-top:16px">
+            <strong>Usman Khan</strong><br>
+            <span class="muted">Software Consultant, Lahore</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <p>"We wanted a professional business website that could represent our company properly online. The final website looks modern, loads fast, and has already helped us generate new inquiries."</p>
+          <div style="margin-top:16px">
+            <strong>Bilal Hussain</strong><br>
+            <span class="muted">Managing Director, Islamabad</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <p>"The POS system developed for our store helped us track sales and inventory much better than before. The reporting features alone have saved us a lot of manual work."</p>
+          <div style="margin-top:16px">
+            <strong>Sajid Ali</strong><br>
+            <span class="muted">Retail Store Owner, Peshawar</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- Controls -->
+      <button class="slider-btn prev" onclick="slideTestimonials(-1)">‹</button>
+      <button class="slider-btn next" onclick="slideTestimonials(1)">›</button>
+    </div>
+  </div>
+</section>
 
 
   <!-- why business choose lishaq solutions -->
@@ -566,22 +585,7 @@
   <script src="/lishaqsolutions/js/config.js"></script>
   <script src="/lishaqsolutions/js/dynamic.js"></script>
   <script src="/lishaqsolutions/js/main.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-<script>
-  $('.testimonial-slider-slick').slick({
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    arrows: true,
-    dots: true,
-    responsive: [
-      { breakpoint: 992, settings: { slidesToShow: 2 } },
-      { breakpoint: 576, settings: { slidesToShow: 1 } }
-    ]
-  });
-</script>
+  <script src="/lishaqsolutions/js/slider.min.js"></script>
 
   <!-- Dynamic Local Business Schema -->
   <script id="local-business-schema" type="application/ld+json"></script>
