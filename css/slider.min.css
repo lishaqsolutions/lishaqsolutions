@@ -43,7 +43,7 @@
 }
 
 .slider-btn.prev {
-  left: 0;
+  right: 5;
 }
 
 .slider-btn.next {
