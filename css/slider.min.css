@@ -100,29 +100,3 @@
 
 
 
-.slider-btn:hover {
-  background: var(--primary, #2563eb);
-  color: #fff;
-}
-
-.slider-btn.prev {
-  left: -20px;
-}
-
-.slider-btn.next {
-  right: -20px;
-}
-
-@media (max-width: 992px) {
-  .slider-track .card {
-    flex: 0 0 calc(50% - 12px);
-    min-width: calc(50% - 12px);
-  }
-}
-
-@media (max-width: 576px) {
-  .slider-track .card {
-    flex: 0 0 calc(100% - 0px);
-    min-width: calc(100% - 0px);
-  }
-}
