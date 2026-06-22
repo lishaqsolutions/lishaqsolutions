@@ -420,32 +420,30 @@
   <section class="section">
     <div class="container">
       <div class="section-head">
-        <div>
-          <span class="eyebrow">Client love</span>
-          <h2>What people say</h2>
-        </div>
-
-        <div class="slider-controls">
-          <button class="slider-btn prev" onclick="slideTestimonials(-1)">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M15 18l-6-6 6-6" />
-            </svg>
-          </button>
-          <button class="slider-btn next" onclick="slideTestimonials(1)">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M9 18l6-6-6-6" />
-            </svg>
-          </button>
-        </div>
+        <span class="eyebrow">Client love</span>
+        <h2>What people say</h2>
       </div>
 
       <div class="testimonial-slider">
+        <!-- Arrow buttons at top left and right corners -->
+        <button class="slider-btn prev" onclick="slideTestimonials(-1)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5"/>
+            <path d="M12 19l-7-7 7-7"/>
+          </svg>
+        </button>
+        
+        <button class="slider-btn next" onclick="slideTestimonials(1)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"/>
+            <path d="M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+
         <div class="slider-track" id="sliderTrack">
           <!-- Card 1 -->
           <article class="card">
-            <p>"We needed a custom inventory system because managing stock in Excel was becoming impossible. Muhammad
-              delivered exactly what we needed and explained everything clearly. Our daily operations are now much
-              easier."</p>
+            <p>"We needed a custom inventory system because managing stock in Excel was becoming impossible. Muhammad delivered exactly what we needed and explained everything clearly. Our daily operations are now much easier."</p>
             <div style="margin-top:16px">
               <strong>Ahmed Raza</strong><br>
               <span class="muted">Business Owner, Karachi</span>
@@ -454,8 +452,7 @@
 
           <!-- Card 2 -->
           <article class="card">
-            <p>"Our Laravel project had several issues that previous developers couldn't solve. The bugs were fixed
-              quickly and the system became much more stable. Communication throughout the project was excellent."</p>
+            <p>"Our Laravel project had several issues that previous developers couldn't solve. The bugs were fixed quickly and the system became much more stable. Communication throughout the project was excellent."</p>
             <div style="margin-top:16px">
               <strong>Usman Khan</strong><br>
               <span class="muted">Software Consultant, Lahore</span>
@@ -464,8 +461,7 @@
 
           <!-- Card 3 -->
           <article class="card">
-            <p>"We wanted a professional business website that could represent our company properly online. The final
-              website looks modern, loads fast, and has already helped us generate new inquiries."</p>
+            <p>"We wanted a professional business website that could represent our company properly online. The final website looks modern, loads fast, and has already helped us generate new inquiries."</p>
             <div style="margin-top:16px">
               <strong>Bilal Hussain</strong><br>
               <span class="muted">Managing Director, Islamabad</span>
@@ -474,8 +470,7 @@
 
           <!-- Card 4 -->
           <article class="card">
-            <p>"The POS system developed for our store helped us track sales and inventory much better than before. The
-              reporting features alone have saved us a lot of manual work."</p>
+            <p>"The POS system developed for our store helped us track sales and inventory much better than before. The reporting features alone have saved us a lot of manual work."</p>
             <div style="margin-top:16px">
               <strong>Sajid Ali</strong><br>
               <span class="muted">Retail Store Owner, Peshawar</span>
@@ -484,8 +479,7 @@
 
           <!-- Card 5 -->
           <article class="card">
-            <p>"I received Laravel mentorship and project guidance while building my final year project. Complex
-              concepts were explained in a simple way and I gained confidence working on real-world applications."</p>
+            <p>"I received Laravel mentorship and project guidance while building my final year project. Complex concepts were explained in a simple way and I gained confidence working on real-world applications."</p>
             <div style="margin-top:16px">
               <strong>Hamza Shah</strong><br>
               <span class="muted">BS IT Student, Karachi</span>
@@ -494,9 +488,7 @@
 
           <!-- Duplicate first 4 cards for seamless infinite loop -->
           <article class="card">
-            <p>"We needed a custom inventory system because managing stock in Excel was becoming impossible. Muhammad
-              delivered exactly what we needed and explained everything clearly. Our daily operations are now much
-              easier."</p>
+            <p>"We needed a custom inventory system because managing stock in Excel was becoming impossible. Muhammad delivered exactly what we needed and explained everything clearly. Our daily operations are now much easier."</p>
             <div style="margin-top:16px">
               <strong>Ahmed Raza</strong><br>
               <span class="muted">Business Owner, Karachi</span>
@@ -504,8 +496,7 @@
           </article>
 
           <article class="card">
-            <p>"Our Laravel project had several issues that previous developers couldn't solve. The bugs were fixed
-              quickly and the system became much more stable. Communication throughout the project was excellent."</p>
+            <p>"Our Laravel project had several issues that previous developers couldn't solve. The bugs were fixed quickly and the system became much more stable. Communication throughout the project was excellent."</p>
             <div style="margin-top:16px">
               <strong>Usman Khan</strong><br>
               <span class="muted">Software Consultant, Lahore</span>
@@ -513,8 +504,7 @@
           </article>
 
           <article class="card">
-            <p>"We wanted a professional business website that could represent our company properly online. The final
-              website looks modern, loads fast, and has already helped us generate new inquiries."</p>
+            <p>"We wanted a professional business website that could represent our company properly online. The final website looks modern, loads fast, and has already helped us generate new inquiries."</p>
             <div style="margin-top:16px">
               <strong>Bilal Hussain</strong><br>
               <span class="muted">Managing Director, Islamabad</span>
@@ -522,16 +512,13 @@
           </article>
 
           <article class="card">
-            <p>"The POS system developed for our store helped us track sales and inventory much better than before. The
-              reporting features alone have saved us a lot of manual work."</p>
+            <p>"The POS system developed for our store helped us track sales and inventory much better than before. The reporting features alone have saved us a lot of manual work."</p>
             <div style="margin-top:16px">
               <strong>Sajid Ali</strong><br>
               <span class="muted">Retail Store Owner, Peshawar</span>
             </div>
           </article>
         </div>
-
-
       </div>
     </div>
   </section>
