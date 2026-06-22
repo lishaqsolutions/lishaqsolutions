@@ -9,8 +9,8 @@
 .slider-btn {
   position: absolute;
   top: -58px; /* Adjust based on your heading height */
-  background: var(--bg-card, #fff);
-  border: 1px solid var(--border, #e2e8f0);
+  background: var(--primary);
+  border: 1px solid var(--primary);
   border-radius: 8px;
   width: 40px;
   height: 40px;
