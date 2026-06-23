@@ -25,6 +25,32 @@
   --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* related links */
+.related-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  margin-top: 24px;
+  list-style: none;
+}
+
+.related-links li a {
+  background: var(--gradient-card);
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-size: 0.9rem;
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.related-links li a:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-neon);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -782,162 +808,175 @@ p {
 
 
 /* ===== WhatsApp Floating Button — Premium Style ===== */
-  .wa-float {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: linear-gradient(145deg, #25D366, #1da85c);
-    color: #fff;
-    display: grid;
-    place-items: center;
-    z-index: 999;
-    font-size: 2rem;
-    text-decoration: none;
-    box-shadow: 
+.wa-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #25D366, #1da85c);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  z-index: 999;
+  font-size: 2rem;
+  text-decoration: none;
+  box-shadow:
+    0 8px 32px rgba(37, 211, 102, 0.45),
+    inset 0 2px 0 rgba(255, 255, 255, 0.2),
+    0 0 0 0 rgba(37, 211, 102, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: pulse-ring 2.5s ease-in-out infinite;
+}
+
+/* animated pulse ring */
+@keyframes pulse-ring {
+  0% {
+    box-shadow:
       0 8px 32px rgba(37, 211, 102, 0.45),
       inset 0 2px 0 rgba(255, 255, 255, 0.2),
       0 0 0 0 rgba(37, 211, 102, 0.4);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    animation: pulse-ring 2.5s ease-in-out infinite;
   }
 
-  /* animated pulse ring */
-  @keyframes pulse-ring {
-    0% {
-      box-shadow: 
-        0 8px 32px rgba(37, 211, 102, 0.45),
-        inset 0 2px 0 rgba(255, 255, 255, 0.2),
-        0 0 0 0 rgba(37, 211, 102, 0.4);
-    }
-    50% {
-      box-shadow: 
-        0 8px 40px rgba(37, 211, 102, 0.6),
-        inset 0 2px 0 rgba(255, 255, 255, 0.2),
-        0 0 0 18px rgba(37, 211, 102, 0);
-    }
-    100% {
-      box-shadow: 
-        0 8px 32px rgba(37, 211, 102, 0.45),
-        inset 0 2px 0 rgba(255, 255, 255, 0.2),
-        0 0 0 0 rgba(37, 211, 102, 0);
-    }
+  50% {
+    box-shadow:
+      0 8px 40px rgba(37, 211, 102, 0.6),
+      inset 0 2px 0 rgba(255, 255, 255, 0.2),
+      0 0 0 18px rgba(37, 211, 102, 0);
   }
 
-  /* hover state */
-  .wa-float:hover {
-    transform: scale(1.12) rotate(-3deg);
-    box-shadow: 
-      0 12px 48px rgba(37, 211, 102, 0.65),
-      inset 0 2px 0 rgba(255, 255, 255, 0.3),
-      0 0 0 8px rgba(37, 211, 102, 0.15);
+  100% {
+    box-shadow:
+      0 8px 32px rgba(37, 211, 102, 0.45),
+      inset 0 2px 0 rgba(255, 255, 255, 0.2),
+      0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* hover state */
+.wa-float:hover {
+  transform: scale(1.12) rotate(-3deg);
+  box-shadow:
+    0 12px 48px rgba(37, 211, 102, 0.65),
+    inset 0 2px 0 rgba(255, 255, 255, 0.3),
+    0 0 0 8px rgba(37, 211, 102, 0.15);
+}
+
+/* active / click feedback */
+.wa-float:active {
+  transform: scale(0.92);
+  transition-duration: 0.08s;
+}
+
+/* icon inside — crisp & centered */
+.wa-float i {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+  line-height: 1;
+}
+
+/* optional tiny notification dot */
+.wa-float .notification-dot {
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  width: 14px;
+  height: 14px;
+  background: #ff3b5c;
+  border-radius: 50%;
+  border: 2.5px solid #fff;
+  animation: blink-dot 1.8s ease-in-out infinite;
+  box-shadow: 0 2px 8px rgba(255, 59, 92, 0.5);
+}
+
+@keyframes blink-dot {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 
-  /* active / click feedback */
-  .wa-float:active {
-    transform: scale(0.92);
-    transition-duration: 0.08s;
+  50% {
+    opacity: 0.4;
+    transform: scale(0.85);
+  }
+}
+
+/* tooltip on hover — modern & clean */
+.wa-float::after {
+  content: "Chat with us 💬";
+  position: absolute;
+  right: calc(100% + 18px);
+  top: 50%;
+  transform: translateY(-50%) scale(0.9);
+  background: #1f2937;
+  color: #f9fafb;
+  padding: 0.45rem 1rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* tooltip arrow */
+.wa-float::before {
+  content: '';
+  position: absolute;
+  right: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%) scale(0.8);
+  border: 6px solid transparent;
+  border-left-color: #1f2937;
+  opacity: 0;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wa-float:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+
+.wa-float:hover::before {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+
+/* responsive: smaller on mobile */
+@media (max-width: 480px) {
+  .wa-float {
+    bottom: 16px;
+    right: 16px;
+    width: 52px;
+    height: 52px;
+    font-size: 1.6rem;
   }
 
-  /* icon inside — crisp & centered */
-  .wa-float i {
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
-    line-height: 1;
-  }
-
-  /* optional tiny notification dot */
   .wa-float .notification-dot {
-    position: absolute;
-    top: 2px;
-    right: 4px;
-    width: 14px;
-    height: 14px;
-    background: #ff3b5c;
-    border-radius: 50%;
-    border: 2.5px solid #fff;
-    animation: blink-dot 1.8s ease-in-out infinite;
-    box-shadow: 0 2px 8px rgba(255, 59, 92, 0.5);
+    width: 12px;
+    height: 12px;
+    top: 1px;
+    right: 3px;
   }
 
-  @keyframes blink-dot {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.4; transform: scale(0.85); }
-  }
-
-  /* tooltip on hover — modern & clean */
   .wa-float::after {
-    content: "Chat with us 💬";
-    position: absolute;
-    right: calc(100% + 18px);
-    top: 50%;
-    transform: translateY(-50%) scale(0.9);
-    background: #1f2937;
-    color: #f9fafb;
-    padding: 0.45rem 1rem;
-    border-radius: 10px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    letter-spacing: 0.3px;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.7rem;
+    padding: 0.35rem 0.8rem;
+    right: calc(100% + 14px);
   }
+}
 
-  /* tooltip arrow */
-  .wa-float::before {
-    content: '';
-    position: absolute;
-    right: calc(100% + 10px);
-    top: 50%;
-    transform: translateY(-50%) scale(0.8);
-    border: 6px solid transparent;
-    border-left-color: #1f2937;
-    opacity: 0;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .wa-float:hover::after {
-    opacity: 1;
-    transform: translateY(-50%) scale(1);
-  }
-
-  .wa-float:hover::before {
-    opacity: 1;
-    transform: translateY(-50%) scale(1);
-  }
-
-  /* responsive: smaller on mobile */
-  @media (max-width: 480px) {
-    .wa-float {
-      bottom: 16px;
-      right: 16px;
-      width: 52px;
-      height: 52px;
-      font-size: 1.6rem;
-    }
-    .wa-float .notification-dot {
-      width: 12px;
-      height: 12px;
-      top: 1px;
-      right: 3px;
-    }
-    .wa-float::after {
-      font-size: 0.7rem;
-      padding: 0.35rem 0.8rem;
-      right: calc(100% + 14px);
-    }
-  }
-
-  /* accessibility */
-  .wa-float:focus-visible {
-    outline: 3px solid #2563eb;
-    outline-offset: 4px;
-  }
+/* accessibility */
+.wa-float:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 4px;
+}
 
 
 
@@ -945,120 +984,143 @@ p {
 
 
 /* modern, clean style */
-  .socials {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem;
-    background: transparent;
-    max-width: fit-content;
-    margin: 0;
-  }
+.socials {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  background: transparent;
+  max-width: fit-content;
+  margin: 0;
+}
 
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 12px;
+  background: transparent;
+  color: #6b7280;
+  font-size: 1.35rem;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  position: relative;
+}
+
+/* subtle background on hover - each brand gets its own color */
+.social-link:hover {
+  transform: translateY(-3px) scale(1.05);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+/* brand-specific hover colors */
+.social-link[data-whatsapp-link]:hover {
+  color: #25D366;
+  background: #25D36612;
+}
+
+.social-link[data-email-link]:hover {
+  color: #EA4335;
+  background: #EA433512;
+}
+
+.social-link[data-github-link]:hover {
+  color: #181717;
+  background: #18171712;
+}
+
+.social-link[data-linkedin-link]:hover {
+  color: #0A66C2;
+  background: #0A66C212;
+}
+
+.social-link[data-youtube-link]:hover {
+  color: #FF0000;
+  background: #FF000012;
+}
+
+.social-link[data-facebook-link]:hover {
+  color: #1877F2;
+  background: #1877F212;
+}
+
+.social-link[data-tiktok-link]:hover {
+  color: #7b7676;
+  background: #01010112;
+}
+
+/* active/click feedback */
+.social-link:active {
+  transform: scale(0.92);
+  transition-duration: 0.08s;
+}
+
+/* accessible focus */
+.social-link:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 4px;
+  border-radius: 12px;
+}
+
+/* tooltip-like label on hover — optional extra polish */
+.social-link::after {
+  content: attr(aria-label);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  background: #1f2937;
+  color: #f9fafb;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.social-link:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+/* small arrow on tooltip */
+.social-link::before {
+  content: '';
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  border: 5px solid transparent;
+  border-top-color: #1f2937;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.social-link:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+/* responsive tweaks */
+@media (max-width: 480px) {
   .social-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 12px;
-    background: transparent;
-    color: #6b7280;
-    font-size: 1.35rem;
-    text-decoration: none;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    border: none;
-    position: relative;
+    width: 2.6rem;
+    height: 2.6rem;
+    font-size: 1.15rem;
   }
 
-  /* subtle background on hover - each brand gets its own color */
-  .social-link:hover {
-    transform: translateY(-3px) scale(1.05);
-    background: rgba(0,0,0,0.04);
+  .socials {
+    gap: 0.3rem;
+    padding: 0.3rem;
   }
-
-  /* brand-specific hover colors */
-  .social-link[data-whatsapp-link]:hover { color: #25D366; background: #25D36612; }
-  .social-link[data-email-link]:hover { color: #EA4335; background: #EA433512; }
-  .social-link[data-github-link]:hover { color: #181717; background: #18171712; }
-  .social-link[data-linkedin-link]:hover { color: #0A66C2; background: #0A66C212; }
-  .social-link[data-youtube-link]:hover { color: #FF0000; background: #FF000012; }
-  .social-link[data-facebook-link]:hover { color: #1877F2; background: #1877F212; }
-  .social-link[data-tiktok-link]:hover { color: #7b7676; background: #01010112; }
-
-  /* active/click feedback */
-  .social-link:active {
-    transform: scale(0.92);
-    transition-duration: 0.08s;
-  }
-
-  /* accessible focus */
-  .social-link:focus-visible {
-    outline: 2px solid #2563eb;
-    outline-offset: 4px;
-    border-radius: 12px;
-  }
-
-  /* tooltip-like label on hover — optional extra polish */
-  .social-link::after {
-    content: attr(aria-label);
-    position: absolute;
-    bottom: calc(100% + 8px);
-    left: 50%;
-    transform: translateX(-50%) scale(0.8);
-    background: #1f2937;
-    color: #f9fafb;
-    padding: 0.25rem 0.65rem;
-    border-radius: 6px;
-    font-size: 0.65rem;
-    font-weight: 500;
-    letter-spacing: 0.3px;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.2s ease;
-    white-space: nowrap;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-
-  .social-link:hover::after {
-    opacity: 1;
-    transform: translateX(-50%) scale(1);
-  }
-
-  /* small arrow on tooltip */
-  .social-link::before {
-    content: '';
-    position: absolute;
-    bottom: calc(100% + 4px);
-    left: 50%;
-    transform: translateX(-50%) scale(0.8);
-    border: 5px solid transparent;
-    border-top-color: #1f2937;
-    opacity: 0;
-    transition: all 0.2s ease;
-  }
-
-  .social-link:hover::before {
-    opacity: 1;
-    transform: translateX(-50%) scale(1);
-  }
-
-  /* responsive tweaks */
-  @media (max-width: 480px) {
-    .social-link {
-      width: 2.6rem;
-      height: 2.6rem;
-      font-size: 1.15rem;
-    }
-    .socials {
-      gap: 0.3rem;
-      padding: 0.3rem;
-    }
-  }
-
-
-
-
-  
+}
