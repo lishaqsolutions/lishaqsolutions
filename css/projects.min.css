@@ -1,47 +1,123 @@
-/* Project Cover */
-.project-cover {
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-card);
+/* ========================================
+   PROJECT PAGES - Lishaq Solutions
+   Dark Theme Optimized
+   ======================================== */
+
+/* ===== Hero ===== */
+.project-hero {
+  padding: 80px 0 60px;
 }
 
-.project-cover img {
+.project-hero .badge-container {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.project-hero .tech-badge {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+  transition: var(--transition);
+}
+
+.project-hero .tech-badge:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* ===== Cover Image ===== */
+.project-cover {
+  padding: 0 0 40px;
+}
+
+.project-cover .cover-wrapper {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.project-cover .cover-wrapper img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* Badges */
-.badge {
-  background: var(--primary-light, #e8f0fe);
-  color: var(--primary, #2563eb);
-  padding: 6px 16px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 500;
+/* ===== Project Overview ===== */
+.project-overview {
+  padding-top: 0;
 }
 
-/* Challenge Cards */
+.project-overview .overview-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.project-overview .overview-content h2 {
+  text-align: center;
+}
+
+.project-overview .overview-content p {
+  text-align: center;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.project-overview .overview-content p + p {
+  margin-top: 16px;
+}
+
+/* ===== Section Headings ===== */
+.section-head-center {
+  text-align: center;
+}
+
+/* ===== Challenge Cards ===== */
 .challenge-card {
-  border-left: 4px solid var(--warning, #f59e0b);
+  border-left: 3px solid var(--warning, #f59e0b);
 }
 
-.challenge-icon {
-  font-size: 2rem;
+.challenge-card .card-icon {
+  font-size: 2.5rem;
   margin-bottom: 8px;
 }
 
-/* Solution Cards */
+.challenge-card h3 {
+  font-size: 1.1rem;
+}
+
+.challenge-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* ===== Solution Cards ===== */
 .solution-card {
-  border-left: 4px solid var(--success, #10b981);
+  border-left: 3px solid var(--success, #10b981);
 }
 
-.solution-icon {
-  font-size: 2rem;
+.solution-card .card-icon {
+  font-size: 2.5rem;
   margin-bottom: 8px;
 }
 
-/* Tech Stack */
+.solution-card h3 {
+  font-size: 1.1rem;
+}
+
+.solution-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* ===== Tech Stack ===== */
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
@@ -51,22 +127,29 @@
 }
 
 .tech-item {
-  background: var(--bg-card, #fff);
-  border: 1px solid var(--border, #e2e8f0);
-  border-radius: 8px;
-  padding: 12px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 28px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   font-weight: 500;
+  color: var(--text);
+  transition: var(--transition);
 }
 
-.tech-icon {
-  font-size: 1.2rem;
+.tech-item:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
 }
 
-/* Gallery */
-.gallery-grid {
+.tech-item .tech-icon {
+  font-size: 1.3rem;
+}
+
+/* ===== Gallery ===== */
+.project-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 24px;
@@ -75,12 +158,14 @@
 .gallery-item {
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
   transition: var(--transition);
 }
 
 .gallery-item:hover {
   transform: translateY(-4px);
+  border-color: var(--primary);
   box-shadow: var(--shadow-neon);
 }
 
@@ -91,32 +176,35 @@
   display: block;
 }
 
-.gallery-caption {
-  display: block;
+.gallery-item .gallery-caption {
   padding: 12px 16px;
   font-weight: 500;
   font-size: 0.9rem;
-  background: var(--bg-card, #fff);
+  color: var(--text);
 }
 
-/* Feature Cards */
+/* ===== Feature Cards ===== */
 .feature-card {
   text-align: center;
-  padding: 24px;
 }
 
-.feature-check {
-  display: inline-block;
-  font-size: 2rem;
+.feature-card .feature-check {
+  font-size: 2.5rem;
   color: var(--success, #10b981);
-  font-weight: 700;
+  display: block;
 }
 
 .feature-card h3 {
+  font-size: 1.1rem;
   margin: 8px 0 4px;
 }
 
-/* Results */
+.feature-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* ===== Results ===== */
 .results-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -125,31 +213,154 @@
 }
 
 .result-item {
-  padding: 24px;
   background: var(--gradient-card);
-  border-radius: var(--radius);
   border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  transition: var(--transition);
 }
 
-.result-number {
+.result-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+}
+
+.result-item .result-number {
   font-size: 3rem;
   font-weight: 700;
-  color: var(--primary, #2563eb);
+  color: var(--primary);
   font-family: 'Space Grotesk', sans-serif;
 }
 
 .result-item p {
-  margin-top: 4px;
   color: var(--text-muted);
+  margin-top: 4px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .gallery-grid {
-    grid-template-columns: 1fr 1fr;
+/* ===== Results Description ===== */
+.results-description {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.results-description p {
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ===== Related Services CTA ===== */
+.related-cta {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.related-cta h2 {
+  margin-bottom: 8px;
+}
+
+.related-cta p {
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 8px auto 24px;
+}
+
+.related-cta .btn {
+  display: inline-block;
+}
+
+/* ===== Divider ===== */
+.project-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 40px 0;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 992px) {
+  .project-gallery {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
+}
+
+@media (max-width: 768px) {
+  .project-hero {
+    padding: 60px 0 40px;
+  }
+
+  .project-hero .badge-container {
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .project-hero .tech-badge {
+    font-size: 0.75rem;
+    padding: 4px 14px;
+  }
+
+  .project-cover {
+    padding: 0 0 30px;
+  }
+
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .project-gallery .gallery-item img {
+    height: 180px;
+  }
+
   .results-grid {
     grid-template-columns: 1fr;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .tech-stack {
+    gap: 10px;
+  }
+
+  .tech-item {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+
+  .tech-item .tech-icon {
+    font-size: 1.1rem;
+  }
+
+  .related-cta p {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-hero {
+    padding: 40px 0 30px;
+  }
+
+  .project-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .project-hero .tech-badge {
+    font-size: 0.7rem;
+    padding: 3px 10px;
+  }
+
+  .project-gallery .gallery-item img {
+    height: 150px;
+  }
+
+  .result-item .result-number {
+    font-size: 2.5rem;
+  }
+
+  .tech-item {
+    padding: 8px 14px;
+    font-size: 0.8rem;
   }
 }
