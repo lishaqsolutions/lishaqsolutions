@@ -44,7 +44,6 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/lishaqsolutions/css/styles.min.css" />
-  <!-- <link rel="stylesheet" href="/lishaqsolutions/css/projects.min.css" /> -->
 </head>
 
 <body>
@@ -58,49 +57,48 @@
         <span class="eyebrow">Case Study</span>
         <h1>
           RestaurantPOS Pro
-          <span class="text-gradient"></span>
         </h1>
-        <p class="lead" style="max-width: 640px; margin: 16px auto 0;">
+        <p class="lead" style="max-width: 640px; margin: 16px auto 0; color: var(--text-muted);">
           Multi-branch restaurant POS system developed using Laravel and Bootstrap.
         </p>
         <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 28px;">
-          <span class="badge">Laravel</span>
-          <span class="badge">Bootstrap</span>
-          <span class="badge">MySQL</span>
-          <span class="badge">jQuery</span>
-          <span class="badge">AJAX</span>
+          <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Laravel</span>
+          <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Bootstrap</span>
+          <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">MySQL</span>
+          <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">jQuery</span>
+          <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">AJAX</span>
         </div>
       </div>
     </section>
 
     <!-- PROJECT COVER IMAGE -->
-    <section class="section" style="padding-top: 0;">
+    <section style="padding: 0 0 40px;">
       <div class="container">
-        <div class="project-cover">
+        <div style="border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border);">
           <img 
             src="/lishaqsolutions/images/projects/restaurant-pos-cover.webp" 
             alt="Restaurant POS Pro Dashboard Preview"
             loading="lazy"
             onerror="this.src='/lishaqsolutions/images/placeholder-project.webp'"
+            style="width: 100%; height: auto; display: block;"
           />
         </div>
       </div>
     </section>
 
     <!-- PROJECT OVERVIEW -->
-    <section class="section" style="padding-top: 30px">
+    <section class="section" style="padding-top: 0;">
       <div class="container">
-        <div class="project-content">
-          <h2>Project Overview</h2>
-          <p>
+        <div style="max-width: 800px; margin: 0 auto;">
+          <h2 style="text-align: center;">Project Overview</h2>
+          <p style="text-align: center; color: var(--text-muted); line-height: 1.8;">
             RestaurantPOS Pro is a complete restaurant management solution designed to handle
             billing, kitchen operations, inventory, sales reporting and staff management.
             The system streamlines daily operations for restaurant chains and single-branch
             establishments alike, providing real-time visibility into sales, inventory, and
             employee performance.
           </p>
-
-          <p>
+          <p style="text-align: center; color: var(--text-muted); line-height: 1.8; margin-top: 16px;">
             This project was developed for a growing restaurant chain with 5 branches across
             the city. The client needed a unified system that could handle their complex
             operations while being easy for staff to use.
@@ -112,27 +110,27 @@
     <!-- CLIENT CHALLENGES -->
     <section class="section">
       <div class="container">
-        <h2>Client Challenges</h2>
+        <h2 style="text-align: center;">Client Challenges</h2>
         <div class="grid-2">
-          <article class="card challenge-card">
-            <div class="challenge-icon">📋</div>
-            <h3>Manual Billing Process</h3>
-            <p>Staff was using paper receipts and manual calculations, leading to errors and slow service.</p>
+          <article class="card" style="border-left: 3px solid var(--warning, #f59e0b);">
+            <div style="font-size: 2.5rem; margin-bottom: 8px;">📋</div>
+            <h3 style="font-size: 1.1rem;">Manual Billing Process</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Staff was using paper receipts and manual calculations, leading to errors and slow service.</p>
           </article>
-          <article class="card challenge-card">
-            <div class="challenge-icon">📦</div>
-            <h3>No Inventory Tracking</h3>
-            <p>Stock levels were tracked manually, resulting in frequent stockouts and overordering.</p>
+          <article class="card" style="border-left: 3px solid var(--warning, #f59e0b);">
+            <div style="font-size: 2.5rem; margin-bottom: 8px;">📦</div>
+            <h3 style="font-size: 1.1rem;">No Inventory Tracking</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Stock levels were tracked manually, resulting in frequent stockouts and overordering.</p>
           </article>
-          <article class="card challenge-card">
-            <div class="challenge-icon">📊</div>
-            <h3>No Sales Analytics</h3>
-            <p>The client had no visibility into sales trends, popular items, or peak hours.</p>
+          <article class="card" style="border-left: 3px solid var(--warning, #f59e0b);">
+            <div style="font-size: 2.5rem; margin-bottom: 8px;">📊</div>
+            <h3 style="font-size: 1.1rem;">No Sales Analytics</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">The client had no visibility into sales trends, popular items, or peak hours.</p>
           </article>
-          <article class="card challenge-card">
-            <div class="challenge-icon">🏢</div>
-            <h3>Multiple Branches Difficult to Manage</h3>
-            <p>Each branch operated independently with no centralized reporting or control.</p>
+          <article class="card" style="border-left: 3px solid var(--warning, #f59e0b);">
+            <div style="font-size: 2.5rem; margin-bottom: 8px;">🏢</div>
+            <h3 style="font-size: 1.1rem;">Multiple Branches Difficult to Manage</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Each branch operated independently with no centralized reporting or control.</p>
           </article>
         </div>
       </div>
@@ -141,32 +139,32 @@
     <!-- OUR SOLUTION -->
     <section class="section">
       <div class="container">
-        <h2>Our Solution</h2>
+        <h2 style="text-align: center;">Our Solution</h2>
         <div class="grid-3">
-          <article class="card solution-card">
-            <div class="solution-icon">🖥️</div>
-            <h3>Real-Time POS</h3>
-            <p>Fast, intuitive point-of-sale interface with touch support and quick item selection.</p>
+          <article class="card" style="border-left: 3px solid var(--success, #10b981);">
+            <div style="font-size: 2.5rem; margin-bottom: 8px;">🖥️</div>
+            <h3 style="font-size: 1.1rem;">Real-Time POS</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Fast, intuitive point-of-sale interface with touch support and quick item selection.</p>
           </article>
-          <article class="card solution-card">
-            <div class="solution-icon">👨‍🍳</div>
-            <h3>Kitchen Display System</h3>
-            <p>Orders sent directly to kitchen screens with real-time status updates.</p>
+          <article class="card" style="border-left: 3px solid var(--success, #10b981);">
+            <div style="font-size: 2.5rem; margin-bottom: 8px;">👨‍🍳</div>
+            <h3 style="font-size: 1.1rem;">Kitchen Display System</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Orders sent directly to kitchen screens with real-time status updates.</p>
           </article>
-          <article class="card solution-card">
-            <div class="solution-icon">📈</div>
-            <h3>Sales Reports</h3>
-            <p>Comprehensive reports on sales, revenue, taxes, and item performance.</p>
+          <article class="card" style="border-left: 3px solid var(--success, #10b981);">
+            <div style="font-size: 2.5rem; margin-bottom: 8px;">📈</div>
+            <h3 style="font-size: 1.1rem;">Sales Reports</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Comprehensive reports on sales, revenue, taxes, and item performance.</p>
           </article>
-          <article class="card solution-card">
-            <div class="solution-icon">📦</div>
-            <h3>Inventory Management</h3>
-            <p>Automatic stock updates with low-stock alerts and supplier management.</p>
+          <article class="card" style="border-left: 3px solid var(--success, #10b981);">
+            <div style="font-size: 2.5rem; margin-bottom: 8px;">📦</div>
+            <h3 style="font-size: 1.1rem;">Inventory Management</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Automatic stock updates with low-stock alerts and supplier management.</p>
           </article>
-          <article class="card solution-card">
-            <div class="solution-icon">👤</div>
-            <h3>Role Based Access</h3>
-            <p>Different access levels for managers, cashiers, and kitchen staff.</p>
+          <article class="card" style="border-left: 3px solid var(--success, #10b981);">
+            <div style="font-size: 2.5rem; margin-bottom: 8px;">👤</div>
+            <h3 style="font-size: 1.1rem;">Role Based Access</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Different access levels for managers, cashiers, and kitchen staff.</p>
           </article>
         </div>
       </div>
@@ -175,31 +173,25 @@
     <!-- TECHNOLOGIES -->
     <section class="section">
       <div class="container">
-        <h2>Technologies Used</h2>
-        <div class="tech-stack">
-          <div class="tech-item">
-            <span class="tech-icon">⚡</span>
-            <span>Laravel 10</span>
+        <h2 style="text-align: center;">Technologies Used</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; padding: 16px 0;">
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 28px; display: flex; align-items: center; gap: 10px; font-weight: 500;">
+            <span style="font-size: 1.3rem;">⚡</span> Laravel 10
           </div>
-          <div class="tech-item">
-            <span class="tech-icon">🎨</span>
-            <span>Bootstrap 5</span>
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 28px; display: flex; align-items: center; gap: 10px; font-weight: 500;">
+            <span style="font-size: 1.3rem;">🎨</span> Bootstrap 5
           </div>
-          <div class="tech-item">
-            <span class="tech-icon">🔄</span>
-            <span>AJAX</span>
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 28px; display: flex; align-items: center; gap: 10px; font-weight: 500;">
+            <span style="font-size: 1.3rem;">🔄</span> AJAX
           </div>
-          <div class="tech-item">
-            <span class="tech-icon">🗄️</span>
-            <span>MySQL</span>
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 28px; display: flex; align-items: center; gap: 10px; font-weight: 500;">
+            <span style="font-size: 1.3rem;">🗄️</span> MySQL
           </div>
-          <div class="tech-item">
-            <span class="tech-icon">📜</span>
-            <span>jQuery</span>
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 28px; display: flex; align-items: center; gap: 10px; font-weight: 500;">
+            <span style="font-size: 1.3rem;">📜</span> jQuery
           </div>
-          <div class="tech-item">
-            <span class="tech-icon">🔐</span>
-            <span>Laravel Auth</span>
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 28px; display: flex; align-items: center; gap: 10px; font-weight: 500;">
+            <span style="font-size: 1.3rem;">🔐</span> Laravel Auth
           </div>
         </div>
       </div>
@@ -208,43 +200,47 @@
     <!-- SCREENSHOTS / GALLERY -->
     <section class="section">
       <div class="container">
-        <h2>Project Gallery</h2>
-        <div class="gallery-grid">
-          <div class="gallery-item">
+        <h2 style="text-align: center;">Project Gallery</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
+          <div style="border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); background: var(--bg-card); transition: var(--transition);">
             <img 
               src="/lishaqsolutions/images/projects/restaurant-pos-dashboard.webp" 
               alt="Restaurant POS Dashboard"
               loading="lazy"
               onerror="this.src='/lishaqsolutions/images/placeholder-project.webp'"
+              style="width: 100%; height: 200px; object-fit: cover; display: block;"
             />
-            <span class="gallery-caption">Main Dashboard</span>
+            <div style="padding: 12px 16px; font-weight: 500; font-size: 0.9rem; color: var(--text);">Main Dashboard</div>
           </div>
-          <div class="gallery-item">
+          <div style="border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); background: var(--bg-card); transition: var(--transition);">
             <img 
               src="/lishaqsolutions/images/projects/restaurant-pos-reports.webp" 
               alt="Restaurant POS Reports"
               loading="lazy"
               onerror="this.src='/lishaqsolutions/images/placeholder-project.webp'"
+              style="width: 100%; height: 200px; object-fit: cover; display: block;"
             />
-            <span class="gallery-caption">Sales Reports</span>
+            <div style="padding: 12px 16px; font-weight: 500; font-size: 0.9rem; color: var(--text);">Sales Reports</div>
           </div>
-          <div class="gallery-item">
+          <div style="border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); background: var(--bg-card); transition: var(--transition);">
             <img 
               src="/lishaqsolutions/images/projects/restaurant-pos-pos.webp" 
               alt="Restaurant POS Interface"
               loading="lazy"
               onerror="this.src='/lishaqsolutions/images/placeholder-project.webp'"
+              style="width: 100%; height: 200px; object-fit: cover; display: block;"
             />
-            <span class="gallery-caption">POS Interface</span>
+            <div style="padding: 12px 16px; font-weight: 500; font-size: 0.9rem; color: var(--text);">POS Interface</div>
           </div>
-          <div class="gallery-item">
+          <div style="border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); background: var(--bg-card); transition: var(--transition);">
             <img 
               src="/lishaqsolutions/images/projects/restaurant-pos-inventory.webp" 
               alt="Restaurant POS Inventory"
               loading="lazy"
               onerror="this.src='/lishaqsolutions/images/placeholder-project.webp'"
+              style="width: 100%; height: 200px; object-fit: cover; display: block;"
             />
-            <span class="gallery-caption">Inventory Management</span>
+            <div style="padding: 12px 16px; font-weight: 500; font-size: 0.9rem; color: var(--text);">Inventory Management</div>
           </div>
         </div>
       </div>
@@ -253,37 +249,37 @@
     <!-- KEY FEATURES -->
     <section class="section">
       <div class="container">
-        <h2>Key Features</h2>
+        <h2 style="text-align: center;">Key Features</h2>
         <div class="grid-3">
-          <div class="card feature-card">
-            <span class="feature-check">✓</span>
-            <h3>Receipt Printing</h3>
-            <p>Automatic receipt printing with thermal printer support</p>
+          <div class="card" style="text-align: center;">
+            <div style="font-size: 2.5rem; color: var(--success, #10b981);">✓</div>
+            <h3 style="font-size: 1.1rem; margin: 8px 0 4px;">Receipt Printing</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Automatic receipt printing with thermal printer support</p>
           </div>
-          <div class="card feature-card">
-            <span class="feature-check">✓</span>
-            <h3>Sales Dashboard</h3>
-            <p>Real-time sales tracking with visual analytics</p>
+          <div class="card" style="text-align: center;">
+            <div style="font-size: 2.5rem; color: var(--success, #10b981);">✓</div>
+            <h3 style="font-size: 1.1rem; margin: 8px 0 4px;">Sales Dashboard</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Real-time sales tracking with visual analytics</p>
           </div>
-          <div class="card feature-card">
-            <span class="feature-check">✓</span>
-            <h3>Inventory Tracking</h3>
-            <p>Live stock updates with automatic deduction on sales</p>
+          <div class="card" style="text-align: center;">
+            <div style="font-size: 2.5rem; color: var(--success, #10b981);">✓</div>
+            <h3 style="font-size: 1.1rem; margin: 8px 0 4px;">Inventory Tracking</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Live stock updates with automatic deduction on sales</p>
           </div>
-          <div class="card feature-card">
-            <span class="feature-check">✓</span>
-            <h3>Multi Branch Support</h3>
-            <p>Centralized management for all restaurant branches</p>
+          <div class="card" style="text-align: center;">
+            <div style="font-size: 2.5rem; color: var(--success, #10b981);">✓</div>
+            <h3 style="font-size: 1.1rem; margin: 8px 0 4px;">Multi Branch Support</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Centralized management for all restaurant branches</p>
           </div>
-          <div class="card feature-card">
-            <span class="feature-check">✓</span>
-            <h3>Employee Management</h3>
-            <p>Staff scheduling, attendance, and performance tracking</p>
+          <div class="card" style="text-align: center;">
+            <div style="font-size: 2.5rem; color: var(--success, #10b981);">✓</div>
+            <h3 style="font-size: 1.1rem; margin: 8px 0 4px;">Employee Management</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Staff scheduling, attendance, and performance tracking</p>
           </div>
-          <div class="card feature-card">
-            <span class="feature-check">✓</span>
-            <h3>Order Management</h3>
-            <p>Track orders from placement to fulfillment</p>
+          <div class="card" style="text-align: center;">
+            <div style="font-size: 2.5rem; color: var(--success, #10b981);">✓</div>
+            <h3 style="font-size: 1.1rem; margin: 8px 0 4px;">Order Management</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Track orders from placement to fulfillment</p>
           </div>
         </div>
       </div>
@@ -292,23 +288,23 @@
     <!-- RESULTS -->
     <section class="section">
       <div class="container">
-        <h2>Results</h2>
-        <div class="results-grid">
-          <div class="result-item">
-            <div class="result-number">60%</div>
-            <p>Reduced billing time</p>
+        <h2 style="text-align: center;">Results</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; text-align: center;">
+          <div style="background: var(--gradient-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px 24px;">
+            <div style="font-size: 3rem; font-weight: 700; color: var(--primary); font-family: 'Space Grotesk', sans-serif;">60%</div>
+            <p style="color: var(--text-muted); margin-top: 4px;">Reduced billing time</p>
           </div>
-          <div class="result-item">
-            <div class="result-number">95%</div>
-            <p>Improved inventory accuracy</p>
+          <div style="background: var(--gradient-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px 24px;">
+            <div style="font-size: 3rem; font-weight: 700; color: var(--primary); font-family: 'Space Grotesk', sans-serif;">95%</div>
+            <p style="color: var(--text-muted); margin-top: 4px;">Improved inventory accuracy</p>
           </div>
-          <div class="result-item">
-            <div class="result-number">100%</div>
-            <p>Centralized branch reporting</p>
+          <div style="background: var(--gradient-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px 24px;">
+            <div style="font-size: 3rem; font-weight: 700; color: var(--primary); font-family: 'Space Grotesk', sans-serif;">100%</div>
+            <p style="color: var(--text-muted); margin-top: 4px;">Centralized branch reporting</p>
           </div>
         </div>
         <div style="margin-top: 32px; text-align: center;">
-          <p class="muted">
+          <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">
             The restaurant chain now processes orders 60% faster, has eliminated stockouts,
             and managers can view real-time performance across all branches.
           </p>
@@ -319,17 +315,19 @@
     <!-- RELATED SERVICES - INTERNAL LINKS -->
     <section class="section">
       <div class="container">
-        <h2>Need a Similar System?</h2>
-        <p style="max-width: 600px; margin: 0 auto 24px; text-align: center;">
-          We can build a custom POS solution for your business.
-        </p>
-        <div style="text-align: center;">
+        <div style="text-align: center; margin-bottom: 40px;">
+          <h2>Need a Similar System?</h2>
+          <p style="color: var(--text-muted); max-width: 600px; margin: 8px auto 24px;">
+            We can build a custom POS solution for your business.
+          </p>
           <a href="/lishaqsolutions/services/pos-system/" class="btn btn-primary" style="display: inline-block;">
             POS Development Service →
           </a>
         </div>
-        <hr style="margin: 40px 0 32px;" />
-        <h2>Related Services</h2>
+
+        <hr style="border: none; border-top: 1px solid var(--border); margin: 40px 0;" />
+
+        <h2 style="text-align: center;">Related Services</h2>
         <ul class="related-links" role="list">
           <li><a href="/lishaqsolutions/services/bug-fixing/">Bug Fixing &amp; Debugging</a></li>
           <li><a href="/lishaqsolutions/services/landing-page-design/">Landing Page Design</a></li>
@@ -353,10 +351,10 @@
           Need a POS System?
           <span class="text-gradient">We can build it</span>
         </h2>
-        <p class="muted" style="max-width: 520px; margin: 14px auto 0">
+        <p class="muted" style="max-width: 520px; margin: 14px auto 0;">
           Tell us about your business. We'll create a custom POS solution tailored to your needs.
         </p>
-        <div class="hero-cta" style="margin-top: 28px">
+        <div class="hero-cta" style="margin-top: 28px;">
           <a href="/lishaqsolutions/contact/" class="btn btn-primary">
             Contact Now →
           </a>
