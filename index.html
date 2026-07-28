@@ -34,16 +34,16 @@
   <link rel="canonical" href="https://lishaqsolutions.com/" />
 
   <!-- Fonts -->
-  <!-- Google Fonts (Inter) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-  <!-- Font Awesome 6 (free) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono&display=swap"
+    rel="stylesheet" />
 
   <!-- CSS -->
   <link rel="stylesheet" href="/lishaqsolutions/css/styles.min.css" />
   <link rel="stylesheet" href="/lishaqsolutions/css/slider.min.css">
+  <link rel="stylesheet" href="/lishaqsolutions/css/hero-slider.css">
   <style>
     /* Read more button */
     .read-more {
@@ -92,408 +92,6 @@
         grid-template-columns: 1fr;
       }
     }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #0B0F19;
-      color: #f0f3fa;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 1.5rem;
-    }
-
-    /* main slider container – glassmorphism card */
-    .slider-wrapper {
-      max-width: 1400px;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.04);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-      border-radius: 3rem;
-      padding: 2rem 2rem 1.5rem;
-      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8), inset 0 0 0 1px rgba(255, 255, 255, 0.06);
-      transition: all 0.2s ease;
-      border: 1px solid rgba(255, 255, 255, 0.03);
-    }
-
-    /* slider viewport */
-    .slider {
-      position: relative;
-      overflow: hidden;
-      border-radius: 2rem;
-      min-height: 580px;
-      background: radial-gradient(circle at 20% 30%, rgba(88, 60, 255, 0.12), transparent 60%),
-                  radial-gradient(circle at 80% 70%, rgba(0, 200, 255, 0.08), transparent 50%),
-                  #0B0F19;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03);
-    }
-
-    /* slides container */
-    .slides-container {
-      display: flex;
-      width: 100%;
-      height: 100%;
-      min-height: 580px;
-      transition: transform 0.85s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      will-change: transform;
-    }
-
-    .slide {
-      flex: 0 0 100%;
-      display: flex;
-      flex-direction: column;
-      padding: 2.5rem 2.8rem;
-      gap: 1.8rem;
-      min-height: 580px;
-      position: relative;
-    }
-
-    /* left & right side – grid */
-    .slide-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2.5rem;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-    }
-
-    /* left content */
-    .slide-left {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      gap: 1.2rem;
-      z-index: 5;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: rgba(255, 255, 255, 0.04);
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-      padding: 0.45rem 1.2rem 0.45rem 1rem;
-      border-radius: 60px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      color: #b3c6ff;
-      background: rgba(65, 88, 208, 0.15);
-      box-shadow: 0 0 20px rgba(80, 60, 255, 0.15);
-      animation: badgePulse 6s infinite alternate;
-    }
-
-    .badge i {
-      font-size: 0.6rem;
-      color: #7f9cf5;
-    }
-
-    @keyframes badgePulse {
-      0% { opacity: 0.8; transform: scale(1); }
-      100% { opacity: 1; transform: scale(1.02); }
-    }
-
-    .slide-left h1 {
-      font-size: 3.4rem;
-      font-weight: 700;
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-      background: linear-gradient(135deg, #ffffff 0%, #c8d6ff 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      max-width: 90%;
-    }
-
-    .slide-left p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: rgba(210, 220, 255, 0.8);
-      max-width: 90%;
-      font-weight: 400;
-      margin-top: 0.2rem;
-    }
-
-    .cta-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.9rem;
-      margin-top: 0.4rem;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      padding: 0.8rem 2rem;
-      border-radius: 60px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      border: none;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      text-decoration: none;
-      background: rgba(255,255,255,0.05);
-      color: #f0f3fa;
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-      border: 1px solid rgba(255,255,255,0.08);
-      box-shadow: 0 8px 20px -10px rgba(0,0,0,0.6);
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #6366f1, #8b5cf6);
-      border: 1px solid rgba(255,255,255,0.15);
-      color: #fff;
-      box-shadow: 0 12px 28px -8px rgba(99, 102, 241, 0.3);
-    }
-    .btn-primary:hover {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 20px 35px -8px rgba(99, 102, 241, 0.45);
-      background: linear-gradient(135deg, #818cf8, #a78bfa);
-    }
-    .btn-secondary {
-      background: rgba(255,255,255,0.03);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border: 1px solid rgba(255,255,255,0.12);
-    }
-    .btn-secondary:hover {
-      background: rgba(255,255,255,0.1);
-      transform: translateY(-3px);
-      border-color: rgba(255,255,255,0.25);
-    }
-
-    /* right side illustration */
-    .slide-right {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      min-height: 260px;
-    }
-
-    .illustration-wrapper {
-      position: relative;
-      width: 100%;
-      max-width: 420px;
-      aspect-ratio: 1/0.9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .glass-card {
-      background: rgba(255, 255, 255, 0.04);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-radius: 2.5rem;
-      padding: 1.8rem 2rem;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: 0 25px 45px -18px rgba(0,0,0,0.8), inset 0 0 0 1px rgba(255,255,255,0.02);
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: radial-gradient(circle at 30% 40%, rgba(99,102,241,0.10), transparent 70%);
-    }
-
-    .floating-icon {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-    }
-
-    .floating-icon .icon-card {
-      background: rgba(255, 255, 255, 0.03);
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-      border-radius: 2rem;
-      padding: 1.2rem 1.5rem;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      box-shadow: 0 12px 28px -12px #00000066;
-      font-size: 2.8rem;
-      color: #a5b4fc;
-      transition: all 0.3s ease;
-      animation: floatY 6s infinite alternate ease-in-out;
-    }
-
-    .icon-card i {
-      filter: drop-shadow(0 0 12px rgba(99,102,241,0.3));
-    }
-
-    .icon-card span {
-      display: block;
-      font-size: 0.7rem;
-      font-weight: 500;
-      color: #cbd5e1;
-      margin-top: 0.3rem;
-      letter-spacing: 0.02em;
-    }
-
-    .glass-float {
-      animation: floatY 7s infinite alternate ease-in-out;
-    }
-
-    .glass-float-2 {
-      animation: floatY 8s infinite alternate-reverse ease-in-out;
-    }
-
-    @keyframes floatY {
-      0% { transform: translateY(0px); }
-      100% { transform: translateY(-12px); }
-    }
-
-    /* navigation arrows */
-    .nav-arrows {
-      position: absolute;
-      bottom: 2.5rem;
-      right: 2.5rem;
-      display: flex;
-      gap: 0.6rem;
-      z-index: 25;
-    }
-
-    .arrow-btn {
-      width: 44px;
-      height: 44px;
-      border-radius: 60px;
-      background: rgba(255, 255, 255, 0.04);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border: 1px solid rgba(255,255,255,0.08);
-      color: #e0e7ff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1rem;
-      transition: all 0.2s ease;
-      cursor: pointer;
-      box-shadow: 0 8px 18px -8px rgba(0,0,0,0.6);
-    }
-    .arrow-btn:hover {
-      background: rgba(255,255,255,0.12);
-      border-color: rgba(255,255,255,0.2);
-      transform: scale(1.04);
-    }
-
-    /* progress indicators */
-    .progress-indicators {
-      position: absolute;
-      bottom: 2.5rem;
-      left: 2.5rem;
-      display: flex;
-      gap: 0.8rem;
-      align-items: center;
-      z-index: 20;
-    }
-
-    .progress-dot {
-      width: 46px;
-      height: 4px;
-      border-radius: 6px;
-      background: rgba(255,255,255,0.12);
-      cursor: pointer;
-      transition: background 0.25s ease;
-      position: relative;
-      overflow: hidden;
-      box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
-    }
-    .progress-dot.active {
-      background: rgba(255,255,255,0.2);
-    }
-    .progress-dot .bar {
-      height: 100%;
-      width: 0%;
-      background: linear-gradient(90deg, #6366f1, #a78bfa);
-      border-radius: 6px;
-      transition: width 0.1s linear;
-      box-shadow: 0 0 16px #818cf880;
-    }
-    .progress-dot.active .bar {
-      width: 100%;
-      transition: width 6s linear;
-    }
-
-    /* bottom trust bar */
-    .trust-bar {
-      margin-top: 1.8rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      gap: 1.2rem 1.8rem;
-      padding: 0.8rem 0.2rem;
-      border-top: 1px solid rgba(255,255,255,0.04);
-      background: rgba(255, 255, 255, 0.01);
-      backdrop-filter: blur(2px);
-      border-radius: 4rem;
-    }
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: #b9c8ff;
-      letter-spacing: 0.01em;
-    }
-    .trust-item i {
-      font-size: 1.2rem;
-      color: #7f9cf5;
-      filter: drop-shadow(0 0 8px #6366f160);
-    }
-
-    /* responsive */
-    @media (max-width: 1024px) {
-      .slide-grid { grid-template-columns: 1fr; gap: 1rem; }
-      .slide-left h1 { font-size: 2.8rem; max-width: 100%; }
-      .slide-left p { max-width: 100%; }
-      .slider { min-height: 700px; }
-      .slides-container { min-height: 700px; }
-      .slide { min-height: 700px; padding: 2rem 1.8rem; }
-      .illustration-wrapper { max-width: 320px; }
-    }
-
-    @media (max-width: 640px) {
-      .slider-wrapper { padding: 1rem; border-radius: 2rem; }
-      .slide { padding: 1.8rem 1.2rem; }
-      .slide-left h1 { font-size: 2.2rem; }
-      .cta-group .btn { padding: 0.7rem 1.5rem; font-size: 0.85rem; }
-      .nav-arrows { bottom: 1.2rem; right: 1.2rem; }
-      .progress-indicators { bottom: 1.2rem; left: 1.2rem; }
-      .trust-bar { justify-content: center; gap: 0.8rem 1.2rem; }
-    }
-
-    /* accessibility / keyboard */
-    .arrow-btn:focus-visible, .progress-dot:focus-visible {
-      outline: 2px solid #818cf8;
-      outline-offset: 3px;
-    }
-
-    /* lazy loading and performance */
-    img, .lazy {
-      content-visibility: auto;
-    }
-
-    /* swipe hint (optional) */
-    .swipe-hint {
-      display: none;
-    }
   </style>
 </head>
 
@@ -501,129 +99,36 @@
   <!-- Header -->
   <div id="header"></div>
 
-  <div class="slider-wrapper" role="region" aria-label="Lishaq Solutions hero slider">
-    <div class="slider" id="sliderContainer">
-      <div class="slides-container" id="slidesContainer" role="list">
-        <!-- slide 1 -->
-        <div class="slide" role="listitem" aria-label="Slide 1: Business Software Development">
-          <div class="slide-grid">
-            <div class="slide-left">
-              <div class="badge"><i class="fas fa-circle"></i> Lishaq solutions</div>
-              <h1>Business Software<br>Development</h1>
-              <p>Modern, tailor‑made systems that streamline operations, boost efficiency, and scale with your business.</p>
-              <div class="cta-group">
-                <a href="#" class="btn btn-primary" aria-label="Get Free Consultation"><i class="fas fa-calendar-check"></i> Get Free Consultation</a>
-                <a href="#" class="btn btn-secondary" aria-label="View Projects"><i class="fas fa-arrow-right"></i> View Projects</a>
-              </div>
-            </div>
-            <div class="slide-right">
-              <div class="illustration-wrapper">
-                <div class="glass-card">
-                  <div class="floating-icon">
-                    <div class="icon-card glass-float"><i class="fas fa-code"></i><span>Dev</span></div>
-                    <div class="icon-card glass-float-2"><i class="fas fa-layer-group"></i><span>Stack</span></div>
-                    <div class="icon-card glass-float"><i class="fas fa-database"></i><span>Data</span></div>
-                  </div>
-                </div>
-              </div>
+<!-- ============================================================
+     HERO SLIDER — Lishaq Solutions
+     ============================================================ -->
+<div class="hero-slider-wrapper" role="region" aria-label="Lishaq Solutions hero slider">
+  <div class="hero-slider" id="heroSlider">
+    <div class="hero-slides-container" id="heroSlidesContainer" role="list">
+
+      <!-- SLIDE 1: Business Software Development -->
+      <div class="hero-slide" role="listitem" aria-label="Slide 1: Business Software Development">
+        <div class="hero-slide-grid">
+          <div class="hero-slide-left">
+            <div class="hero-badge"><i class="fas fa-circle"></i> Lishaq solutions</div>
+            <h1>Business Software<br>Development</h1>
+            <p>Modern, tailor‑made systems that streamline operations, boost efficiency, and scale with your business.</p>
+            <div class="hero-cta-group">
+              <a href="/lishaqsolutions/contact/" class="hero-btn hero-btn-primary" aria-label="Get Free Consultation">
+                <i class="fas fa-calendar-check"></i> Get Free Consultation
+              </a>
+              <a href="#services" class="hero-btn hero-btn-secondary" aria-label="View Projects">
+                <i class="fas fa-arrow-right"></i> View Projects
+              </a>
             </div>
           </div>
-        </div>
-        <!-- slide 2 -->
-        <div class="slide" role="listitem" aria-label="Slide 2: AI Automation & Chatbots">
-          <div class="slide-grid">
-            <div class="slide-left">
-              <div class="badge"><i class="fas fa-robot"></i> AI powered</div>
-              <h1>AI Automation<br>&amp; Chatbots</h1>
-              <p>Intelligent virtual assistants that work 24/7, automate support, and supercharge customer engagement.</p>
-              <div class="cta-group">
-                <a href="#" class="btn btn-primary" aria-label="Get Free Consultation"><i class="fas fa-calendar-check"></i> Get Free Consultation</a>
-                <a href="#" class="btn btn-secondary" aria-label="View Projects"><i class="fas fa-arrow-right"></i> View Projects</a>
-              </div>
-            </div>
-            <div class="slide-right">
-              <div class="illustration-wrapper">
-                <div class="glass-card">
-                  <div class="floating-icon">
-                    <div class="icon-card glass-float"><i class="fas fa-robot"></i><span>AI Chat</span></div>
-                    <div class="icon-card glass-float-2"><i class="fas fa-comment-dots"></i><span>NLP</span></div>
-                    <div class="icon-card glass-float"><i class="fas fa-brain"></i><span>Auto</span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- slide 3 -->
-        <div class="slide" role="listitem" aria-label="Slide 3: E-Commerce & Business Websites">
-          <div class="slide-grid">
-            <div class="slide-left">
-              <div class="badge"><i class="fas fa-store"></i> E‑commerce</div>
-              <h1>E‑Commerce &amp;<br>Business Websites</h1>
-              <p>Beautiful, high‑converting online stores and corporate sites that build trust and drive revenue.</p>
-              <div class="cta-group">
-                <a href="#" class="btn btn-primary" aria-label="Get Free Consultation"><i class="fas fa-calendar-check"></i> Get Free Consultation</a>
-                <a href="#" class="btn btn-secondary" aria-label="View Projects"><i class="fas fa-arrow-right"></i> View Projects</a>
-              </div>
-            </div>
-            <div class="slide-right">
-              <div class="illustration-wrapper">
-                <div class="glass-card">
-                  <div class="floating-icon">
-                    <div class="icon-card glass-float"><i class="fas fa-shopping-cart"></i><span>Store</span></div>
-                    <div class="icon-card glass-float-2"><i class="fas fa-globe"></i><span>Web</span></div>
-                    <div class="icon-card glass-float"><i class="fas fa-rocket"></i><span>Growth</span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- slide 4 -->
-        <div class="slide" role="listitem" aria-label="Slide 4: POS & Inventory Systems">
-          <div class="slide-grid">
-            <div class="slide-left">
-              <div class="badge"><i class="fas fa-cash-register"></i> POS & inventory</div>
-              <h1>POS &amp; Inventory<br>Management</h1>
-              <p>Real‑time tracking, automated stock alerts, and seamless billing—reduce waste and increase profits.</p>
-              <div class="cta-group">
-                <a href="#" class="btn btn-primary" aria-label="Get Free Consultation"><i class="fas fa-calendar-check"></i> Get Free Consultation</a>
-                <a href="#" class="btn btn-secondary" aria-label="View Projects"><i class="fas fa-arrow-right"></i> View Projects</a>
-              </div>
-            </div>
-            <div class="slide-right">
-              <div class="illustration-wrapper">
-                <div class="glass-card">
-                  <div class="floating-icon">
-                    <div class="icon-card glass-float"><i class="fas fa-boxes"></i><span>Stock</span></div>
-                    <div class="icon-card glass-float-2"><i class="fas fa-clipboard-list"></i><span>Inventory</span></div>
-                    <div class="icon-card glass-float"><i class="fas fa-chart-line"></i><span>Analytics</span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- slide 5 -->
-        <div class="slide" role="listitem" aria-label="Slide 5: Laravel & API Integration">
-          <div class="slide-grid">
-            <div class="slide-left">
-              <div class="badge"><i class="fas fa-link"></i> API & laravel</div>
-              <h1>Laravel &amp;<br>API Integration</h1>
-              <p>Scalable backend, secure APIs, and robust Laravel solutions that connect your entire digital ecosystem.</p>
-              <div class="cta-group">
-                <a href="#" class="btn btn-primary" aria-label="Get Free Consultation"><i class="fas fa-calendar-check"></i> Get Free Consultation</a>
-                <a href="#" class="btn btn-secondary" aria-label="View Projects"><i class="fas fa-arrow-right"></i> View Projects</a>
-              </div>
-            </div>
-            <div class="slide-right">
-              <div class="illustration-wrapper">
-                <div class="glass-card">
-                  <div class="floating-icon">
-                    <div class="icon-card glass-float"><i class="fab fa-laravel"></i><span>Laravel</span></div>
-                    <div class="icon-card glass-float-2"><i class="fas fa-plug"></i><span>APIs</span></div>
-                    <div class="icon-card glass-float"><i class="fas fa-cloud"></i><span>Cloud</span></div>
-                  </div>
+          <div class="hero-slide-right">
+            <div class="hero-illustration-wrapper">
+              <div class="hero-glass-card">
+                <div class="hero-floating-icon">
+                  <div class="hero-icon-card hero-float-1"><i class="fas fa-code"></i><span>Dev</span></div>
+                  <div class="hero-icon-card hero-float-2"><i class="fas fa-layer-group"></i><span>Stack</span></div>
+                  <div class="hero-icon-card hero-float-3"><i class="fas fa-database"></i><span>Data</span></div>
                 </div>
               </div>
             </div>
@@ -631,32 +136,169 @@
         </div>
       </div>
 
-      <!-- navigation arrows -->
-      <div class="nav-arrows">
-        <button class="arrow-btn" id="prevBtn" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
-        <button class="arrow-btn" id="nextBtn" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+      <!-- SLIDE 2: AI Automation & Chatbots -->
+      <div class="hero-slide" role="listitem" aria-label="Slide 2: AI Automation & Chatbots">
+        <div class="hero-slide-grid">
+          <div class="hero-slide-left">
+            <div class="hero-badge"><i class="fas fa-robot"></i> AI powered</div>
+            <h1>AI Automation<br>&amp; Chatbots</h1>
+            <p>Intelligent virtual assistants that work 24/7, automate support, and supercharge customer engagement.</p>
+            <div class="hero-cta-group">
+              <a href="/lishaqsolutions/contact/" class="hero-btn hero-btn-primary" aria-label="Get Free Consultation">
+                <i class="fas fa-calendar-check"></i> Get Free Consultation
+              </a>
+              <a href="#services" class="hero-btn hero-btn-secondary" aria-label="View Projects">
+                <i class="fas fa-arrow-right"></i> View Projects
+              </a>
+            </div>
+          </div>
+          <div class="hero-slide-right">
+            <div class="hero-illustration-wrapper">
+              <div class="hero-glass-card">
+                <div class="hero-floating-icon">
+                  <div class="hero-icon-card hero-float-1"><i class="fas fa-robot"></i><span>AI Chat</span></div>
+                  <div class="hero-icon-card hero-float-2"><i class="fas fa-comment-dots"></i><span>NLP</span></div>
+                  <div class="hero-icon-card hero-float-3"><i class="fas fa-brain"></i><span>Auto</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- progress indicators -->
-      <div class="progress-indicators" id="progressDots" role="tablist">
-        <div class="progress-dot active" data-index="0" role="tab" aria-label="Slide 1"><div class="bar"></div></div>
-        <div class="progress-dot" data-index="1" role="tab" aria-label="Slide 2"><div class="bar"></div></div>
-        <div class="progress-dot" data-index="2" role="tab" aria-label="Slide 3"><div class="bar"></div></div>
-        <div class="progress-dot" data-index="3" role="tab" aria-label="Slide 4"><div class="bar"></div></div>
-        <div class="progress-dot" data-index="4" role="tab" aria-label="Slide 5"><div class="bar"></div></div>
+      <!-- SLIDE 3: E-Commerce & Business Websites -->
+      <div class="hero-slide" role="listitem" aria-label="Slide 3: E-Commerce & Business Websites">
+        <div class="hero-slide-grid">
+          <div class="hero-slide-left">
+            <div class="hero-badge"><i class="fas fa-store"></i> E‑commerce</div>
+            <h1>E‑Commerce &amp;<br>Business Websites</h1>
+            <p>Beautiful, high‑converting online stores and corporate sites that build trust and drive revenue.</p>
+            <div class="hero-cta-group">
+              <a href="/lishaqsolutions/contact/" class="hero-btn hero-btn-primary" aria-label="Get Free Consultation">
+                <i class="fas fa-calendar-check"></i> Get Free Consultation
+              </a>
+              <a href="#services" class="hero-btn hero-btn-secondary" aria-label="View Projects">
+                <i class="fas fa-arrow-right"></i> View Projects
+              </a>
+            </div>
+          </div>
+          <div class="hero-slide-right">
+            <div class="hero-illustration-wrapper">
+              <div class="hero-glass-card">
+                <div class="hero-floating-icon">
+                  <div class="hero-icon-card hero-float-1"><i class="fas fa-shopping-cart"></i><span>Store</span></div>
+                  <div class="hero-icon-card hero-float-2"><i class="fas fa-globe"></i><span>Web</span></div>
+                  <div class="hero-icon-card hero-float-3"><i class="fas fa-rocket"></i><span>Growth</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 4: POS & Inventory Systems -->
+      <div class="hero-slide" role="listitem" aria-label="Slide 4: POS & Inventory Systems">
+        <div class="hero-slide-grid">
+          <div class="hero-slide-left">
+            <div class="hero-badge"><i class="fas fa-cash-register"></i> POS & inventory</div>
+            <h1>POS &amp; Inventory<br>Management</h1>
+            <p>Real‑time tracking, automated stock alerts, and seamless billing—reduce waste and increase profits.</p>
+            <div class="hero-cta-group">
+              <a href="/lishaqsolutions/contact/" class="hero-btn hero-btn-primary" aria-label="Get Free Consultation">
+                <i class="fas fa-calendar-check"></i> Get Free Consultation
+              </a>
+              <a href="#services" class="hero-btn hero-btn-secondary" aria-label="View Projects">
+                <i class="fas fa-arrow-right"></i> View Projects
+              </a>
+            </div>
+          </div>
+          <div class="hero-slide-right">
+            <div class="hero-illustration-wrapper">
+              <div class="hero-glass-card">
+                <div class="hero-floating-icon">
+                  <div class="hero-icon-card hero-float-1"><i class="fas fa-boxes"></i><span>Stock</span></div>
+                  <div class="hero-icon-card hero-float-2"><i class="fas fa-clipboard-list"></i><span>Inventory</span></div>
+                  <div class="hero-icon-card hero-float-3"><i class="fas fa-chart-line"></i><span>Analytics</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 5: Laravel & API Integration -->
+      <div class="hero-slide" role="listitem" aria-label="Slide 5: Laravel & API Integration">
+        <div class="hero-slide-grid">
+          <div class="hero-slide-left">
+            <div class="hero-badge"><i class="fas fa-link"></i> API & laravel</div>
+            <h1>Laravel &amp;<br>API Integration</h1>
+            <p>Scalable backend, secure APIs, and robust Laravel solutions that connect your entire digital ecosystem.</p>
+            <div class="hero-cta-group">
+              <a href="/lishaqsolutions/contact/" class="hero-btn hero-btn-primary" aria-label="Get Free Consultation">
+                <i class="fas fa-calendar-check"></i> Get Free Consultation
+              </a>
+              <a href="#services" class="hero-btn hero-btn-secondary" aria-label="View Projects">
+                <i class="fas fa-arrow-right"></i> View Projects
+              </a>
+            </div>
+          </div>
+          <div class="hero-slide-right">
+            <div class="hero-illustration-wrapper">
+              <div class="hero-glass-card">
+                <div class="hero-floating-icon">
+                  <div class="hero-icon-card hero-float-1"><i class="fab fa-laravel"></i><span>Laravel</span></div>
+                  <div class="hero-icon-card hero-float-2"><i class="fas fa-plug"></i><span>APIs</span></div>
+                  <div class="hero-icon-card hero-float-3"><i class="fas fa-cloud"></i><span>Cloud</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.hero-slides-container -->
+
+    <!-- Navigation Arrows -->
+    <div class="hero-nav-arrows">
+      <button class="hero-arrow-btn" id="heroPrevBtn" aria-label="Previous slide">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="hero-arrow-btn" id="heroNextBtn" aria-label="Next slide">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <!-- Progress Indicators -->
+    <div class="hero-progress-indicators" id="heroProgressDots" role="tablist">
+      <div class="hero-progress-dot active" data-index="0" role="tab" aria-label="Slide 1">
+        <div class="hero-bar"></div>
+      </div>
+      <div class="hero-progress-dot" data-index="1" role="tab" aria-label="Slide 2">
+        <div class="hero-bar"></div>
+      </div>
+      <div class="hero-progress-dot" data-index="2" role="tab" aria-label="Slide 3">
+        <div class="hero-bar"></div>
+      </div>
+      <div class="hero-progress-dot" data-index="3" role="tab" aria-label="Slide 4">
+        <div class="hero-bar"></div>
+      </div>
+      <div class="hero-progress-dot" data-index="4" role="tab" aria-label="Slide 5">
+        <div class="hero-bar"></div>
       </div>
     </div>
 
-    <!-- bottom trust section -->
-    <div class="trust-bar">
-      <span class="trust-item"><i class="fas fa-check-circle"></i> 500+ Features Delivered</span>
-      <span class="trust-item"><i class="fas fa-bolt"></i> Fast Delivery</span>
-      <span class="trust-item"><i class="fas fa-microchip"></i> AI Powered</span>
-      <span class="trust-item"><i class="fas fa-gear"></i> Business Automation</span>
-      <span class="trust-item"><i class="fas fa-shield-halved"></i> Secure Development</span>
-    </div>
+  </div><!-- /.hero-slider -->
+
+  <!-- Bottom Trust Bar -->
+  <div class="hero-trust-bar">
+    <span class="hero-trust-item"><i class="fas fa-check-circle"></i> 500+ Features Delivered</span>
+    <span class="hero-trust-item"><i class="fas fa-bolt"></i> Fast Delivery</span>
+    <span class="hero-trust-item"><i class="fas fa-microchip"></i> AI Powered</span>
+    <span class="hero-trust-item"><i class="fas fa-gear"></i> Business Automation</span>
+    <span class="hero-trust-item"><i class="fas fa-shield-halved"></i> Secure Development</span>
   </div>
 
+</div><!-- /.hero-slider-wrapper -->
 
   <!-- Services -->
   <section class="section">
@@ -1114,130 +756,10 @@
   <script src="/lishaqsolutions/js/dynamic.js"></script>
   <script src="/lishaqsolutions/js/main.min.js"></script>
   <script src="/lishaqsolutions/js/slider.min.js"></script>
+  <script src="/lishaqsolutions/js/hero-slider.js"></script>
 
   <!-- Dynamic Local Business Schema -->
   <script id="local-business-schema" type="application/ld+json"></script>
-  <script>
-    (function() {
-      const container = document.getElementById('slidesContainer');
-      const slides = document.querySelectorAll('.slide');
-      const dots = document.querySelectorAll('.progress-dot');
-      const prevBtn = document.getElementById('prevBtn');
-      const nextBtn = document.getElementById('nextBtn');
-      const slider = document.getElementById('sliderContainer');
-
-      let current = 0;
-      const total = slides.length;
-      let autoPlayInterval = null;
-      let isPaused = false;
-
-      // update slider
-      function goTo(index) {
-        if (index < 0) index = total - 1;
-        else if (index >= total) index = 0;
-        current = index;
-
-        container.style.transform = `translateX(-${current * 100}%)`;
-
-        // update dots
-        dots.forEach((dot, i) => {
-          dot.classList.toggle('active', i === current);
-          const bar = dot.querySelector('.bar');
-          if (i === current) {
-            bar.style.width = '0%';
-            requestAnimationFrame(() => {
-              bar.style.transition = 'width 6s linear';
-              bar.style.width = '100%';
-            });
-          } else {
-            bar.style.transition = 'none';
-            bar.style.width = '0%';
-          }
-        });
-
-        // update aria
-        slides.forEach((s, i) => s.setAttribute('aria-hidden', i === current ? 'false' : 'true'));
-      }
-
-      function nextSlide() { goTo(current + 1); }
-      function prevSlide() { goTo(current - 1); }
-
-      // reset autoplay
-      function resetAutoplay() {
-        if (autoPlayInterval) clearInterval(autoPlayInterval);
-        if (!isPaused) {
-          autoPlayInterval = setInterval(nextSlide, 6000);
-        }
-      }
-
-      // pause / resume on hover
-      slider.addEventListener('mouseenter', () => {
-        isPaused = true;
-        if (autoPlayInterval) {
-          clearInterval(autoPlayInterval);
-          autoPlayInterval = null;
-        }
-      });
-      slider.addEventListener('mouseleave', () => {
-        isPaused = false;
-        resetAutoplay();
-      });
-
-      // dot click
-      dots.forEach((dot, idx) => {
-        dot.addEventListener('click', () => {
-          goTo(idx);
-          resetAutoplay();
-        });
-        dot.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            goTo(idx);
-            resetAutoplay();
-          }
-        });
-      });
-
-      // arrow buttons
-      nextBtn.addEventListener('click', () => { nextSlide(); resetAutoplay(); });
-      prevBtn.addEventListener('click', () => { prevSlide(); resetAutoplay(); });
-
-      // keyboard
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight') { nextSlide(); resetAutoplay(); }
-        else if (e.key === 'ArrowLeft') { prevSlide(); resetAutoplay(); }
-      });
-
-      // swipe support (touch)
-      let touchStartX = 0;
-      let touchEndX = 0;
-      slider.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-      }, { passive: true });
-      slider.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        const diff = touchStartX - touchEndX;
-        if (Math.abs(diff) > 40) {
-          if (diff > 0) { nextSlide(); } else { prevSlide(); }
-          resetAutoplay();
-        }
-      }, { passive: true });
-
-      // initial
-      goTo(0);
-      resetAutoplay();
-
-      // handle visibility change (pause when tab hidden)
-      document.addEventListener('visibilitychange', () => {
-        if (document.hidden) {
-          if (autoPlayInterval) clearInterval(autoPlayInterval);
-        } else {
-          resetAutoplay();
-        }
-      });
-
-    })();
-  </script>
 </body>
 
 </html>
