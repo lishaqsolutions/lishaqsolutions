@@ -77,11 +77,11 @@ async function loadBlogs() {
             }
 
             // Ensure image URL is valid
-            const imageUrl = blog.image || '/lishaqsolutions/images/placeholder.webp';
+            const imageUrl = blog.image || '/images/placeholder.webp';
 
             container.innerHTML += `
                 <a
-                    href="/lishaqsolutions/blog-post/?slug=${encodeURIComponent(blog.slug)}"
+                    href="/blog-post/?slug=${encodeURIComponent(blog.slug)}"
                     class="card blog-card"
                     style="padding:0;overflow:hidden;display:block;text-decoration:none;background: rgba(15, 25, 55, 0.75);border-radius: 28px;transition: all 0.25s ease;border: 1px solid rgba(43, 127, 255, 0.25);"
                 >
@@ -91,7 +91,7 @@ async function loadBlogs() {
                             alt="${blog.title || 'Blog post'}"
                             loading="lazy"
                             style="width:100%;height:100%;object-fit:cover;"
-                            onerror="this.src='/lishaqsolutions/images/placeholder.webp'"
+                            onerror="this.src='/images/placeholder.webp'"
                         >
                     </div>
                     <div style="padding:24px">
@@ -114,7 +114,7 @@ async function loadBlogs() {
         container.innerHTML = `
             <div style="text-align: center; padding: 50px; grid-column: 1/-1;">
                 <p style="color: #ff6b6b;">Failed to load blog posts.</p>
-                <p style="margin-top: 10px; color: white;">Please try again later or <a href="/lishaqsolutions/contact/" style="color: var(--primary);">contact us</a> if the issue persists.</p>
+                <p style="margin-top: 10px; color: white;">Please try again later or <a href="/contact/" style="color: var(--primary);">contact us</a> if the issue persists.</p>
                 <details style="margin-top: 20px; text-align: left;">
                     <summary style="color: white;">Technical details</summary>
                     <pre style="background: #1a1a2e; padding: 10px; border-radius: 8px; margin-top: 10px; overflow-x: auto; color: #e2e8f0;">${error.message}</pre>

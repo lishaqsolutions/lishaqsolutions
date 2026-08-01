@@ -106,7 +106,7 @@ async function loadBlogPost() {
 
             canonical.href =
                 window.location.origin +
-                "/lishaqsolutions/blog-post/?slug=" +
+                "/blog-post/?slug=" +
                 blog.slug;
 
         }
@@ -129,7 +129,7 @@ async function loadBlogPost() {
             <article class="article">
 
                 <a
-                    href="/lishaqsolutions/blog/"
+                    href="/blog/"
                     style="
                         color:var(--primary);
                         font-size:0.9rem;

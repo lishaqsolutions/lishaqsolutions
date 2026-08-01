@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (document.querySelector('#header')) {
             await loadComponent(
                 '#header',
-                '/lishaqsolutions/templates/header.html'
+                '/templates/header.html'
             );
         }
 
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (document.querySelector('#footer')) {
             await loadComponent(
                 '#footer',
-                '/lishaqsolutions/templates/footer.html'
+                '/templates/footer.html'
             );
         }
 

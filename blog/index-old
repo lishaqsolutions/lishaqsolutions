@@ -38,7 +38,7 @@
     <!-- Favicon -->
     <link
       rel="shortcut icon"
-      href="/lishaqsolutions/images/logo.png"
+      href="/images/logo.png"
       type="image/x-icon"
       data-favicon
     />
@@ -52,7 +52,7 @@
     />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="/lishaqsolutions/css/styles.min.css" />
+    <link rel="stylesheet" href="/css/styles.min.css" />
   </head>
 
   <body data-site="lishaqsolutions">
@@ -87,14 +87,14 @@
 
         <!-- BLOG CARD TEMPLATE (data-driven ready) -->
         <a
-          href="/lishaqsolutions/blogs/fix-laravel-error-500/"
+          href="/blogs/fix-laravel-error-500/"
           class="card blog-card reveal"
           data-blog-card
           data-blog-id="1"
         >
           <div class="thumb" style="aspect-ratio: 16/9; overflow: hidden">
             <img
-              src="/lishaqsolutions/images/project-inventory.webp"
+              src="/images/project-inventory.webp"
               alt="Fix Laravel Error 500 guide"
               loading="lazy"
               data-blog-image
@@ -121,13 +121,13 @@
 
         <!-- BLOG 2 -->
         <a
-          href="/lishaqsolutions/blogs/laravel-ajax-not-working/"
+          href="/blogs/laravel-ajax-not-working/"
           class="card blog-card reveal"
           data-blog-card
         >
           <div class="thumb" style="aspect-ratio: 16/9; overflow: hidden">
             <img
-              src="/lishaqsolutions/images/project-ecom.webp"
+              src="/images/project-ecom.webp"
               alt="Laravel AJAX not working fix"
               loading="lazy"
             />
@@ -150,10 +150,10 @@
         </a>
 
         <!-- BLOG 3 -->
-        <a href="/lishaqsolutions/blogs/website-slow-loading-fix/" class="card blog-card reveal" data-blog-card>
+        <a href="/blogs/website-slow-loading-fix/" class="card blog-card reveal" data-blog-card>
           <div class="thumb" style="aspect-ratio: 16/9; overflow: hidden">
             <img
-              src="/lishaqsolutions/images/project-pos.webp"
+              src="/images/project-pos.webp"
               alt="Website slow loading fix guide"
               loading="lazy"
             />
@@ -176,10 +176,10 @@
         </a>
 
         <!-- BLOG 4 -->
-        <a href="/lishaqsolutions/blogs/pos-system-small-business-pakistan/" class="card blog-card reveal" data-blog-card>
+        <a href="/blogs/pos-system-small-business-pakistan/" class="card blog-card reveal" data-blog-card>
           <div class="thumb" style="aspect-ratio: 16/9; overflow: hidden">
             <img
-              src="/lishaqsolutions/images/project-pos.webp"
+              src="/images/project-pos.webp"
               alt="POS system for small business Pakistan"
               loading="lazy"
             />
@@ -202,10 +202,10 @@
         </a>
 
         <!-- BLOG 5 -->
-        <a href="/lishaqsolutions/blogs/website-development-cost-karachi/" class="card blog-card reveal" data-blog-card>
+        <a href="/blogs/website-development-cost-karachi/" class="card blog-card reveal" data-blog-card>
           <div class="thumb" style="aspect-ratio: 16/9; overflow: hidden">
             <img
-              src="/lishaqsolutions/images/project-ecom.webp"
+              src="/images/project-ecom.webp"
               alt="Website development cost Karachi"
               loading="lazy"
             />
@@ -244,9 +244,9 @@
     </a>
 
     <!-- JS -->
-    <script src="/lishaqsolutions/js/components.js"></script>
-    <script src="/lishaqsolutions/js/config.js"></script>
-    <script src="/lishaqsolutions/js/dynamic.js"></script>
-    <script src="/lishaqsolutions/js/main.min.js"></script>
+    <script src="/js/components.js"></script>
+    <script src="/js/config.js"></script>
+    <script src="/js/dynamic.js"></script>
+    <script src="/js/main.min.js"></script>
   </body>
 </html>

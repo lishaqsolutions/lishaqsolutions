@@ -1,0 +1,73 @@
+// function doGet() {
+
+//   const sheet =
+//     SpreadsheetApp
+//       .getActiveSpreadsheet()
+//       .getSheetByName("Blogs");
+
+//   const data =
+//     sheet
+//       .getDataRange()
+//       .getValues();
+
+//   const headers = data.shift();
+
+//   const result = data.map(row => {
+
+//     let obj = {};
+
+//     headers.forEach((header, index) => {
+//       obj[header] = row[index];
+//     });
+
+//     return obj;
+
+//   });
+
+//   return ContentService
+//     .createTextOutput(
+//       JSON.stringify(result)
+//     )
+//     .setMimeType(
+//       ContentService.MimeType.JSON
+//     );
+// }
+
+
+
+
+function doGet() {
+
+  const sheet =
+    SpreadsheetApp
+      .getActiveSpreadsheet()
+      .getSheetByName("Blogs");
+
+  const data =
+    sheet
+      .getDataRange()
+      .getValues();
+
+  const headers = data.shift();
+
+  const result = data.map(row => {
+
+    let obj = {};
+
+    headers.forEach((header, index) => {
+      obj[header] = row[index];
+    });
+
+    return obj;
+
+  });
+
+  return ContentService
+    .createTextOutput(
+      JSON.stringify(result)
+    )
+    .setMimeType(
+      ContentService.MimeType.JSON
+    );
+
+}
