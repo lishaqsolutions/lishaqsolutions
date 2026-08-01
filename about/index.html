@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html lang="en" data-page="about" data-page-title="About — Lishaq Solutions"
-  data-page-description="Muhammad Ishaq — a developer who delivers solutions, not just code. 2+ years building Laravel & Vue.js systems."
-  data-page-url="/about/" data-page-type="about">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- TITLE (fallback, JS can override) -->
-  <title>About — Lishaq Solutions</title>
+  <title data-site-title data-page-title="About Lishaq Solutions | Web Development & AI Automation Agency"></title>
 
-  <!-- SEO -->
-  <meta name="description"
-    content="Muhammad Ishaq — a developer who delivers solutions, not just code. 2+ years building Laravel & Vue.js systems." />
-  <meta name="author" content="Muhammad Ishaq" />
+  <meta name="description" data-site-description data-page-description="Discover Lishaq Solutions and our expertise in web development, AI automation, software engineering, e-commerce solutions, business systems, and modern digital experiences designed to help businesses grow." />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="About — Lishaq Solutions" />
-  <meta property="og:description"
-    content="Muhammad Ishaq — a developer who delivers solutions, not just code. 2+ years building Laravel & Vue.js systems." />
-  <meta property="og:type" content="website" />
+  <meta name="robots" content="index,follow">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://lishaqsolutions.com/about/">
 
-  <!-- Canonical (dynamic-ready) -->
-  <link rel="canonical" href="/about/" data-canonical />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url">
+  <meta property="og:image" content="/images/og-image.jpg">
+  <meta property="og:site_name">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image:alt" content="Lishaq Solutions">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="/images/og-image.jpg">
+
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" data-favicon />
@@ -150,6 +151,52 @@
   <script src="/js/config.js"></script>
   <script src="/js/dynamic.js"></script>
   <script src="/js/main.min.js"></script>
+
+  <!-- Common schemas -->
+  <script id="organization" type="application/ld+json"></script>
+  <script id="website" type="application/ld+json"></script>
+
+  <!-- Page-specific schema -->
+  <script id="page-schema" type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://lishaqsolutions.com/about/#webpage",
+          "url": "https://lishaqsolutions.com/about/",
+          "name": "About | Lishaq Solutions",
+          "description":"Learn about Lishaq Solutions and how we help businesses grow through custom web development, AI automation, software engineering and scalable digital solutions.",
+          "isPartOf": {
+            "@id": "https://lishaqsolutions.com/#website"
+          },
+          "about": {
+            "@id": "https://lishaqsolutions.com/#organization"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://lishaqsolutions.com/about/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://lishaqsolutions.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "About",
+              "item": "https://lishaqsolutions.com/about/"
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+
+  <script src="/js/schema.js"></script>
 
 </body>
 

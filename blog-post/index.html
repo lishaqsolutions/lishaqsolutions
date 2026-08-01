@@ -2,13 +2,33 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Loading...</title>
+    <title data-site-title>Loading...</title>
 
-    <meta name="description" content="">
+    <meta name="description" data-site-description content="">
 
-    <link rel="stylesheet"
-          href="/css/styles.min.css">
+    <meta name="robots" content="index,follow">
+
+    <link rel="canonical" href="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:site_name" content="">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image:alt" content="Lishaq Solutions">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="/images/og-image.jpg">
+    <link rel="icon" href="/images/logo.png" type="image/png">
+
+    <link rel="stylesheet" href="/css/styles.min.css">
 
 </head>
 
@@ -34,7 +54,7 @@
 
     </section>
 
-    
+
 
     <div id="footer"></div>
 
@@ -42,6 +62,15 @@
     <script src="/js/config.js"></script>
     <script src="/js/dynamic.js"></script>
     <script src="/js/blog-post.js"></script>
+    <!-- Common schemas -->
+    <script id="organization" type="application/ld+json"></script>
+    <script id="website" type="application/ld+json"></script>
+
+    <!-- Page Schema -->
+    <script id="page-schema" type="application/ld+json"></script>
+
+    <script src="/js/schema.js"></script>
 
 </body>
+
 </html>

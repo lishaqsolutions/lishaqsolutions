@@ -5,35 +5,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Dynamic Title -->
-  <title data-site-title
-    data-page-title="Mobile Fix Service Management System | Repair Shop Software | Lishaq Solutions">
-    Mobile Fix Service Management System | Repair Shop Software | Lishaq Solutions
-  </title>
+  <title data-site-title data-page-title="Mobile Fix Service Management System | Case Study"></title>
 
-  <!-- Dynamic Description -->
-  <meta name="description" data-site-description
-    data-page-description="Custom service management software for mobile repair businesses. Track repairs, customers, technicians, invoices, payments and service history."
-    content="Custom service management software for mobile repair businesses. Track repairs, customers, technicians, invoices, payments and service history." />
+  <meta name="description" data-site-description data-page-description="Service management software for mobile repair businesses with repair tracking, customer management, technician workflow, and billing." />
 
-  <meta name="author" content="Muhammad Ishaq" />
+  <meta name="robots" content="index,follow">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Mobile Fix Service Management System | Lishaq Solutions" />
-  <meta property="og:description"
-    content="Custom service management software for mobile repair businesses. Track repairs, customers, technicians, invoices, payments and service history." />
-  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://lishaqsolutions.com/projects/mobile-fix-service-management-system/">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:description"
-    content="Custom service management software for mobile repair businesses. Track repairs, customers, technicians, invoices, payments and service history." />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url">
+  <meta property="og:image" content="/images/og-image.jpg">
+  <meta property="og:site_name">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image:alt" content="Lishaq Solutions">
 
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="/images/og-image.jpg">
   <!-- Favicon -->
   <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
-
-  <!-- Dynamic Canonical -->
-  <link rel="canonical" href="https://lishaqsolutions.com/projects/mobile-fix-service-management-system/" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -76,9 +70,8 @@
     <section class="project-cover">
       <div class="container">
         <div class="cover-wrapper">
-          <img src="/images/projects/mobile-fix-cover.webp"
-            alt="Mobile Fix Service Management System Dashboard Preview" loading="lazy"
-            onerror="this.src='/images/projects/placeholder-project.webp'" />
+          <img src="/images/projects/mobile-fix-cover.webp" alt="Mobile Fix Service Management System Dashboard Preview"
+            loading="lazy" onerror="this.src='/images/projects/placeholder-project.webp'" />
         </div>
       </div>
     </section>
@@ -213,8 +206,8 @@
         <h2 class="section-head-center">Project Gallery</h2>
         <div class="project-gallery">
           <div class="gallery-item">
-            <img src="/images/projects/mobile-fix-dashboard.webp" alt="Service Management Dashboard"
-              loading="lazy" onerror="this.src='/images/projects/placeholder-project.webp'" />
+            <img src="/images/projects/mobile-fix-dashboard.webp" alt="Service Management Dashboard" loading="lazy"
+              onerror="this.src='/images/projects/placeholder-project.webp'" />
             <div class="gallery-caption">Main Dashboard</div>
           </div>
           <div class="gallery-item">
@@ -223,8 +216,8 @@
             <div class="gallery-caption">Repair Tracking</div>
           </div>
           <div class="gallery-item">
-            <img src="/images/projects/mobile-fix-customers.webp" alt="Customer Management"
-              loading="lazy" onerror="this.src='/images/projects/placeholder-project.webp'" />
+            <img src="/images/projects/mobile-fix-customers.webp" alt="Customer Management" loading="lazy"
+              onerror="this.src='/images/projects/placeholder-project.webp'" />
             <div class="gallery-caption">Customer Management</div>
           </div>
           <div class="gallery-item">
@@ -542,48 +535,68 @@
   <script src="/js/dynamic.js"></script>
   <script src="/js/main.min.js"></script>
 
-  <!-- Dynamic Local Business Schema -->
-  <script id="local-business-schema" type="application/ld+json"></script>
+  <!-- Common schemas -->
+  <script id="organization" type="application/ld+json"></script>
+  <script id="website" type="application/ld+json"></script>
 
-  <!-- Project Schema -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "CreativeWork",
-      "name": "Mobile Fix Service Management System",
-      "author": {
-        "@type": "Organization",
-        "name": "Lishaq Solutions"
-      },
-      "about": "Repair Shop Software",
-      "url": "https://lishaqsolutions.com/projects/mobile-fix-service-management-system/"
-    }
-
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://lishaqsolutions.com/"
+  <!-- Page-specific schema -->
+  <script id="page-schema" type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebPage",
+        "@id":"https://lishaqsolutions.com/projects/mobile-fix-service-management-system/#webpage",
+        "url":"https://lishaqsolutions.com/projects/mobile-fix-service-management-system/",
+        "name":"Mobile Fix Service Management System | Lishaq Solutions",
+        "description":"Repair shop management system with repair tracking, customer records, inventory and billing.",
+        "isPartOf":{
+          "@id":"https://lishaqsolutions.com/#website"
         },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Projects",
-          "item": "https://lishaqsolutions.com/projects/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Mobile Fix Service Management System",
-          "item": "https://lishaqsolutions.com/projects/mobile-fix-service-management-system/"
+        "about":{
+          "@id":"https://lishaqsolutions.com/#organization"
         }
-      ]
-    }
-  </script>
+      },
+      {
+        "@type":"SoftwareApplication",
+        "@id":"https://lishaqsolutions.com/projects/mobile-fix-service-management-system/#project",
+        "name":"Mobile Fix Service Management System",
+        "applicationCategory":"BusinessApplication",
+        "creator":{
+          "@id":"https://lishaqsolutions.com/#organization"
+        },
+        "url":"https://lishaqsolutions.com/projects/mobile-fix-service-management-system/",
+        "description":"Service center software for managing repairs, customers, inventory and invoices."
+      },
+      {
+        "@type":"BreadcrumbList",
+        "@id":"https://lishaqsolutions.com/projects/mobile-fix-service-management-system/#breadcrumb",
+        "itemListElement":[
+          {
+            "@type":"ListItem",
+            "position":1,
+            "name":"Home",
+            "item":"https://lishaqsolutions.com/"
+          },
+          {
+            "@type":"ListItem",
+            "position":2,
+            "name":"Projects",
+            "item":"https://lishaqsolutions.com/projects/"
+          },
+          {
+            "@type":"ListItem",
+            "position":3,
+            "name":"Mobile Fix Service Management System",
+            "item":"https://lishaqsolutions.com/projects/mobile-fix-service-management-system/"
+          }
+        ]
+      }
+    ]
+  }
+</script>
+
+  <script src="/js/schema.js"></script>
 
 </body>
 

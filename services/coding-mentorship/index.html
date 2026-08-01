@@ -4,37 +4,30 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- Dynamic Title -->
-        <title
-            data-site-title
-            data-page-title="Coding Mentorship & Laravel Training in Pakistan | 1-on-1 Developer Guidance">
-            Coding Mentorship & Laravel Training in Pakistan | 1-on-1 Developer Guidance
-        </title>
+    <title data-site-title data-page-title="Coding Mentorship & Programming Guidance | Lishaq Solutions"></title>
 
-        <!-- Dynamic Meta Description -->
-        <meta
-            name="description"
-            data-site-description
-            data-page-description="1-on-1 coding mentorship in Pakistan. Learn Laravel, PHP, web development, debugging, project structure, and real-world development practices from industry experience."
-            content="1-on-1 coding mentorship in Pakistan. Learn Laravel, PHP, web development, debugging, project structure, and real-world development practices from industry experience." />
+    <meta name="description" data-site-description
+    data-page-description="Get one-on-one coding mentorship for Laravel, PHP, JavaScript, Vue.js, web development, project architecture, debugging, and career growth." />
 
-        <meta name="author" content="Muhammad Ishaq" />
+    <meta name="robots" content="index,follow">
 
-        <meta property="og:title"
-            content="Coding Mentorship — Lishaq Solutions" />
-        <meta
-            property="og:description"
-            content="1-on-1 coding mentorship in Pakistan. Learn Laravel, PHP, web development, debugging, and real-world development practices." />
-        <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://lishaqsolutions.com/services/coding-mentorship/">
 
-        <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:site_name">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image:alt" content="Lishaq Solutions">
 
-        <link
-            rel="shortcut icon"
-            href="/images/logo.png"
-            type="image/x-icon" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="/images/og-image.jpg">
 
-        <link rel="canonical" href="https://lishaqsolutions.com/services/coding-mentorship/" />
+        <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -234,17 +227,69 @@
         <script src="/js/dynamic.js"></script>
         <script src="/js/main.min.js"></script>
 
-        <script type="application/ld+json">
+        <!-- Common schemas -->
+        <script id="organization" type="application/ld+json"></script>
+        <script id="website" type="application/ld+json"></script>
+
+        <!-- Page-specific schema -->
+        <script id="page-schema" type="application/ld+json">
+        {
+        "@context":"https://schema.org",
+        "@graph":[
             {
-                "@context":"https://schema.org",
-                "@type":"Service",
-                "serviceType":"Coding Mentorship",
-                "provider":{
-                    "@type":"Organization",
-                    "name":"Lishaq Solutions"
-                }
+            "@type":"WebPage",
+            "@id":"https://lishaqsolutions.com/services/coding-mentorship/#webpage",
+            "url":"https://lishaqsolutions.com/services/coding-mentorship/",
+            "name":"Coding Mentorship | Lishaq Solutions",
+            "description":"One-on-one coding mentorship for Laravel, PHP, Vue.js, JavaScript, web development and software engineering.",
+            "isPartOf":{
+                "@id":"https://lishaqsolutions.com/#website"
+            },
+            "about":{
+                "@id":"https://lishaqsolutions.com/#organization"
             }
+            },
+            {
+            "@type":"Service",
+            "@id":"https://lishaqsolutions.com/services/coding-mentorship/#service",
+            "serviceType":"Coding Mentorship",
+            "name":"Coding Mentorship",
+            "provider":{
+                "@id":"https://lishaqsolutions.com/#organization"
+            },
+            "areaServed":"Worldwide",
+            "url":"https://lishaqsolutions.com/services/coding-mentorship/",
+            "description":"Personalized coding mentorship covering Laravel, PHP, Vue.js, JavaScript, backend development, debugging and software engineering best practices."
+            },
+            {
+            "@type":"BreadcrumbList",
+            "@id":"https://lishaqsolutions.com/services/coding-mentorship/#breadcrumb",
+            "itemListElement":[
+                {
+                "@type":"ListItem",
+                "position":1,
+                "name":"Home",
+                "item":"https://lishaqsolutions.com/"
+                },
+                {
+                "@type":"ListItem",
+                "position":2,
+                "name":"Services",
+                "item":"https://lishaqsolutions.com/services/"
+                },
+                {
+                "@type":"ListItem",
+                "position":3,
+                "name":"Coding Mentorship",
+                "item":"https://lishaqsolutions.com/services/coding-mentorship/"
+                }
+            ]
+            }
+        ]
+        }
         </script>
+
+        <script src="/js/schema.js"></script>
 
     </body>
 </html>

@@ -4,38 +4,29 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- Dynamic Title -->
-        <title
-            data-site-title
-            data-page-title="POS System Development Services in Pakistan | Custom Point of Sale Software">
-            POS System Development Services in Pakistan | Custom Point of Sale
-            Software
-        </title>
+        <title data-site-title data-page-title="POS System Development | Restaurant & Retail Software"></title>
 
-        <!-- Dynamic Meta Description -->
-        <meta
-            name="description"
-            data-site-description
-            data-page-description="Custom POS system development services in Pakistan. Point of sale software for restaurants, retail stores, pharmacies, supermarkets and multi-branch businesses."
-            content="Custom POS system development services in Pakistan. Point of sale software for restaurants, retail stores, pharmacies, supermarkets and multi-branch businesses." />
+    <meta name="description" data-site-description 
+    data-page-description="Custom POS systems for restaurants, retail stores, and businesses with billing, inventory management, reporting, customer management, and analytics." />
 
-        <meta name="author" content="Muhammad Ishaq" />
+    <meta name="robots" content="index,follow">
 
-        <meta property="og:title"
-            content="POS System Development — Lishaq Solutions" />
-        <meta
-            property="og:description"
-            content="Custom POS software for restaurants, retail stores, pharmacies, supermarkets and multi-branch businesses." />
-        <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://lishaqsolutions.com/services/pos-system/">
 
-        <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:site_name">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image:alt" content="Lishaq Solutions">
 
-        <link
-            rel="shortcut icon"
-            href="/images/logo.png"
-            type="image/x-icon" />
-
-        <link rel="canonical" href="https://lishaqsolutions.com/services/pos-system/" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="/images/og-image.jpg">
+        <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -416,17 +407,56 @@
         <script src="/js/dynamic.js"></script>
         <script src="/js/main.min.js"></script>
 
-        <script type="application/ld+json">
+        <!-- Common schemas -->
+        <script id="organization" type="application/ld+json"></script>
+        <script id="website" type="application/ld+json"></script>
+
+        <!-- Page-specific schema -->
+        <script id="page-schema" type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@graph": [
             {
-                "@context":"https://schema.org",
-                "@type":"Service",
-                "serviceType":"POS System Development",
-                "provider":{
-                    "@type":"Organization",
-                    "name":"Lishaq Solutions"
+            "@type": "Service",
+            "@id": "https://lishaqsolutions.com/services/pos-system/#service",
+            "name": "POS System Development",
+            "serviceType": "POS System Development",
+            "provider": {
+                "@id": "https://lishaqsolutions.com/#organization"
+            },
+            "url": "https://lishaqsolutions.com/services/pos-system/",
+            "description": "Custom POS system development for restaurants, retail stores, pharmacies and businesses with billing, inventory, reporting and customer management.",
+            "areaServed": "Worldwide"
+            },
+            {
+            "@type": "BreadcrumbList",
+            "@id": "https://lishaqsolutions.com/services/pos-system/#breadcrumb",
+            "itemListElement": [
+                {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://lishaqsolutions.com/"
+                },
+                {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://lishaqsolutions.com/services/"
+                },
+                {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "POS System Development",
+                "item": "https://lishaqsolutions.com/services/pos-system/"
                 }
+            ]
             }
+        ]
+        }
         </script>
+
+        <script src="/js/schema.js"></script>
 
     </body>
 </html>

@@ -4,37 +4,29 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- Dynamic Title -->
-        <title
-            data-site-title
-            data-page-title="Inventory Management System Development in Pakistan">
-            Inventory Management System Development in Pakistan
-        </title>
+        <title data-site-title data-page-title="Inventory Management Software Development | Lishaq Solutions"></title>
 
-        <!-- Dynamic Meta Description -->
-        <meta
-            name="description"
-            data-site-description
-            data-page-description="Custom inventory management software for warehouses, stores and distributors. Track stock, suppliers, purchases and sales in real time."
-            content="Custom inventory management software for warehouses, stores and distributors. Track stock, suppliers, purchases and sales in real time." />
+    <meta name="description" data-site-description 
+    data-page-description="Develop custom inventory management systems with stock tracking, barcode support, reporting, supplier management, and real-time inventory control." />
 
-        <meta name="author" content="Muhammad Ishaq" />
+    <meta name="robots" content="index,follow">
 
-        <meta property="og:title"
-            content="Inventory Management — Lishaq Solutions" />
-        <meta
-            property="og:description"
-            content="Custom inventory software for warehouses, stores and distributors. Track stock, suppliers, purchases and sales in real time." />
-        <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://lishaqsolutions.com/services/inventory-management-system/">
 
-        <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:site_name">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image:alt" content="Lishaq Solutions">
 
-        <link
-            rel="shortcut icon"
-            href="/images/logo.png"
-            type="image/x-icon" />
-
-        <link rel="canonical" href="https://lishaqsolutions.com/services/inventory-management-system/" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="/images/og-image.jpg">
+        <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -273,17 +265,56 @@
         <script src="/js/dynamic.js"></script>
         <script src="/js/main.min.js"></script>
 
-        <script type="application/ld+json">
+        <!-- Common schemas -->
+        <script id="organization" type="application/ld+json"></script>
+        <script id="website" type="application/ld+json"></script>
+
+        <!-- Page-specific schema -->
+        <script id="page-schema" type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@graph": [
             {
-                "@context":"https://schema.org",
-                "@type":"Service",
-                "serviceType":"Inventory Management System Development",
-                "provider":{
-                    "@type":"Organization",
-                    "name":"Lishaq Solutions"
+            "@type": "Service",
+            "@id": "https://lishaqsolutions.com/services/inventory-management-system/#service",
+            "name": "Inventory Management System Development",
+            "serviceType": "Inventory Management System Development",
+            "provider": {
+                "@id": "https://lishaqsolutions.com/#organization"
+            },
+            "url": "https://lishaqsolutions.com/services/inventory-management-system/",
+            "description": "Custom inventory management software for warehouses, retail stores and distributors with stock tracking, purchase management, sales management and reporting.",
+            "areaServed": "Worldwide"
+            },
+            {
+            "@type": "BreadcrumbList",
+            "@id": "https://lishaqsolutions.com/services/inventory-management-system/#breadcrumb",
+            "itemListElement": [
+                {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://lishaqsolutions.com/"
+                },
+                {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://lishaqsolutions.com/services/"
+                },
+                {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Inventory Management System",
+                "item": "https://lishaqsolutions.com/services/inventory-management-system/"
                 }
+            ]
             }
+        ]
+        }
         </script>
+
+        <script src="/js/schema.js"></script>
 
     </body>
 </html>

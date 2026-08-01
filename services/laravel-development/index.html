@@ -4,36 +4,29 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- Dynamic Title -->
-        <title
-            data-site-title
-            data-page-title="Laravel Development Services in Pakistan | Custom Web Applications">
-            Laravel Development Services in Pakistan | Custom Web Applications
-        </title>
+        <title data-site-title data-page-title="Laravel Development Services | Custom Web Applications"></title>
 
-        <!-- Dynamic Meta Description -->
-        <meta
-            name="description"
-            data-site-description
-            data-page-description="Professional Laravel development services in Pakistan. Custom web applications, admin panels, POS systems, inventory software, APIs, debugging and maintenance."
-            content="Professional Laravel development services in Pakistan. Custom web applications, admin panels, POS systems, inventory software, APIs, debugging and maintenance." />
+    <meta name="description" data-site-description 
+    data-page-description="Develop secure and scalable Laravel applications, REST APIs, dashboards, CRM systems, and enterprise software tailored to your business needs." />
 
-        <meta name="author" content="Muhammad Ishaq" />
+    <meta name="robots" content="index,follow">
 
-        <meta property="og:title" content="Services — Lishaq Solutions" />
-        <meta
-            property="og:description"
-            content="POS, inventory, admin dashboards, e-commerce, landing pages, debugging, rebuilds and code mentorship." />
-        <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://lishaqsolutions.com/services/laravel-development/">
 
-        <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:site_name">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image:alt" content="Lishaq Solutions">
 
-        <link
-            rel="shortcut icon"
-            href="/images/logo.png"
-            type="image/x-icon" />
-
-        <link rel="canonical" href="https://lishaqsolutions.com/services/laravel-development/" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="/images/og-image.jpg">
+        <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -269,19 +262,56 @@
         <script src="/js/dynamic.js"></script>
         <script src="/js/main.min.js"></script>
 
-        <!-- Dynamic Local Business Schema -->
-        <!-- <script id="local-business-schema" type="application/ld+json"></script> -->
-        <script type="application/ld+json">
+        <!-- Common schemas -->
+        <script id="organization" type="application/ld+json"></script>
+        <script id="website" type="application/ld+json"></script>
+
+        <!-- Page-specific schema -->
+        <script id="page-schema" type="application/ld+json">
         {
-            "@context":"https://schema.org",
-            "@type":"Service",
-            "serviceType":"Laravel Development",
-            "provider":{
-                "@type":"Organization",
-                "name":"Lishaq Solutions"
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+            "@type": "Service",
+            "@id": "https://lishaqsolutions.com/services/laravel-development/#service",
+            "name": "Laravel Development",
+            "serviceType": "Laravel Development",
+            "provider": {
+                "@id": "https://lishaqsolutions.com/#organization"
+            },
+            "url": "https://lishaqsolutions.com/services/laravel-development/",
+            "description": "Professional Laravel development for web applications, admin dashboards, APIs, CRM systems, ERP solutions and custom business software.",
+            "areaServed": "Worldwide"
+            },
+            {
+            "@type": "BreadcrumbList",
+            "@id": "https://lishaqsolutions.com/services/laravel-development/#breadcrumb",
+            "itemListElement": [
+                {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://lishaqsolutions.com/"
+                },
+                {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://lishaqsolutions.com/services/"
+                },
+                {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Laravel Development",
+                "item": "https://lishaqsolutions.com/services/laravel-development/"
+                }
+            ]
             }
+        ]
         }
-    </script>
+        </script>
+
+        <script src="/js/schema.js"></script>
 
     </body>
 </html>

@@ -5,29 +5,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Dynamic Title -->
-  <title data-site-title data-page-title="Web Development Services in Karachi | Laravel, POS & E-commerce">
-    Web Development Services in Karachi | Laravel, POS & E-commerce
-  </title>
+  <title data-site-title data-page-title="Our Services | Web Development, AI Automation & Custom Software"></title>
 
-  <!-- Dynamic Meta Description -->
-  <meta name="description" data-site-description
-    data-page-description="Custom web solutions in Pakistan. Laravel development, POS systems, inventory software & business websites. Affordable & scalable solutions."
-    content="Custom web solutions in Pakistan. Laravel development, POS systems, inventory software & business websites. Affordable & scalable solutions." />
+  <meta name="description" data-site-description data-page-description="Explore our web development, AI automation, Laravel development, e-commerce, POS systems, business software, and website optimization services for modern businesses." />
 
-  <meta name="author" content="Muhammad Ishaq" />
+  <meta name="robots" content="index,follow">
 
-  <meta property="og:title" content="Services — Lishaq Solutions" />
-  <meta property="og:description"
-    content="POS, inventory, admin dashboards, e-commerce, landing pages, debugging, rebuilds and code mentorship." />
-  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://lishaqsolutions.com/services/">
 
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url">
+  <meta property="og:image" content="/images/og-image.jpg">
+  <meta property="og:site_name">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image:alt" content="Lishaq Solutions">
 
-  <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
-
-  <link rel="canonical" href="https://lishaqsolutions.com/services/" />
-
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="/images/og-image.jpg">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -569,8 +568,47 @@
   <script src="/js/dynamic.js"></script>
   <script src="/js/main.min.js"></script>
 
-  <!-- Dynamic Local Business Schema -->
-  <script id="local-business-schema" type="application/ld+json"></script>
+  <!-- Common schemas -->
+  <script id="organization" type="application/ld+json"></script>
+  <script id="website" type="application/ld+json"></script>
+
+  <!-- Page-specific schema -->
+  <script id="page-schema" type="application/ld+json">
+  {
+  "@context":"https://schema.org",
+  "@graph":[
+  {
+    "@type":"CollectionPage",
+    "@id":"https://lishaqsolutions.com/services/#webpage",
+    "url":"https://lishaqsolutions.com/services/",
+    "name":"Our Services | Lishaq Solutions",
+    "description":"Explore our web development, AI automation, software development and digital services.",
+    "isPartOf":{
+    "@id":"https://lishaqsolutions.com/#website"
+    }
+  },
+  {
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+    {
+      "@type":"ListItem",
+      "position":1,
+      "name":"Home",
+      "item":"https://lishaqsolutions.com/"
+    },
+    {
+      "@type":"ListItem",
+      "position":2,
+      "name":"Services",
+      "item":"https://lishaqsolutions.com/services/"
+    }
+    ]
+  }
+  ]
+  }
+  </script>
+
+  <script src="/js/schema.js"></script>
 </body>
 
 </html>

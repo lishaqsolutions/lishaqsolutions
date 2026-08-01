@@ -5,35 +5,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Dynamic Title -->
-    <title data-site-title
-        data-page-title="Government Website & Admin Panel Development | Laravel Case Study | Lishaq Solutions">
-        Government Website & Admin Panel Development | Laravel Case Study | Lishaq Solutions
-    </title>
+    <title data-site-title data-page-title="UADA Website & Admin Dashboard | Case Study"></title>
 
-    <!-- Dynamic Description -->
-    <meta name="description" data-site-description
-        data-page-description="Case study of a government website modernization project with Laravel admin panel, content management, user management, reporting dashboards, and performance improvements."
-        content="Case study of a government website modernization project with Laravel admin panel, content management, user management, reporting dashboards, and performance improvements." />
+    <meta name="description" data-site-description data-page-description="A custom website and admin dashboard featuring content management, user administration, reporting, and streamlined business operations." />
 
-    <meta name="author" content="Muhammad Ishaq" />
+    <meta name="robots" content="index,follow">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Government Website & Admin Panel Development | Lishaq Solutions" />
-    <meta property="og:description"
-        content="Case study of a government website modernization project with Laravel admin panel, content management, user management, reporting dashboards, and performance improvements." />
-    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://lishaqsolutions.com/projects/uada-website-admin-panel/">
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:description"
-        content="Case study of a government website modernization project with Laravel admin panel, content management, user management, reporting dashboards, and performance improvements." />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:site_name">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image:alt" content="Lishaq Solutions">
 
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="/images/og-image.jpg">
     <!-- Favicon -->
     <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
-
-    <!-- Dynamic Canonical -->
-    <link rel="canonical" href="https://lishaqsolutions.com/projects/uada-website-admin-panel/" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -587,48 +581,68 @@
     <script src="/js/dynamic.js"></script>
     <script src="/js/main.min.js"></script>
 
-    <!-- Dynamic Local Business Schema -->
-    <script id="local-business-schema" type="application/ld+json"></script>
+    <!-- Common schemas -->
+    <script id="organization" type="application/ld+json"></script>
+    <script id="website" type="application/ld+json"></script>
 
-    <!-- Project Schema -->
-    <script type="application/ld+json">
+    <!-- Page-specific schema -->
+    <script id="page-schema" type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "CreativeWork",
-      "name": "Government Website & Admin Panel Development",
-      "author": {
-        "@type": "Organization",
-        "name": "Lishaq Solutions"
-      },
-      "about": "Laravel Government Website Development",
-      "url": "https://lishaqsolutions.com/projects/uada-website-admin-panel/"
-    }
-
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
+    "@context":"https://schema.org",
+    "@graph":[
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://lishaqsolutions.com/"
+        "@type":"WebPage",
+        "@id":"https://lishaqsolutions.com/projects/uada-website-admin-panel/#webpage",
+        "url":"https://lishaqsolutions.com/projects/uada-website-admin-panel/",
+        "name":"UADA Website Admin Panel | Lishaq Solutions",
+        "description":"Custom website administration dashboard for managing content, users, pages and website settings through an intuitive interface.",
+        "isPartOf":{
+            "@id":"https://lishaqsolutions.com/#website"
         },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Projects",
-          "item": "https://lishaqsolutions.com/projects/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "UADA Website & Admin Panel",
-          "item": "https://lishaqsolutions.com/projects/uada-website-admin-panel/"
+        "about":{
+            "@id":"https://lishaqsolutions.com/#organization"
         }
-      ]
+        },
+        {
+        "@type":"SoftwareApplication",
+        "@id":"https://lishaqsolutions.com/projects/uada-website-admin-panel/#project",
+        "name":"UADA Website Admin Panel",
+        "applicationCategory":"BusinessApplication",
+        "creator":{
+            "@id":"https://lishaqsolutions.com/#organization"
+        },
+        "url":"https://lishaqsolutions.com/projects/uada-website-admin-panel/",
+        "description":"Custom administration dashboard for website content management, user administration and system configuration."
+        },
+        {
+        "@type":"BreadcrumbList",
+        "@id":"https://lishaqsolutions.com/projects/uada-website-admin-panel/#breadcrumb",
+        "itemListElement":[
+            {
+            "@type":"ListItem",
+            "position":1,
+            "name":"Home",
+            "item":"https://lishaqsolutions.com/"
+            },
+            {
+            "@type":"ListItem",
+            "position":2,
+            "name":"Projects",
+            "item":"https://lishaqsolutions.com/projects/"
+            },
+            {
+            "@type":"ListItem",
+            "position":3,
+            "name":"UADA Website Admin Panel",
+            "item":"https://lishaqsolutions.com/projects/uada-website-admin-panel/"
+            }
+        ]
+        }
+    ]
     }
-  </script>
+    </script>
+
+    <script src="/js/schema.js"></script>
 
 </body>
 

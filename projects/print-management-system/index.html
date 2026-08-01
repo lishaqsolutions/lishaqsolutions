@@ -5,35 +5,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Dynamic Title -->
-    <title data-site-title
-        data-page-title="Print Management System Development | Architecture Workflow Software | Lishaq Solutions">
-        Print Management System Development | Architecture Workflow Software | Lishaq Solutions
-    </title>
+    <title data-site-title data-page-title="Print Management System | Business Software Project"></title>
 
-    <!-- Dynamic Description -->
-    <meta name="description" data-site-description
-        data-page-description="Custom Print Management System developed for an architecture firm to manage map printing, order tracking, workflow automation, approvals and reporting."
-        content="Custom Print Management System developed for an architecture firm to manage map printing, order tracking, workflow automation, approvals and reporting." />
+    <meta name="description" data-site-description data-page-description="A print management solution for handling print jobs, customer orders, quotations, invoicing, workflow management, and reporting." />
 
-    <meta name="author" content="Muhammad Ishaq" />
+    <meta name="robots" content="index,follow">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Print Management System Development | Lishaq Solutions" />
-    <meta property="og:description"
-        content="Custom Print Management System developed for an architecture firm to manage map printing, order tracking, workflow automation, approvals and reporting." />
-    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://lishaqsolutions.com/projects/print-management-system/">
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:description"
-        content="Custom Print Management System developed for an architecture firm to manage map printing, order tracking, workflow automation, approvals and reporting." />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:site_name">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image:alt" content="Lishaq Solutions">
 
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="/images/og-image.jpg">
     <!-- Favicon -->
     <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
-
-    <!-- Dynamic Canonical -->
-    <link rel="canonical" href="https://lishaqsolutions.com/projects/print-management-system/" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -529,48 +523,68 @@
     <script src="/js/dynamic.js"></script>
     <script src="/js/main.min.js"></script>
 
-    <!-- Dynamic Local Business Schema -->
-    <script id="local-business-schema" type="application/ld+json"></script>
+    <!-- Common schemas -->
+    <script id="organization" type="application/ld+json"></script>
+    <script id="website" type="application/ld+json"></script>
 
-    <!-- Project Schema -->
-    <script type="application/ld+json">
+    <!-- Page-specific schema -->
+    <script id="page-schema" type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "CreativeWork",
-      "name": "Print Management System",
-      "author": {
-        "@type": "Organization",
-        "name": "Lishaq Solutions"
-      },
-      "about": "Architecture Workflow Software",
-      "url": "https://lishaqsolutions.com/projects/print-management-system/"
-    }
-
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
+    "@context":"https://schema.org",
+    "@graph":[
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://lishaqsolutions.com/"
+        "@type":"WebPage",
+        "@id":"https://lishaqsolutions.com/projects/print-management-system/#webpage",
+        "url":"https://lishaqsolutions.com/projects/print-management-system/",
+        "name":"Print Management System | Lishaq Solutions",
+        "description":"Business software for managing printing orders, customers, quotations and production workflow.",
+        "isPartOf":{
+            "@id":"https://lishaqsolutions.com/#website"
         },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Projects",
-          "item": "https://lishaqsolutions.com/projects/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Print Management System",
-          "item": "https://lishaqsolutions.com/projects/print-management-system/"
+        "about":{
+            "@id":"https://lishaqsolutions.com/#organization"
         }
-      ]
+        },
+        {
+        "@type":"SoftwareApplication",
+        "@id":"https://lishaqsolutions.com/projects/print-management-system/#project",
+        "name":"Print Management System",
+        "applicationCategory":"BusinessApplication",
+        "creator":{
+            "@id":"https://lishaqsolutions.com/#organization"
+        },
+        "url":"https://lishaqsolutions.com/projects/print-management-system/",
+        "description":"Custom software for managing print jobs, production workflow, customer orders and invoicing."
+        },
+        {
+        "@type":"BreadcrumbList",
+        "@id":"https://lishaqsolutions.com/projects/print-management-system/#breadcrumb",
+        "itemListElement":[
+            {
+            "@type":"ListItem",
+            "position":1,
+            "name":"Home",
+            "item":"https://lishaqsolutions.com/"
+            },
+            {
+            "@type":"ListItem",
+            "position":2,
+            "name":"Projects",
+            "item":"https://lishaqsolutions.com/projects/"
+            },
+            {
+            "@type":"ListItem",
+            "position":3,
+            "name":"Print Management System",
+            "item":"https://lishaqsolutions.com/projects/print-management-system/"
+            }
+        ]
+        }
+    ]
     }
-  </script>
+    </script>
+
+    <script src="/js/schema.js"></script>
 
 </body>
 

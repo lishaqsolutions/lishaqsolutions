@@ -5,35 +5,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Dynamic Title -->
-    <title data-site-title
-        data-page-title="Dress Hub E-commerce Website Development | Fashion Store Case Study | Lishaq Solutions">
-        Dress Hub E-commerce Website Development | Fashion Store Case Study | Lishaq Solutions
-    </title>
+    <title data-site-title data-page-title="Dress Hub | Fashion E-commerce Website Project"></title>
 
-    <!-- Dynamic Description -->
-    <meta name="description" data-site-description
-        data-page-description="Case study of Dress Hub E-commerce website development. Custom online fashion store with product management, shopping cart, order management, customer accounts and admin dashboard."
-        content="Case study of Dress Hub E-commerce website development. Custom online fashion store with product management, shopping cart, order management, customer accounts and admin dashboard." />
+    <meta name="description" data-site-description data-page-description="A modern fashion e-commerce platform featuring product management, secure payments, order tracking, customer accounts, and responsive shopping." />
 
-    <meta name="author" content="Muhammad Ishaq" />
+    <meta name="robots" content="index,follow">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Dress Hub E-commerce Website Development | Lishaq Solutions" />
-    <meta property="og:description"
-        content="Case study of Dress Hub E-commerce website development. Custom online fashion store with product management, shopping cart, order management, customer accounts and admin dashboard." />
-    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://lishaqsolutions.com/projects/dress-hub-ecommerce/">
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:description"
-        content="Case study of Dress Hub E-commerce website development. Custom online fashion store with product management, shopping cart, order management, customer accounts and admin dashboard." />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:site_name">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image:alt" content="Lishaq Solutions">
 
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="/images/og-image.jpg">
     <!-- Favicon -->
     <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
-
-    <!-- Dynamic Canonical -->
-    <link rel="canonical" href="https://lishaqsolutions.com/projects/dress-hub-ecommerce/" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -521,48 +515,67 @@
     <script src="/js/dynamic.js"></script>
     <script src="/js/main.min.js"></script>
 
-    <!-- Dynamic Local Business Schema -->
-    <script id="local-business-schema" type="application/ld+json"></script>
+    <!-- Common schemas -->
+    <script id="organization" type="application/ld+json"></script>
+    <script id="website" type="application/ld+json"></script>
 
-    <!-- Project Schema -->
-    <script type="application/ld+json">
+    <!-- Page-specific schema -->
+    <script id="page-schema" type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "CreativeWork",
-      "name": "Dress Hub E-commerce Website",
-      "author": {
-        "@type": "Organization",
-        "name": "Lishaq Solutions"
-      },
-      "about": "Fashion Store E-commerce Development",
-      "url": "https://lishaqsolutions.com/projects/dress-hub-ecommerce/"
-    }
-
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
+    "@context":"https://schema.org",
+    "@graph":[
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://lishaqsolutions.com/"
+        "@type":"WebPage",
+        "@id":"https://lishaqsolutions.com/projects/dress-hub-ecommerce/#webpage",
+        "url":"https://lishaqsolutions.com/projects/dress-hub-ecommerce/",
+        "name":"Dress Hub E-commerce | Lishaq Solutions",
+        "description":"Custom fashion e-commerce website with product catalog, shopping cart, secure checkout and inventory management.",
+        "isPartOf":{
+            "@id":"https://lishaqsolutions.com/#website"
         },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Projects",
-          "item": "https://lishaqsolutions.com/projects/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Dress Hub E-commerce",
-          "item": "https://lishaqsolutions.com/projects/dress-hub-ecommerce/"
+        "about":{
+            "@id":"https://lishaqsolutions.com/#organization"
         }
-      ]
+        },
+        {
+        "@type":"CreativeWork",
+        "@id":"https://lishaqsolutions.com/projects/dress-hub-ecommerce/#project",
+        "name":"Dress Hub E-commerce",
+        "creator":{
+            "@id":"https://lishaqsolutions.com/#organization"
+        },
+        "url":"https://lishaqsolutions.com/projects/dress-hub-ecommerce/",
+        "description":"Development of a modern online fashion store with responsive design, product management and customer ordering system."
+        },
+        {
+        "@type":"BreadcrumbList",
+        "@id":"https://lishaqsolutions.com/projects/dress-hub-ecommerce/#breadcrumb",
+        "itemListElement":[
+            {
+            "@type":"ListItem",
+            "position":1,
+            "name":"Home",
+            "item":"https://lishaqsolutions.com/"
+            },
+            {
+            "@type":"ListItem",
+            "position":2,
+            "name":"Projects",
+            "item":"https://lishaqsolutions.com/projects/"
+            },
+            {
+            "@type":"ListItem",
+            "position":3,
+            "name":"Dress Hub E-commerce",
+            "item":"https://lishaqsolutions.com/projects/dress-hub-ecommerce/"
+            }
+        ]
+        }
+    ]
     }
-  </script>
+    </script>
+
+    <script src="/js/schema.js"></script>
 
 </body>
 

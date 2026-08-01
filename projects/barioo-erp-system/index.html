@@ -5,42 +5,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Dynamic Title -->
-    <title data-site-title
-        data-page-title="Barioo ERP System Upgrade Project | ERP Software Development | Lishaq Solutions">
-        Barioo ERP System Upgrade Project | ERP Software Development | Lishaq Solutions
-    </title>
+    <title data-site-title data-page-title="Barioo ERP System | Enterprise Software Case Study"></title>
 
-    <!-- Dynamic Description -->
-    <meta name="description" data-site-description
-        data-page-description="Case study of a Barioo ERP system modernization project. Laravel ERP upgrade, Bootstrap 5 redesign, UI modernization, workflow improvements, and business software optimization."
-        content="Case study of a Barioo ERP system modernization project. Laravel ERP upgrade, Bootstrap 5 redesign, UI modernization, workflow improvements, and business software optimization." />
+    <meta name="description" data-site-description data-page-description="Custom ERP software designed to streamline inventory, finance, employee management, reporting, and business operations from one platform." />
 
-    <meta name="author" content="Muhammad Ishaq" />
+    <meta name="robots" content="index,follow">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Barioo ERP System Upgrade Project | Lishaq Solutions" />
-    <meta property="og:description"
-        content="ERP system redesign and modernization project using Laravel, Bootstrap 5, AJAX and modern UI/UX practices." />
-    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://lishaqsolutions.com/projects/barioo-erp-system/">
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:description"
-        content="ERP system redesign and modernization project using Laravel, Bootstrap 5, AJAX and modern UI/UX practices." />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:site_name">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image:alt" content="Lishaq Solutions">
 
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="/images/og-image.jpg">
     <!-- Favicon -->
     <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
-
-    <!-- Dynamic Canonical -->
-    <link rel="canonical" href="https://lishaqsolutions.com/projects/barioo-erp-system/" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/styles.min.css" />
@@ -596,49 +588,68 @@
     <script src="/js/dynamic.js"></script>
     <script src="/js/main.min.js"></script>
 
-    <!-- Dynamic Local Business Schema -->
-    <script id="local-business-schema" type="application/ld+json"></script>
+    <!-- Common schemas -->
+    <script id="organization" type="application/ld+json"></script>
+    <script id="website" type="application/ld+json"></script>
 
-    <!-- Project Schema -->
-    <script type="application/ld+json">
+    <!-- Page-specific schema -->
+    <script id="page-schema" type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Barioo ERP System",
-      "applicationCategory": "BusinessApplication",
-      "creator": {
-        "@type": "Organization",
-        "name": "Lishaq Solutions"
-      },
-      "url": "https://lishaqsolutions.com/projects/barioo-erp-system/",
-      "description": "ERP software modernization and redesign project using Laravel and Bootstrap 5."
-    }
-
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
+    "@context":"https://schema.org",
+    "@graph":[
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://lishaqsolutions.com/"
+        "@type":"WebPage",
+        "@id":"https://lishaqsolutions.com/projects/barioo-erp-system/#webpage",
+        "url":"https://lishaqsolutions.com/projects/barioo-erp-system/",
+        "name":"Barioo ERP System | Lishaq Solutions",
+        "description":"Custom ERP system for managing business operations including inventory, sales, purchasing, finance and reporting.",
+        "isPartOf":{
+            "@id":"https://lishaqsolutions.com/#website"
         },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Projects",
-          "item": "https://lishaqsolutions.com/projects/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Barioo ERP System Upgrade",
-          "item": "https://lishaqsolutions.com/projects/barioo-erp-system/"
+        "about":{
+            "@id":"https://lishaqsolutions.com/#organization"
         }
-      ]
+        },
+        {
+        "@type":"SoftwareApplication",
+        "@id":"https://lishaqsolutions.com/projects/barioo-erp-system/#project",
+        "name":"Barioo ERP System",
+        "applicationCategory":"BusinessApplication",
+        "creator":{
+            "@id":"https://lishaqsolutions.com/#organization"
+        },
+        "url":"https://lishaqsolutions.com/projects/barioo-erp-system/",
+        "description":"Enterprise Resource Planning (ERP) system developed to streamline inventory management, sales, purchasing, customer management and business reporting."
+        },
+        {
+        "@type":"BreadcrumbList",
+        "@id":"https://lishaqsolutions.com/projects/barioo-erp-system/#breadcrumb",
+        "itemListElement":[
+            {
+            "@type":"ListItem",
+            "position":1,
+            "name":"Home",
+            "item":"https://lishaqsolutions.com/"
+            },
+            {
+            "@type":"ListItem",
+            "position":2,
+            "name":"Projects",
+            "item":"https://lishaqsolutions.com/projects/"
+            },
+            {
+            "@type":"ListItem",
+            "position":3,
+            "name":"Barioo ERP System",
+            "item":"https://lishaqsolutions.com/projects/barioo-erp-system/"
+            }
+        ]
+        }
+    ]
     }
-  </script>
+    </script>
+
+    <script src="/js/schema.js"></script>
 
 </body>
 

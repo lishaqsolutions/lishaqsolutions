@@ -1,6 +1,9 @@
 window.SITE_CONFIG = {
     siteName: "Lishaq Solutions",
     siteUrl: "https://lishaqsolutions.com",
+    description:"Digital agency providing Web Development, AI Automation, Software Development and UI/UX Design.",
+    logo:"/images/logo.png",
+    defaultImage:"/images/og-image.jpg",
     email: "lishaqsolutions@gmail.com",
     phone: "+92 315 1250978",
     whatsapp: "923151250978",

@@ -4,37 +4,29 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- Dynamic Title -->
-        <title
-            data-site-title
-            data-page-title="Website Speed Optimization Services in Pakistan | SEO & Performance">
-            Website Speed Optimization Services in Pakistan | SEO & Performance
-        </title>
+        <title data-site-title data-page-title="Website Speed & SEO Optimization | Lishaq Solutions"></title>
 
-        <!-- Dynamic Meta Description -->
-        <meta
-            name="description"
-            data-site-description
-            data-page-description="Professional website optimization services in Pakistan. Improve speed, performance, Core Web Vitals, SEO ranking and user experience for Laravel and PHP websites."
-            content="Professional website optimization services in Pakistan. Improve speed, performance, Core Web Vitals, SEO ranking and user experience for Laravel and PHP websites." />
+    <meta name="description" data-site-description 
+    data-page-description="Improve website speed, Core Web Vitals, SEO performance, security, and user experience with professional website optimization services." />
 
-        <meta name="author" content="Muhammad Ishaq" />
+    <meta name="robots" content="index,follow">
 
-        <meta property="og:title"
-            content="Website Optimization — Lishaq Solutions" />
-        <meta
-            property="og:description"
-            content="Improve speed, Core Web Vitals, SEO ranking and user experience with professional optimization." />
-        <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://lishaqsolutions.com/services/website-optimization/">
 
-        <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:site_name">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image:alt" content="Lishaq Solutions">
 
-        <link
-            rel="shortcut icon"
-            href="/images/logo.png"
-            type="image/x-icon" />
-
-        <link rel="canonical" href="https://lishaqsolutions.com/services/website-optimization/" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="/images/og-image.jpg">
+        <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -233,17 +225,56 @@
         <script src="/js/dynamic.js"></script>
         <script src="/js/main.min.js"></script>
 
-        <script type="application/ld+json">
+        <!-- Common schemas -->
+        <script id="organization" type="application/ld+json"></script>
+        <script id="website" type="application/ld+json"></script>
+
+        <!-- Page-specific schema -->
+        <script id="page-schema" type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@graph": [
             {
-                "@context":"https://schema.org",
-                "@type":"Service",
-                "serviceType":"Website Optimization",
-                "provider":{
-                    "@type":"Organization",
-                    "name":"Lishaq Solutions"
+            "@type": "Service",
+            "@id": "https://lishaqsolutions.com/services/website-optimization/#service",
+            "name": "Website Optimization",
+            "serviceType": "Website Optimization",
+            "provider": {
+                "@id": "https://lishaqsolutions.com/#organization"
+            },
+            "url": "https://lishaqsolutions.com/services/website-optimization/",
+            "description": "Website speed optimization, Core Web Vitals improvements, SEO optimization, performance tuning and code optimization for faster websites.",
+            "areaServed": "Worldwide"
+            },
+            {
+            "@type": "BreadcrumbList",
+            "@id": "https://lishaqsolutions.com/services/website-optimization/#breadcrumb",
+            "itemListElement": [
+                {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://lishaqsolutions.com/"
+                },
+                {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://lishaqsolutions.com/services/"
+                },
+                {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Website Optimization",
+                "item": "https://lishaqsolutions.com/services/website-optimization/"
                 }
+            ]
             }
+        ]
+        }
         </script>
+
+        <script src="/js/schema.js"></script>
 
     </body>
 </html>

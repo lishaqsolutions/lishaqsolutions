@@ -4,37 +4,29 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- Dynamic Title -->
-        <title
-            data-site-title
-            data-page-title="Landing Page Design Services in Pakistan | High Converting Pages">
-            Landing Page Design Services in Pakistan | High Converting Pages
-        </title>
+        <title data-site-title data-page-title="High-Converting Landing Page Design | Lishaq Solutions"></title>
 
-        <!-- Dynamic Meta Description -->
-        <meta
-            name="description"
-            data-site-description
-            data-page-description="High-converting landing page design services in Pakistan. SEO optimized, fast loading, mobile friendly pages built for ads, startups and product launches."
-            content="High-converting landing page design services in Pakistan. SEO optimized, fast loading, mobile friendly pages built for ads, startups and product launches." />
+    <meta name="description" data-site-description 
+    data-page-description="Increase conversions with professionally designed landing pages optimized for speed, SEO, user experience, and lead generation." />
 
-        <meta name="author" content="Muhammad Ishaq" />
+    <meta name="robots" content="index,follow">
 
-        <meta property="og:title"
-            content="Landing Page Design — Lishaq Solutions" />
-        <meta
-            property="og:description"
-            content="High-converting landing page design services. SEO optimized, fast loading, mobile friendly pages for ads and product launches." />
-        <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://lishaqsolutions.com/Services/landing-page-design/">
 
-        <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:site_name">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image:alt" content="Lishaq Solutions">
 
-        <link
-            rel="shortcut icon"
-            href="/images/logo.png"
-            type="image/x-icon" />
-
-        <link rel="canonical" href="https://lishaqsolutions.com/services/landing-page-design/" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="/images/og-image.jpg">
+        <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -248,17 +240,56 @@
         <script src="/js/dynamic.js"></script>
         <script src="/js/main.min.js"></script>
 
-        <script type="application/ld+json">
+        <!-- Common schemas -->
+        <script id="organization" type="application/ld+json"></script>
+        <script id="website" type="application/ld+json"></script>
+
+        <!-- Page-specific schema -->
+        <script id="page-schema" type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@graph": [
             {
-                "@context":"https://schema.org",
-                "@type":"Service",
-                "serviceType":"Landing Page Design",
-                "provider":{
-                    "@type":"Organization",
-                    "name":"Lishaq Solutions"
+            "@type": "Service",
+            "@id": "https://lishaqsolutions.com/services/landing-page-design/#service",
+            "name": "Landing Page Design",
+            "serviceType": "Landing Page Design",
+            "provider": {
+                "@id": "https://lishaqsolutions.com/#organization"
+            },
+            "url": "https://lishaqsolutions.com/services/landing-page-design/",
+            "description": "Professional landing page design focused on conversions, lead generation and sales. We build fast, responsive landing pages optimized for marketing campaigns and business growth.",
+            "areaServed": "Worldwide"
+            },
+            {
+            "@type": "BreadcrumbList",
+            "@id": "https://lishaqsolutions.com/services/landing-page-design/#breadcrumb",
+            "itemListElement": [
+                {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://lishaqsolutions.com/"
+                },
+                {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://lishaqsolutions.com/services/"
+                },
+                {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Landing Page Design",
+                "item": "https://lishaqsolutions.com/services/landing-page-design/"
                 }
+            ]
             }
+        ]
+        }
         </script>
+
+        <script src="/js/schema.js"></script>
 
     </body>
 </html>
