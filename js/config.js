@@ -14,8 +14,8 @@ window.SITE_CONFIG = {
         github: "https://github.com/lishaqsolutions",
         linkedin: "https://linkedin.com/in/lishaqsolutions",
         youtube: "https://youtube.com/@lishaqsolutions",
-        facebook: "https://youtube.com/@lishaqsolutions",
-        tiktok: "https://youtube.com/@lishaqsolutions"
+        facebook: "https://web.facebook.com/profile.php?id=61588867869452",
+        tiktok: "https://www.tiktok.com/@lishaqsolutions?_r=1&_t=ZS-98XFbap4Jd7"
     },
 
     googleScript: {
