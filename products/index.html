@@ -1,0 +1,851 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title
+    data-site-title
+    data-page-title="Products | Software Products | Lishaq Solutions">
+  </title>
+
+  <meta
+    name="description"
+    data-site-description
+    data-page-description="Explore software products developed by Lishaq Solutions, including PharmaDesk, a Windows desktop pharmacy management system."
+  />
+
+  <meta name="robots" content="index,follow" />
+
+  <link
+    rel="canonical"
+    href="https://lishaqsolutions.com/products/"
+  />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Software Products | Lishaq Solutions" />
+  <meta
+    property="og:description"
+    content="Explore software products developed by Lishaq Solutions, including PharmaDesk for Windows."
+  />
+  <meta
+    property="og:url"
+    content="https://lishaqsolutions.com/products/"
+  />
+  <meta property="og:image" content="/images/og-image.jpg" />
+  <meta property="og:site_name" content="Lishaq Solutions" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Software Products | Lishaq Solutions" />
+  <meta
+    name="twitter:description"
+    content="Explore software products developed by Lishaq Solutions, including PharmaDesk for Windows."
+  />
+  <meta name="twitter:image" content="/images/og-image.jpg" />
+
+  <link
+    rel="shortcut icon"
+    href="/images/logo.png"
+    type="image/x-icon"
+  />
+
+  <link rel="stylesheet" href="/css/styles.min.css" />
+
+  <style>
+    .products-hero {
+      padding: 96px 0 72px;
+      text-align: center;
+    }
+
+    .products-hero-inner {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .products-hero h1 {
+      margin: 14px auto 18px;
+    }
+
+    .products-hero .lead {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .products-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .products-head {
+      max-width: 760px;
+      margin: 0 auto 34px;
+      text-align: center;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .product-card {
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--gradient-card);
+    }
+
+    .product-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    .product-icon {
+      width: 58px;
+      height: 58px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--gradient-card);
+      font-size: 1.45rem;
+    }
+
+    .product-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 11px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: .78rem;
+      font-weight: 700;
+    }
+
+    .product-status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .product-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .product-card p {
+      color: var(--text-muted);
+    }
+
+    .product-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 18px 0 24px;
+    }
+
+    .product-chip {
+      padding: 7px 10px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: .78rem;
+      color: var(--text-muted);
+    }
+
+    .product-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .product-actions .btn {
+      flex: 1 1 160px;
+      text-align: center;
+    }
+
+    .product-note {
+      margin-top: 16px;
+      font-size: .82rem;
+      color: var(--text-muted);
+    }
+
+    .coming-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 100%;
+      padding: 36px 28px;
+      border: 1px dashed var(--border);
+      border-radius: 20px;
+      text-align: center;
+      background: var(--gradient-card);
+    }
+
+    .coming-icon {
+      width: 58px;
+      height: 58px;
+      margin: 0 auto 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      font-size: 1.4rem;
+    }
+
+    .product-value-icon {
+      width: 46px;
+      height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: var(--gradient-card);
+    }
+
+    @media (max-width: 700px) {
+      .products-hero {
+        padding-top: 66px;
+      }
+
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="header"></div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero products-hero">
+      <div class="container">
+
+        <div class="products-hero-inner">
+
+          <span class="eyebrow">Software Products</span>
+
+          <h1>
+            Software built for
+            <span class="text-gradient">
+              real business workflows
+            </span>
+          </h1>
+
+          <p class="lead">
+            Explore software products developed by Lishaq Solutions to help
+            businesses manage everyday operations with practical, focused tools.
+          </p>
+
+          <div class="products-actions">
+
+            <a
+              href="#software-products"
+              class="btn btn-primary">
+              <i
+                class="fas fa-layer-group"
+                aria-hidden="true">
+              </i>
+              Explore Products
+            </a>
+
+            <a
+              href="/contact/"
+              class="btn btn-ghost">
+              <i
+                class="fas fa-comments"
+                aria-hidden="true">
+              </i>
+              Talk to Lishaq Solutions
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SOFTWARE PRODUCTS -->
+    <section
+      class="section"
+      id="software-products">
+
+      <div class="container">
+
+        <div class="products-head">
+
+          <span class="eyebrow">
+            Available Software
+          </span>
+
+          <h2>
+            Products by Lishaq Solutions
+          </h2>
+
+          <p>
+            Focused software products designed around specific business needs,
+            workflows, and day-to-day operations.
+          </p>
+
+        </div>
+
+
+        <div class="products-grid">
+
+          <!-- PharmaDesk -->
+          <article class="product-card">
+
+            <div class="product-card-top">
+
+              <div
+                class="product-icon"
+                aria-hidden="true">
+
+                <i class="fas fa-prescription-bottle-medical"></i>
+
+              </div>
+
+              <span class="product-status">
+
+                <span class="product-status-dot"></span>
+
+                Available
+
+              </span>
+
+            </div>
+
+
+            <span class="eyebrow">
+              Pharmacy Management
+            </span>
+
+            <h3>
+              PharmaDesk
+            </h3>
+
+            <p>
+              A Windows desktop Pharmacy Management System for medicines,
+              inventory, purchases, sales, customers, suppliers, payments,
+              reports, users, permissions, and backup management.
+            </p>
+
+
+            <div class="product-chips">
+
+              <span class="product-chip">
+                Windows 10/11
+              </span>
+
+              <span class="product-chip">
+                64-bit
+              </span>
+
+              <span class="product-chip">
+                Desktop Application
+              </span>
+
+              <span
+                class="product-chip"
+                id="pharmaProductVersion">
+                Latest Release
+              </span>
+
+            </div>
+
+
+            <div class="product-actions">
+
+              <a
+                href="/products/pharmadesk/"
+                class="btn btn-primary">
+
+                <i
+                  class="fas fa-arrow-right"
+                  aria-hidden="true">
+                </i>
+
+                View PharmaDesk
+
+              </a>
+
+
+              <a
+                id="pharmaProductDownload"
+                href="/products/pharmadesk/"
+                class="btn btn-ghost">
+
+                <i
+                  class="fas fa-download"
+                  aria-hidden="true">
+                </i>
+
+                Download
+
+              </a>
+
+            </div>
+
+
+            <p class="product-note">
+              Official Windows releases are distributed through the
+              PharmaDesk release channel.
+            </p>
+
+          </article>
+
+
+          <!-- Future Products -->
+          <article class="coming-card">
+
+            <div
+              class="coming-icon"
+              aria-hidden="true">
+
+              <i class="fas fa-code"></i>
+
+            </div>
+
+            <span class="eyebrow">
+              In Development
+            </span>
+
+            <h3>
+              More products are coming
+            </h3>
+
+            <p>
+              Additional software products are being developed for business
+              operations, workflow management, and automation.
+            </p>
+
+            <div style="margin-top: 20px">
+
+              <a
+                href="/contact/"
+                class="btn btn-ghost">
+                Discuss a Software Need
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- PRODUCT APPROACH -->
+    <section class="section">
+
+      <div class="container">
+
+        <div class="products-head">
+
+          <span class="eyebrow">
+            Product Approach
+          </span>
+
+          <h2>
+            Built around useful business workflows
+          </h2>
+
+        </div>
+
+
+        <div class="grid grid-3">
+
+          <article class="card">
+
+            <div class="product-value-icon">
+              <i class="fas fa-bullseye"></i>
+            </div>
+
+            <h3>
+              Focused Solutions
+            </h3>
+
+            <p>
+              Products are designed around defined business workflows
+              and practical requirements.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <div class="product-value-icon">
+              <i class="fas fa-desktop"></i>
+            </div>
+
+            <h3>
+              Practical Technology
+            </h3>
+
+            <p>
+              Modern development tools are used while keeping the final
+              software practical for its users.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <div class="product-value-icon">
+              <i class="fas fa-arrows-rotate"></i>
+            </div>
+
+            <h3>
+              Continuous Improvement
+            </h3>
+
+            <p>
+              Products can evolve through releases, fixes, improvements,
+              and new capabilities.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FINAL CTA -->
+    <section class="container">
+
+      <div class="final-cta glass">
+
+        <span class="eyebrow">
+          Need a custom solution?
+        </span>
+
+        <h2>
+          Have a business workflow that needs software?
+        </h2>
+
+        <p
+          class="muted"
+          style="max-width: 650px; margin: 14px auto 0">
+
+          Lishaq Solutions also builds custom websites,
+          business applications, automation tools, and software
+          solutions based on specific requirements.
+
+        </p>
+
+        <div
+          class="hero-cta"
+          style="margin-top: 28px">
+
+          <a
+            href="/services/"
+            class="btn btn-primary">
+            Explore Services →
+          </a>
+
+          <a
+            href="/contact/"
+            class="btn btn-ghost">
+            Contact Lishaq Solutions
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <div id="footer"></div>
+
+
+  <a
+    data-whatsapp-link
+    aria-label="WhatsApp Chat"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="wa-float">
+
+    <i class="fab fa-whatsapp"></i>
+
+    <span class="notification-dot"></span>
+
+  </a>
+
+
+  <!-- Common site scripts -->
+  <script src="/js/components.js"></script>
+  <script src="/js/config.js"></script>
+  <script src="/js/dynamic.js"></script>
+  <script src="/js/main.min.js"></script>
+
+
+  <!-- Common schemas -->
+  <script
+    id="organization"
+    type="application/ld+json">
+  </script>
+
+  <script
+    id="website"
+    type="application/ld+json">
+  </script>
+
+
+  <!-- Latest PharmaDesk release -->
+  <script>
+    (async function () {
+
+      const releaseApi =
+        "https://api.github.com/repos/IshaqBabakheel/PharmaDesk-Releases/releases/latest";
+
+      const versionEl =
+        document.getElementById("pharmaProductVersion");
+
+      const downloadEl =
+        document.getElementById("pharmaProductDownload");
+
+
+      try {
+
+        const response = await fetch(
+          releaseApi,
+          {
+            headers: {
+              Accept: "application/vnd.github+json"
+            }
+          }
+        );
+
+
+        if (!response.ok) {
+          throw new Error(
+            "GitHub release request failed."
+          );
+        }
+
+
+        const release =
+          await response.json();
+
+
+        const version =
+          String(
+            release.tag_name || ""
+          ).replace(
+            /^v/i,
+            ""
+          );
+
+
+        if (
+          version &&
+          versionEl
+        ) {
+
+          versionEl.textContent =
+            "Version " + version;
+
+        }
+
+
+        const installer =
+          Array.isArray(
+            release.assets
+          )
+            ? release.assets.find(
+                asset =>
+                  /\.exe$/i.test(
+                    asset.name || ""
+                  ) &&
+                  /PharmaDesk-Setup-/i.test(
+                    asset.name || ""
+                  )
+              )
+            : null;
+
+
+        if (
+          installer?.browser_download_url &&
+          downloadEl
+        ) {
+
+          downloadEl.href =
+            installer.browser_download_url;
+
+        }
+
+      } catch (error) {
+
+        console.warn(
+          "Could not load latest PharmaDesk release:",
+          error
+        );
+
+      }
+
+    })();
+  </script>
+
+
+  <!-- Page-specific schema -->
+  <script
+    id="page-schema"
+    type="application/ld+json">
+
+  {
+    "@context": "https://schema.org",
+
+    "@graph": [
+
+      {
+        "@type": "CollectionPage",
+
+        "@id":
+          "https://lishaqsolutions.com/products/#webpage",
+
+        "url":
+          "https://lishaqsolutions.com/products/",
+
+        "name":
+          "Software Products | Lishaq Solutions",
+
+        "description":
+          "Explore software products developed by Lishaq Solutions, including PharmaDesk for Windows.",
+
+        "isPartOf": {
+          "@id":
+            "https://lishaqsolutions.com/#website"
+        },
+
+        "about": {
+          "@id":
+            "https://lishaqsolutions.com/#organization"
+        }
+      },
+
+
+      {
+        "@type": "ItemList",
+
+        "@id":
+          "https://lishaqsolutions.com/products/#products",
+
+        "name":
+          "Lishaq Solutions Software Products",
+
+        "itemListElement": [
+
+          {
+            "@type": "ListItem",
+
+            "position": 1,
+
+            "item": {
+
+              "@type":
+                "SoftwareApplication",
+
+              "name":
+                "PharmaDesk",
+
+              "applicationCategory":
+                "BusinessApplication",
+
+              "operatingSystem":
+                "Windows 10, Windows 11",
+
+              "url":
+                "https://lishaqsolutions.com/products/pharmadesk/",
+
+              "publisher": {
+                "@id":
+                  "https://lishaqsolutions.com/#organization"
+              }
+
+            }
+
+          }
+
+        ]
+
+      },
+
+
+      {
+        "@type": "BreadcrumbList",
+
+        "@id":
+          "https://lishaqsolutions.com/products/#breadcrumb",
+
+        "itemListElement": [
+
+          {
+            "@type": "ListItem",
+
+            "position": 1,
+
+            "name": "Home",
+
+            "item":
+              "https://lishaqsolutions.com/"
+          },
+
+          {
+            "@type": "ListItem",
+
+            "position": 2,
+
+            "name": "Products",
+
+            "item":
+              "https://lishaqsolutions.com/products/"
+          }
+
+        ]
+
+      }
+
+    ]
+  }
+
+  </script>
+
+
+  <script src="/js/schema.js"></script>
+
+</body>
+
+</html>
