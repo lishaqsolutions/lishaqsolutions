@@ -2,154 +2,203 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title data-site-title
-    data-page-title="Web Development Blog | Laravel, AI Automation & Software Engineering | Lishaq Solutions"></title>
+  <meta charset="UTF-8">
 
-  <meta name="description" data-site-description
-    data-page-description="Read tutorials, development guides, AI automation tips, Laravel best practices, software engineering insights, and business technology articles." />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    Insights & Tutorials | Lishaq Solutions
+  </title>
+
+  <meta name="description"
+    content="Practical tutorials and real-world development insights from Lishaq Solutions covering Laravel, Vue.js, PHP, AI automation, APIs, web performance and business software.">
 
   <meta name="robots" content="index,follow">
 
   <link rel="canonical" href="https://lishaqsolutions.com/blog/">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="">
-  <meta property="og:description" content="">
-  <meta property="og:url">
-  <meta property="og:image" content="/images/og-image.jpg">
-  <meta property="og:site_name">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:image:alt" content="Lishaq Solutions">
+
+  <meta property="og:title" content="Insights & Tutorials | Lishaq Solutions">
+
+  <meta property="og:description" content="Practical lessons from real projects.">
+
+  <meta property="og:url" content="https://lishaqsolutions.com/blog/">
+
+  <meta property="og:image" content="https://lishaqsolutions.com/images/og-image.jpg">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="">
-  <meta name="twitter:description" content="">
-  <meta name="twitter:image" content="/images/og-image.jpg">
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" data-favicon />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono&display=swap"
-    rel="stylesheet" />
+  <link rel="icon" href="/images/logo.png" type="image/png">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="/css/styles.min.css" />
+  <link rel="stylesheet" href="/css/styles.min.css">
+
 </head>
 
-<body data-site="lishaqsolutions">
+<body>
 
-  <!-- HEADER (dynamic injected) -->
+  <div id="readingProgress"></div>
+
   <div id="header"></div>
 
-  <!-- HERO -->
-  <section class="hero" style="padding: 80px 0 60px" data-section="hero">
-    <div class="container">
-      <span class="eyebrow" data-hero-tag>Insights & tutorials</span>
+  <main>
 
-      <h1 data-hero-title>
-        Practical lessons from
-        <span class="text-gradient">real projects</span>
-      </h1>
+    <section class="blog-hero section">
 
-      <p class="lead" data-hero-description>
-        Explore practical tutorials on Laravel, Vue.js, PHP, AI automation, web performance,
-        custom software development, debugging, deployment, APIs, and modern application architecture.
-        Every article is based on real-world development experience and production projects.
-      </p>
-    </div>
-  </section>
+      <div class="container">
 
-  <!-- BLOG GRID -->
-  <section class="section" style="padding-top: 30px" data-section="blog-list">
-    <div class="container grid grid-2" id="blogContainer">
+        <div class="blog-hero-content">
 
-      <article class="card">
+          <span class="eyebrow">
+            Insights & tutorials
+          </span>
 
-        <h2>
-          How to Fix Laravel Error 500
-        </h2>
+          <h1>
+            Practical lessons
+            <span class="text-gradient">
+              from real projects
+            </span>
+          </h1>
 
-        <p>
-          Learn how to diagnose and fix Laravel Error 500 using logs,
-          permissions, cache clearing and deployment best practices.
-        </p>
+          <p>
+            Explore practical tutorials,
+            development insights, debugging
+            guides, performance tips, and
+            real-world lessons from building
+            software for businesses.
+          </p>
 
-        <a href="/blog-post/?slug=fix-laravel-error-500">
-          Read article →
-        </a>
+        </div>
 
-      </article>
+      </div>
 
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
+
+    <section class="section blog-library">
+
+      <div class="container">
+
+        <div class="blog-toolbar">
+
+          <div class="blog-search">
+
+            <span class="blog-search-icon" aria-hidden="true">
+              ⌕
+            </span>
+
+            <input id="blogSearch" type="search" placeholder="Search articles..." aria-label="Search articles"
+              autocomplete="off">
+
+          </div>
+
+          <div id="blogCategories" class="blog-filters" aria-label="Filter articles by category"></div>
+
+          <p id="blogStatus" class="blog-status"></p>
+
+        </div>
+
+
+        <div id="blogFeatured" class="blog-featured-wrap"></div>
+
+
+        <div id="blogContainer" class="blog-grid"></div>
+
+
+        <div class="blog-load-more-wrap">
+
+          <button id="blogLoadMore" type="button" class="btn btn-ghost">
+            Load more articles
+          </button>
+
+        </div>
+
+
+        <noscript>
+
+          <div class="blog-empty">
+            <h2>
+              JavaScript is required
+            </h2>
+
+            <p>
+              Please enable JavaScript
+              to view the latest articles.
+            </p>
+          </div>
+
+        </noscript>
+
+      </div>
+
+    </section>
+
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="blog-business-cta glass">
+
+          <div>
+
+            <span class="eyebrow">
+              Need something built?
+            </span>
+
+            <h2>
+              Have a problem similar
+              to something you read?
+            </h2>
+
+            <p>
+              We help businesses turn
+              technical problems into
+              reliable software, automation,
+              websites, dashboards and
+              custom systems.
+            </p>
+
+          </div>
+
+          <a href="/contact/" class="btn btn-primary">
+            Discuss your project
+            <span aria-hidden="true">
+              →
+            </span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
   <div id="footer"></div>
 
-  <!-- WhatsApp Float -->
-  <a data-whatsapp-link aria-label="WhatsApp Chat" target="_blank" rel="noopener noreferrer" class="wa-float">
-    <i class="fab fa-whatsapp"></i>
-    <span class="notification-dot"></span>
-  </a>
 
-  <!-- JS -->
   <script src="/js/components.js"></script>
   <script src="/js/config.js"></script>
   <script src="/js/dynamic.js"></script>
-  <script src="/js/main.min.js"></script>
+
+  <!-- Shared blog data/cache layer -->
+  <script src="/js/blog-data.js"></script>
+
+  <!-- Blog listing -->
   <script src="/js/blogs.js"></script>
 
   <!-- Common schemas -->
   <script id="organization" type="application/ld+json"></script>
+
   <script id="website" type="application/ld+json"></script>
 
-  <!-- Page-specific schema -->
-  <script id="page-schema" type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "CollectionPage",
-        "@id": "https://lishaqsolutions.com/blog/#webpage",
-        "url": "https://lishaqsolutions.com/blog/",
-        "name": "Blog | Lishaq Solutions",
-        "description": "Read articles, tutorials, development tips, AI automation guides, Laravel best practices, web development insights, and software engineering resources from Lishaq Solutions.",
-        "isPartOf": {
-          "@id": "https://lishaqsolutions.com/#website"
-        },
-        "about": {
-          "@id": "https://lishaqsolutions.com/#organization"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://lishaqsolutions.com/blog/#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://lishaqsolutions.com/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Blog",
-            "item": "https://lishaqsolutions.com/blog/"
-          }
-        ]
-      }
-    ]
-  }
-  </script>
+  <script id="page-schema" type="application/ld+json"></script>
 
   <script src="/js/schema.js"></script>
+
 </body>
 
 </html>
