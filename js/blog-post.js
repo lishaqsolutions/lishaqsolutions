@@ -278,8 +278,9 @@
 
     function articleUrl(slug) {
         return (
-            "/blog-post/?slug=" +
-            encodeURIComponent(slug)
+            "/blog/" +
+            encodeURIComponent(slug) +
+            "/"
         );
     }
 
@@ -327,9 +328,7 @@
             );
 
         const canonical =
-            `${window.location.origin}/blog-post/?slug=${encodeURIComponent(
-                blog.slug
-            )}`;
+        `${window.location.origin}/blog/${encodeURIComponent(blog.slug)}/`;
 
         const image =
             absoluteUrl(
@@ -384,6 +383,11 @@
         updateMeta(
             'meta[name="twitter:image"]',
             image
+        );
+
+        updateMeta(
+            "meta[property='og:type']",
+            "article"
         );
 
         const canonicalElement =

@@ -188,10 +188,7 @@
     // --------------------------------------------------
 
     function createArticleUrl(slug) {
-        return (
-            "/blog-post/?slug=" +
-            encodeURIComponent(slug)
-        );
+        return "/blog/" + encodeURIComponent(slug) + "/";
     }
 
     function cardHTML(blog) {
