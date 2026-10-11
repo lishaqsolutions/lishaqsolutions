@@ -4727,3 +4727,382 @@ p {
     }
 
 }
+
+
+
+
+
+/* =========================================================
+   Lishaq Solutions — Mobile Navigation & Footer Refinement
+   Append at the END of styles.min.css
+   ========================================================= */
+
+/* ---------- RIGHT-SIDE OFF-CANVAS NAVIGATION ---------- */
+
+@media (max-width: 900px) {
+
+  /* Keep the header above page content while the drawer is open */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1200;
+    background: rgba(11, 16, 36, 0.96);
+
+    /*
+      Prevent the header blur from becoming the containing block
+      for the fixed off-canvas panel and backdrop.
+    */
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .nav {
+    position: relative;
+    min-width: 0;
+    padding: 12px 0;
+  }
+
+  /* Smooth, accessible hamburger / close control */
+  .menu-toggle {
+    position: relative;
+    z-index: 1203;
+    flex: 0 0 46px;
+    width: 46px;
+    height: 46px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.055);
+    color: var(--text);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .menu-toggle:hover,
+  .menu-toggle:focus-visible {
+    border-color: rgba(79, 195, 255, 0.55);
+    background: rgba(79, 195, 255, 0.1);
+  }
+
+  .menu-toggle:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+  }
+
+  /* Full-screen backdrop */
+  .site-header::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 1201;
+    background: rgba(3, 7, 20, 0.72);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+      opacity 0.28s ease,
+      visibility 0.28s ease;
+  }
+
+  .site-header:has(.nav-links.open)::after {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  /* The drawer starts completely outside the right edge */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+
+    width: min(88vw, 390px);
+    max-width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    max-height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 6px;
+
+    margin: 0;
+    padding:
+      calc(88px + env(safe-area-inset-top, 0px))
+      22px
+      calc(24px + env(safe-area-inset-bottom, 0px));
+
+    list-style: none;
+
+    background:
+      linear-gradient(
+        165deg,
+        rgba(19, 28, 61, 0.99),
+        rgba(8, 12, 30, 0.99)
+      );
+
+    border: 1px solid rgba(120, 180, 255, 0.18);
+    border-right: 0;
+    border-radius: 22px 0 0 22px;
+
+    box-shadow: -24px 0 70px rgba(0, 0, 0, 0.45);
+
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+
+    opacity: 1;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateX(105%);
+    transition:
+      transform 0.34s cubic-bezier(0.22, 0.61, 0.36, 1),
+      visibility 0.34s ease;
+
+    z-index: 1202;
+    will-change: transform;
+  }
+
+  /* Slide the panel into view */
+  .nav-links.open {
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+  }
+
+  /* Right-aligned links with comfortable touch targets */
+  .nav-links > li {
+    width: 100%;
+    min-width: 0;
+    text-align: right;
+  }
+
+  .nav-links > li > a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: 100%;
+    min-height: 50px;
+    padding: 13px 16px;
+
+    border-radius: 12px;
+    text-align: right;
+
+    color: var(--text);
+    font-size: 0.96rem;
+    font-weight: 500;
+    line-height: 1.4;
+
+    transition:
+      background 0.2s ease,
+      color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .nav-links > li:not(.nav-cta) > a:hover,
+  .nav-links > li:not(.nav-cta) > a.active {
+    color: var(--primary);
+    background: rgba(79, 195, 255, 0.09);
+    box-shadow: inset -3px 0 0 var(--primary);
+  }
+
+  /* Give the conversion CTA its own visual section */
+  .nav-links > li.nav-cta {
+    margin: 14px 0 0;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+  }
+
+  .nav-links > li.nav-cta > a.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    min-height: 50px;
+    padding: 13px 18px;
+
+    border-radius: 12px;
+    font-weight: 700;
+    box-shadow: var(--shadow-neon);
+  }
+
+  /* Freeze page scrolling while the drawer is open */
+  body:has(.nav-links.open) {
+    overflow: hidden;
+  }
+}
+
+
+/* ---------- MOBILE FOOTER: RIGHT ALIGNED ---------- */
+
+@media (max-width: 800px) {
+
+  .site-footer {
+    margin-top: 56px;
+  }
+
+  .footer-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+
+    /* Comfortable space between content and screen edges */
+    padding: 36px max(22px, 5vw) 28px;
+
+    text-align: right;
+  }
+
+  .footer-grid > div {
+    min-width: 0;
+    padding: 0 0 24px;
+    margin: 0 0 24px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+  }
+
+  .footer-grid > div:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+
+  /* Company logo and name sit against the right side */
+  .footer-grid .logo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    text-align: right;
+  }
+
+  .footer-grid .logo > span {
+    min-width: 0;
+    text-align: right;
+  }
+
+  /* Override the inline desktop/mobile paragraph margins */
+  .footer-grid p {
+    max-width: 100% !important;
+    margin: 14px 0 0 auto !important;
+
+    text-align: right;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+  }
+
+  /* Right-align social icons; allow wrapping on narrow phones */
+  .socials {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-self: flex-end;
+
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    margin: 12px 0 0;
+    padding: 5px 0 0;
+  }
+
+  .social-link {
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+  }
+
+  /* Explore and contact sections */
+  .footer-grid h4 {
+    margin-bottom: 14px;
+    text-align: right;
+  }
+
+  .footer-grid ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 11px;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    text-align: right;
+  }
+
+  .footer-grid li {
+    width: 100%;
+    margin: 0;
+
+    text-align: right;
+    line-height: 1.75;
+    overflow-wrap: anywhere;
+  }
+
+  .footer-grid li a {
+    display: inline-block;
+    max-width: 100%;
+  }
+
+  /* Copyright stays right-aligned with bottom safe-area spacing */
+  .copyright {
+    padding:
+      17px
+      max(22px, 5vw)
+      calc(17px + env(safe-area-inset-bottom, 0px));
+
+    text-align: right;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+  }
+}
+
+
+/* Extra refinements for narrow phones */
+@media (max-width: 380px) {
+
+  .nav-links {
+    width: 90vw;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .footer-grid .logo {
+    gap: 8px;
+  }
+
+  .socials {
+    gap: 5px;
+  }
+
+  .social-link {
+    flex-basis: 38px;
+    width: 38px;
+    height: 38px;
+    font-size: 1.05rem;
+  }
+}
+
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .nav-links,
+  .site-header::after,
+  .menu-toggle,
+  .nav-links a {
+    transition: none !important;
+  }
+}
