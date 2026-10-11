@@ -6,7 +6,7 @@
 
 :root {
   --hero-start-offset: 150px;
-  --hero-pull-up: 0.3rem;
+  --hero-pull-up: 0rem;
 
   --hero-background: #0B0F19;
   --hero-panel: #0E1626;
