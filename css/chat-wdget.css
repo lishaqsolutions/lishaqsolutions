@@ -1,0 +1,413 @@
+/* =====================================================
+   Lishaq Solutions — AI Assistant Widget
+   Dark navy + cyan, responsive chat interface
+   ===================================================== */
+
+.lishaq-chat-launcher,
+.lishaq-chat-panel,
+.lishaq-chat-panel * {
+  box-sizing: border-box;
+}
+
+.lishaq-chat-launcher {
+  position: fixed;
+  right: 24px;
+  bottom: 100px;
+  z-index: 1301;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 54px;
+  padding: 0 19px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, #6ee0ff, #2f7bff);
+  color: #06122a;
+
+  box-shadow: 0 12px 35px rgba(47, 123, 255, 0.32);
+  font: 700 0.92rem/1.2 Inter, system-ui, sans-serif;
+
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.lishaq-chat-launcher:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(47, 123, 255, 0.42);
+}
+
+.lishaq-chat-launcher:focus-visible,
+.lishaq-chat-close:focus-visible,
+.lishaq-chat-send:focus-visible {
+  outline: 3px solid #6ee0ff;
+  outline-offset: 3px;
+}
+
+.lishaq-chat-launcher svg {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 auto;
+}
+
+.lishaq-chat-panel[hidden] {
+  display: none !important;
+}
+
+.lishaq-chat-panel {
+  position: fixed;
+  right: 24px;
+  bottom: 166px;
+  z-index: 1300;
+
+  display: flex;
+  flex-direction: column;
+
+  width: min(390px, calc(100vw - 32px));
+  height: min(620px, calc(100dvh - 180px));
+  min-height: 360px;
+  max-height: 700px;
+
+  overflow: hidden;
+
+  color: #eaf0ff;
+  background: #0b1024;
+  border: 1px solid rgba(120, 180, 255, 0.22);
+  border-radius: 20px;
+
+  box-shadow:
+    0 28px 80px rgba(0, 0, 0, 0.48),
+    0 0 0 1px rgba(79, 195, 255, 0.04);
+
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  animation: lishaq-chat-enter 0.22s ease both;
+}
+
+@keyframes lishaq-chat-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.lishaq-chat-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  flex: 0 0 auto;
+  padding: 17px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(19, 28, 61, 0.98),
+    rgba(15, 23, 51, 0.98)
+  );
+
+  border-bottom: 1px solid rgba(120, 180, 255, 0.15);
+}
+
+.lishaq-chat-avatar {
+  display: grid;
+  place-items: center;
+
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+
+  border-radius: 13px;
+  background: linear-gradient(135deg, #6ee0ff, #2f7bff);
+  color: #06122a;
+}
+
+.lishaq-chat-avatar svg {
+  width: 23px;
+  height: 23px;
+}
+
+.lishaq-chat-heading {
+  min-width: 0;
+  flex: 1;
+}
+
+.lishaq-chat-heading strong {
+  display: block;
+  color: #eaf0ff;
+  font-size: 0.96rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.lishaq-chat-heading span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-top: 3px;
+  color: #9aa6c7;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.lishaq-chat-status-dot {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  border-radius: 50%;
+  background: #6ee0a2;
+  box-shadow: 0 0 9px rgba(110, 224, 162, 0.35);
+}
+
+.lishaq-chat-close {
+  display: grid;
+  place-items: center;
+
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+
+  border: 1px solid rgba(120, 180, 255, 0.15);
+  border-radius: 11px;
+
+  background: rgba(255, 255, 255, 0.04);
+  color: #eaf0ff;
+
+  font: inherit;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.lishaq-chat-close:hover {
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.lishaq-chat-messages {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 15px;
+
+  min-height: 0;
+  padding: 19px 15px;
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #28365e transparent;
+
+  background:
+    radial-gradient(
+      circle at 100% 0,
+      rgba(47, 123, 255, 0.08),
+      transparent 42%
+    ),
+    #0b1024;
+}
+
+.lishaq-chat-message {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  max-width: 88%;
+  min-width: 0;
+}
+
+.lishaq-chat-message--user {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.lishaq-chat-message--assistant,
+.lishaq-chat-message--typing {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.lishaq-chat-bubble {
+  max-width: 100%;
+  padding: 11px 13px;
+
+  border: 1px solid rgba(120, 180, 255, 0.13);
+  border-radius: 14px;
+
+  color: #eaf0ff;
+  background: #141d3b;
+
+  font-size: 0.88rem;
+  line-height: 1.7;
+
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.lishaq-chat-message--user .lishaq-chat-bubble {
+  color: #06122a;
+  background: linear-gradient(135deg, #a2eaff, #6ebaff);
+  border-color: transparent;
+  border-bottom-right-radius: 5px;
+}
+
+.lishaq-chat-message--assistant .lishaq-chat-bubble,
+.lishaq-chat-message--typing .lishaq-chat-bubble {
+  border-bottom-left-radius: 5px;
+}
+
+.lishaq-chat-message--typing .lishaq-chat-bubble {
+  color: #9aa6c7;
+  font-style: italic;
+}
+
+.lishaq-chat-error .lishaq-chat-bubble {
+  border-color: rgba(255, 122, 122, 0.28);
+}
+
+.lishaq-chat-notice {
+  flex: 0 0 auto;
+  padding: 8px 15px 3px;
+
+  color: #8190b3;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  text-align: center;
+  background: #0b1024;
+}
+
+.lishaq-chat-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 9px;
+
+  flex: 0 0 auto;
+  padding: 12px;
+
+  background: #0b1024;
+  border-top: 1px solid rgba(120, 180, 255, 0.13);
+}
+
+.lishaq-chat-input {
+  display: block;
+  flex: 1 1 auto;
+
+  width: 0;
+  min-width: 0;
+  min-height: 46px;
+  max-height: 112px;
+  padding: 12px 13px;
+
+  resize: none;
+  overflow-y: auto;
+
+  border: 1px solid rgba(120, 180, 255, 0.2);
+  border-radius: 13px;
+
+  outline: none;
+  background: #121b38;
+  color: #eaf0ff;
+
+  font: 400 0.88rem/1.5 Inter, system-ui, sans-serif;
+}
+
+.lishaq-chat-input::placeholder {
+  color: #8491b1;
+}
+
+.lishaq-chat-input:focus {
+  border-color: rgba(79, 195, 255, 0.72);
+  box-shadow: 0 0 0 3px rgba(79, 195, 255, 0.08);
+}
+
+.lishaq-chat-send {
+  display: grid;
+  place-items: center;
+
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+
+  border: 0;
+  border-radius: 13px;
+
+  background: linear-gradient(135deg, #6ee0ff, #2f7bff);
+  color: #06122a;
+
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.lishaq-chat-send:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.lishaq-chat-send:disabled {
+  cursor: wait;
+  opacity: 0.5;
+}
+
+.lishaq-chat-send svg {
+  width: 20px;
+  height: 20px;
+}
+
+.lishaq-chat-footnote {
+  flex: 0 0 auto;
+  padding: 0 12px 11px;
+
+  color: #7786a9;
+  background: #0b1024;
+
+  font-size: 0.67rem;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .lishaq-chat-launcher {
+    right: 16px;
+    bottom: 82px;
+    min-height: 50px;
+    padding: 0 16px;
+    font-size: 0.86rem;
+  }
+
+  .lishaq-chat-panel {
+    right: 10px;
+    bottom: 142px;
+
+    width: calc(100vw - 20px);
+    height: min(620px, calc(100dvh - 155px));
+    min-height: 340px;
+
+    border-radius: 18px;
+  }
+
+  .lishaq-chat-header {
+    padding: 14px;
+  }
+
+  .lishaq-chat-messages {
+    padding: 15px 12px;
+  }
+
+  .lishaq-chat-form {
+    padding: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lishaq-chat-panel,
+  .lishaq-chat-launcher,
+  .lishaq-chat-send {
+    animation: none !important;
+    transition: none !important;
+  }
+}
