@@ -208,16 +208,20 @@ input.style.height = "auto";
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify({
+ 
+body: JSON.stringify({
   message,
+  conversationId,
+  visitorId,
   history: conversationHistory
-  .slice(0, -1)
-  .slice(-12)
-  .map(item => ({
-    role: item.role,
-    content: item.content.slice(0, 500)
-  }))
+    .slice(0, -1)
+    .slice(-12)
+    .map(item => ({
+      role: item.role,
+      content: item.content.slice(0, 500)
+    }))
 }),
+
         credentials: "omit",
         cache: "no-store",
         signal: controller.signal
@@ -265,6 +269,7 @@ if (
 ) {
   conversationHistory.pop();
 }
+addMessage("assistant", messageText);
       console.error("Lishaq chat error:", error.message);
 
     } finally {
