@@ -203,12 +203,12 @@ input.style.height = "auto";
         body: JSON.stringify({
   message,
   history: conversationHistory
-    .slice(0, -1)
-    .slice(-6)
-    .map(item => ({
-      role: item.role,
-      content: item.content.slice(0, 500)
-    }))
+  .slice(0, -1)
+  .slice(-12)
+  .map(item => ({
+    role: item.role,
+    content: item.content.slice(0, 500)
+  }))
 }),
         credentials: "omit",
         cache: "no-store",
