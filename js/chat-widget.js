@@ -132,6 +132,7 @@
   const sendButton = root.querySelector("#lishaq-chat-send");
 
   let isSending = false;
+  let conversationHistory = [];
 
   function openChat() {
     panel.hidden = false;
@@ -174,8 +175,14 @@
     if (isSending || !message) return;
 
     addMessage("user", message);
-    input.value = "";
-    input.style.height = "auto";
+
+conversationHistory.push({
+  role: "user",
+  content: message
+});
+
+input.value = "";
+input.style.height = "auto";
 
     setSending(true);
 
@@ -193,7 +200,16 @@
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify({ message }),
+        body: JSON.stringify({
+  message,
+  history: conversationHistory
+    .slice(0, -1)
+    .slice(-6)
+    .map(item => ({
+      role: item.role,
+      content: item.content.slice(0, 500)
+    }))
+}),
         credentials: "omit",
         cache: "no-store",
         signal: controller.signal
@@ -215,7 +231,14 @@
         throw new Error("The assistant returned an empty response.");
       }
 
-      addMessage("assistant", data.reply.trim());
+      const assistantReply = data.reply.trim();
+
+addMessage("assistant", assistantReply);
+
+conversationHistory.push({
+  role: "assistant",
+  content: assistantReply
+});
 
     } catch (error) {
       typingMessage.remove();
@@ -224,7 +247,16 @@
         ? "The response took too long. Please try again."
         : error.message || "Something went wrong. Please try again.";
 
-      addMessage("assistant", messageText);
+      const lastMessage =
+  conversationHistory[conversationHistory.length - 1];
+
+if (
+  lastMessage &&
+  lastMessage.role === "user" &&
+  lastMessage.content === message
+) {
+  conversationHistory.pop();
+}
       console.error("Lishaq chat error:", error.message);
 
     } finally {
