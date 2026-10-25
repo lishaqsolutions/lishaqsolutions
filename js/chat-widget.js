@@ -84,8 +84,7 @@
       ></div>
 
       <div class="lishaq-chat-notice">
-        AI-generated answers may be inaccurate.
-        Please don't share sensitive information.
+        AI-generated answers may be inaccurate. Chat messages may be stored to help respond to enquiries. Please don't share sensitive information.
       </div>
 
       <form class="lishaq-chat-form" id="lishaq-chat-form">
@@ -133,6 +132,15 @@
 
   let isSending = false;
   let conversationHistory = [];
+
+  function createChatId() {
+  return window.crypto?.randomUUID
+    ? window.crypto.randomUUID()
+    : `chat-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+}
+
+const conversationId = createChatId();
+const visitorId = createChatId();
 
   function openChat() {
     panel.hidden = false;
