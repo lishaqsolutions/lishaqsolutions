@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-site-title data-page-title="Contact Lishaq Solutions | Discuss Your Website or Software Project">Contact Lishaq Solutions | Discuss Your Project</title>
+  <meta name="description" data-site-description data-page-description="Tell Lishaq Solutions about your website, POS, custom software, AI automation, or integration project. Share your requirements and discuss the next steps.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://lishaqsolutions.com/contact/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact Lishaq Solutions | Discuss Your Project">
+  <meta property="og:description" content="Tell us what you want to build, fix, or improve. Discuss websites, custom software, POS, and automation with Lishaq Solutions.">
+  <meta property="og:url" content="https://lishaqsolutions.com/contact/">
+  <meta property="og:image" content="https://lishaqsolutions.com/images/og-image.jpg">
+  <meta property="og:site_name" content="Lishaq Solutions">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image:alt" content="Lishaq Solutions">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact Lishaq Solutions | Discuss Your Project">
+  <meta name="twitter:description" content="Have a website, software, POS, or automation project? Share your requirements with Lishaq Solutions.">
+  <meta name="twitter:image" content="https://lishaqsolutions.com/images/og-image.jpg">
+  <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.min.css">
+  <style>
+    .contact-page { padding: 72px 0 96px; }
+    .contact-intro { max-width: 780px; margin-bottom: 36px; }
+    .contact-intro h1 { margin: 12px 0 16px; font-size: clamp(2.3rem, 5vw, 4.25rem); line-height: 1.08; letter-spacing: -.045em; }
+    .contact-intro .lead { max-width: 670px; color: var(--muted); line-height: 1.75; }
+    .contact-layout { display: grid; grid-template-columns: minmax(260px, .85fr) minmax(0, 1.5fr); gap: 28px; align-items: start; }
+    .contact-sidebar { display: grid; gap: 14px; }
+    .contact-card-link { display: flex; align-items: flex-start; gap: 14px; text-decoration: none; }
+    .contact-card-link h2 { margin: 5px 0; font-size: 1.12rem; overflow-wrap: anywhere; }
+    .contact-icon { display: grid; place-items: center; flex: 0 0 44px; height: 44px; border-radius: 12px; background: rgba(79,195,255,.10); color: var(--primary); font-size: 1.2rem; }
+    .contact-mini-heading { font-size: .77rem; text-transform: uppercase; letter-spacing: .08em; color: var(--primary); font-weight: 700; }
+    .contact-note { font-size: .88rem; color: var(--muted); line-height: 1.65; }
+    .contact-side-detail h2 { font-size: 1.08rem; margin: 0 0 12px; }
+    .contact-side-detail p + p { margin-top: 10px; }
+    .contact-form-heading { margin-bottom: 22px; }
+    .contact-form-heading h2 { font-size: clamp(1.45rem, 2.7vw, 1.95rem); margin: 0 0 8px; }
+    .contact-form-heading p { color: var(--muted); font-size: .9rem; line-height: 1.65; }
+    .contact-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .contact-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .contact-field.full { grid-column: 1 / -1; }
+    .contact-field label { color: var(--text); font-size: .88rem; font-weight: 600; }
+    .contact-field input, .contact-field select, .contact-field textarea { width: 100%; min-width: 0; border: 1px solid rgba(120,180,255,.18); border-radius: 10px; padding: 12px 14px; background: rgba(8,13,32,.7); color: var(--text); font: inherit; font-size: .94rem; line-height: 1.4; }
+    .contact-field select { color-scheme: dark; }
+    .contact-field textarea { min-height: 135px; resize: vertical; }
+    .contact-field :is(input, select, textarea):focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+    .contact-field input::placeholder, .contact-field textarea::placeholder { color: var(--muted); opacity: .85; }
+    .contact-hint { margin: -2px 0 0; font-size: .77rem; line-height: 1.5; color: var(--muted); }
+    .contact-required { color: var(--primary); }
+    .contact-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 24px; }
+    .contact-actions button:disabled { opacity: .65; cursor: wait; }
+    .contact-form-status { margin-top: 17px; padding: 12px 14px; border-radius: 10px; border: 1px solid rgba(120,180,255,.16); font-size: .9rem; line-height: 1.6; }
+    .contact-form-status[hidden] { display: none; }
+    .contact-form-status[data-state="error"] { border-color: rgba(255,110,110,.5); }
+    .contact-form-status[data-state="notice"] { border-color: rgba(79,195,255,.4); }
+    .contact-privacy { margin-top: 12px; color: var(--muted); font-size: .78rem; line-height: 1.6; }
+    .contact-honeypot { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; overflow: hidden !important; }
+    @media (max-width: 860px) { .contact-layout { grid-template-columns: 1fr; } .contact-sidebar { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 620px) { .contact-page { padding: 48px 0 65px; } .contact-layout { gap: 20px; } .contact-sidebar, .contact-form-grid { grid-template-columns: 1fr; } .contact-intro { margin-bottom: 28px; } }
+  </style>
+</head>
+<body>
+  <div id="header"></div>
+  <main class="contact-page">
+    <div class="container">
+      <header class="contact-intro">
+        <span class="eyebrow">Let's talk about your project</span>
+        <h1>Build something that <span class="text-gradient">works for your business.</span></h1>
+        <p class="lead">Need a business website, POS system, custom software, or automation? Tell us what you want to build, fix, or improve. We'll review your requirements and discuss a practical next step.</p>
+      </header>
+      <div class="contact-layout">
+        <aside class="contact-sidebar" aria-label="Other ways to contact us">
+          <a href="https://wa.me/923151250978" class="card contact-card-link" data-whatsapp-link target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon" aria-hidden="true">💬</span>
+            <span><span class="contact-mini-heading">Prefer a quick chat?</span><h2>WhatsApp</h2><span class="contact-note" data-phone>+92 315 1250978</span></span>
+          </a>
+          <a href="mailto:lishaqsolutions@gmail.com" class="card contact-card-link" data-email-link>
+            <span class="contact-icon" aria-hidden="true">✉</span>
+            <span><span class="contact-mini-heading">Send an email</span><h2 data-email>lishaqsolutions@gmail.com</h2><span class="contact-note">Share your project brief or questions.</span></span>
+          </a>
+          <div class="card contact-side-detail">
+            <h2>What happens next?</h2>
+            <p class="contact-note">1. We review what you're trying to achieve.</p>
+            <p class="contact-note">2. We clarify the requirements and scope.</p>
+            <p class="contact-note">3. We discuss a suitable approach and estimate when the scope is clear.</p>
+          </div>
+          <div class="card contact-side-detail">
+            <h2>Availability</h2>
+            <p class="contact-note">Mon–Sat · 10:00–20:00 PKT</p>
+            <p class="contact-note">Working with clients worldwide.</p>
+          </div>
+        </aside>
+
+        <form id="contactForm" class="card" method="post" novalidate>
+          <div class="contact-form-heading">
+            <h2>Tell us about your requirements</h2>
+            <p>Just the essentials to start. Fields marked <span class="contact-required">*</span> are required; budget and timeline are optional.</p>
+          </div>
+          <div class="contact-form-grid">
+            <div class="contact-field">
+              <label for="contactName">Your name <span class="contact-required">*</span></label>
+              <input id="contactName" name="name" type="text" autocomplete="name" maxlength="100" placeholder="Your full name" required>
+            </div>
+            <div class="contact-field">
+              <label for="contactEmail">Email address <span class="contact-required">*</span></label>
+              <input id="contactEmail" name="email" type="email" autocomplete="email" maxlength="180" placeholder="you@company.com" required>
+            </div>
+            <div class="contact-field">
+              <label for="contactPhone">Phone / WhatsApp (optional)</label>
+              <input id="contactPhone" name="phone" type="tel" autocomplete="tel" maxlength="45" placeholder="Include country code">
+            </div>
+            <div class="contact-field">
+              <label for="contactService">What do you need? <span class="contact-required">*</span></label>
+              <select id="contactService" name="service" required>
+                <option value="">Choose a service</option>
+                <option value="Business website / redesign">Business website / redesign</option>
+                <option value="Ecommerce website">Ecommerce website</option>
+                <option value="POS / inventory software">POS / inventory software</option>
+                <option value="Custom web application / dashboard">Custom web application / dashboard</option>
+                <option value="AI chatbot / automation">AI chatbot / automation</option>
+                <option value="API / system integration">API / system integration</option>
+                <option value="UI/UX design">UI/UX design</option>
+                <option value="Other / not sure">Other / not sure</option>
+              </select>
+            </div>
+            <div class="contact-field full">
+              <label for="contactWebsite">Current website (optional)</label>
+              <input id="contactWebsite" name="website" type="text" inputmode="url" autocomplete="url" maxlength="250" placeholder="yourbusiness.com (if you have one)">
+              <p class="contact-hint">Useful for redesigns, SEO improvements, or integrating an existing system.</p>
+            </div>
+            <div class="contact-field">
+              <label for="contactBudget">Estimated budget (optional)</label>
+              <select id="contactBudget" name="budget">
+                <option value="">Not decided yet</option>
+                <option value="Under PKR 50,000">Under PKR 50,000</option>
+                <option value="PKR 50,000–150,000">PKR 50,000–150,000</option>
+                <option value="PKR 150,000–300,000">PKR 150,000–300,000</option>
+                <option value="PKR 300,000+">PKR 300,000+</option>
+                <option value="Need an estimate / other currency">Need an estimate / other currency</option>
+              </select>
+            </div>
+            <div class="contact-field">
+              <label for="contactTimeline">Ideal timeline (optional)</label>
+              <select id="contactTimeline" name="timeline">
+                <option value="">Flexible / not sure</option>
+                <option value="As soon as possible">As soon as possible</option>
+                <option value="Within 2–4 weeks">Within 2–4 weeks</option>
+                <option value="Within 1–3 months">Within 1–3 months</option>
+                <option value="Planning for later">Planning for later</option>
+              </select>
+            </div>
+            <div class="contact-field full">
+              <label for="contactMessage">Tell us about the project <span class="contact-required">*</span></label>
+              <textarea id="contactMessage" name="message" rows="6" minlength="15" maxlength="6000" placeholder="What does your business do? What do you want to build or improve? What isn't working today?" required></textarea>
+              <p class="contact-hint">A short explanation is enough. Please don't include passwords or sensitive customer data.</p>
+            </div>
+            <div class="contact-honeypot" aria-hidden="true">
+              <label for="contactCompanyWebsite">Leave this field blank</label>
+              <input id="contactCompanyWebsite" type="text" name="company_website" tabindex="-1" autocomplete="off">
+            </div>
+          </div>
+          <div class="contact-actions">
+            <button id="contactSubmit" type="submit" class="btn btn-primary">Send project enquiry →</button>
+            <span class="contact-note">Or contact us directly on WhatsApp.</span>
+          </div>
+          <p class="contact-privacy">We'll use the details you provide to respond to your enquiry. Please share only information relevant to your project.</p>
+          <div id="formStatus" class="contact-form-status" role="status" aria-live="polite" hidden></div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <div id="footer"></div>
+  <a href="https://wa.me/923151250978" data-whatsapp-link aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer" class="wa-float"><i class="fab fa-whatsapp" aria-hidden="true"></i><span class="notification-dot"></span></a>
+  <script src="/js/components.js"></script>
+  <script src="/js/config.js"></script>
+  <script src="/js/dynamic.js"></script>
+  <script src="/js/main.min.js"></script>
+  <script id="organization" type="application/ld+json"></script>
+  <script id="website" type="application/ld+json"></script>
+  <script id="page-schema" type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {"@type":"ContactPage","@id":"https://lishaqsolutions.com/contact/#webpage","url":"https://lishaqsolutions.com/contact/","name":"Contact Lishaq Solutions","description":"Discuss a website, POS, custom software, or automation project with Lishaq Solutions.","isPartOf":{"@id":"https://lishaqsolutions.com/#website"},"about":{"@id":"https://lishaqsolutions.com/#organization"},"mainEntity":{"@id":"https://lishaqsolutions.com/#organization"}},
+      {"@type":"BreadcrumbList","@id":"https://lishaqsolutions.com/contact/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://lishaqsolutions.com/"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://lishaqsolutions.com/contact/"}]}
+    ]
+  }
+  </script>
+  <script src="/js/schema.js"></script>
+  <script>
+    (function () {
+      "use strict";
+      const form = document.getElementById("contactForm");
+      const status = document.getElementById("formStatus");
+      const submit = document.getElementById("contactSubmit");
+      if (!form || !status || !submit) return;
+      const allowedServices = new Map(Array.from(form.elements.namedItem("service").options).map(option => [option.value.toLowerCase(), option.value]));
+      const params = new URLSearchParams(window.location.search);
+      const requested = (params.get("service") || "").trim().toLowerCase();
+      if (allowedServices.has(requested)) form.elements.namedItem("service").value = allowedServices.get(requested);
+
+      function report(message, state) {
+        status.textContent = message;
+        status.dataset.state = state;
+        status.hidden = false;
+      }
+      function value(name) {
+        return String(form.elements.namedItem(name)?.value || "").trim();
+      }
+      form.addEventListener("submit", async event => {
+        event.preventDefault();
+        if (value("company_website")) return;
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+        const endpoint = window.SITE_CONFIG?.googleScript?.contactForm;
+        if (!endpoint) {
+          report("The enquiry form is temporarily unavailable. Please contact us using WhatsApp or email.", "error");
+          return;
+        }
+        const data = new FormData(form);
+        const service = value("service");
+        const projectDetails = value("message");
+        // Backwards compatibility: existing Apps Script implementations that save
+        // only name/email/phone/message still receive all important lead details.
+        data.set("message", [
+          `Service: ${service}`,
+          `Website: ${value("website") || "Not provided"}`,
+          `Budget: ${value("budget") || "Not decided"}`,
+          `Timeline: ${value("timeline") || "Flexible"}`,
+          `Page: ${window.location.pathname}`,
+          "",
+          "Project details:",
+          projectDetails
+        ].join("\n"));
+        submit.disabled = true;
+        submit.textContent = "Sending…";
+        report("Submitting your enquiry…", "notice");
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 15000);
+        try {
+          // Apps Script cross-origin endpoints often require no-cors in static sites.
+          // An opaque response does NOT confirm that the sheet received the entry.
+          await fetch(endpoint, {method: "POST", body: data, mode: "no-cors", signal: controller.signal});
+          report("Your request was submitted from this browser, but delivery could not be confirmed automatically. If you don't receive a reply, please follow up via WhatsApp or email. Keep a copy of your details until we respond.", "notice");
+          // Do not clear the form: receipt cannot be verified with no-cors.
+        } catch (error) {
+          console.error("Enquiry submission failed:", error);
+          report("We couldn't submit the form. Please try again or send your project details directly through WhatsApp or email.", "error");
+        } finally {
+          clearTimeout(timeout);
+          submit.disabled = false;
+          submit.textContent = "Send project enquiry →";
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
